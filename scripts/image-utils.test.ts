@@ -1,5 +1,16 @@
 import { describe, expect, it } from "vitest";
-import { isFreeLicense, normalizeOverride, parseArgs, parseYear, rejectReason, scoreCandidate, stripHtml, type Candidate } from "./image-utils";
+import {
+  isFreeLicense,
+  normalizeOverride,
+  parseArgs,
+  parseYear,
+  recencyScore,
+  rejectReason,
+  scoreCandidate,
+  stripHtml,
+  yearFromTitle,
+  type Candidate,
+} from "./image-utils";
 
 const base: Candidate = {
   title: "File:Ryan Gosling in 2018 (cropped).jpg",
@@ -45,7 +56,26 @@ describe("filters", () => {
     const prime = { ...base, year: 2008 };
     const recent = { ...base, year: 2024 };
     expect(scoreCandidate(prime, "Ryan Gosling", era)).toBeGreaterThan(scoreCandidate(recent, "Ryan Gosling", era));
-    expect(scoreCandidate(prime, "Ryan Gosling")).toBeCloseTo(scoreCandidate(recent, "Ryan Gosling"));
+  });
+  it("prefers photos from the last 10 years when no era is set", () => {
+    const old = { ...base, year: 2008 };
+    const recent = { ...base, year: 2022 };
+    expect(scoreCandidate(recent, "Ryan Gosling", undefined, 2026)).toBeGreaterThan(scoreCandidate(old, "Ryan Gosling", undefined, 2026));
+    expect(recencyScore({ ...base, year: 2022, yearSource: "uploaded" }, 2026)).toBeLessThan(recencyScore(recent, 2026));
+    expect(recencyScore({ ...base, year: undefined }, 2026)).toBeLessThan(recencyScore(recent, 2026));
+  });
+  it("penalises sunglasses, hats and profile shots", () => {
+    for (const title of ["File:Ryan Gosling in sunglasses.jpg", "File:Ryan Gosling wearing a hat.jpg", "File:Ryan Gosling profile.jpg"])
+      expect(scoreCandidate({ ...base, title }, "Ryan Gosling")).toBeLessThan(scoreCandidate(base, "Ryan Gosling"));
+  });
+  it("prefers the Wikidata image and demotes search hits outside the person's category", () => {
+    expect(scoreCandidate({ ...base, fromWikidata: true }, "Ryan Gosling")).toBeGreaterThan(scoreCandidate(base, "Ryan Gosling"));
+    expect(scoreCandidate({ ...base, offCategory: true }, "Ryan Gosling")).toBeLessThan(scoreCandidate(base, "Ryan Gosling"));
+  });
+  it("reads years from file titles but not from Flickr ids", () => {
+    expect(yearFromTitle("File:Ryan Gosling in 2018 (cropped).jpg")).toBe(2018);
+    expect(yearFromTitle("File:Gosling (53388157347) (cropped).jpg")).toBeUndefined();
+    expect(yearFromTitle("File:Gosling_BFI_081223.jpg")).toBeUndefined();
   });
   it("prefers cropped single portraits over group and action shots", () => {
     const group = { ...base, title: "File:Ryan Gosling and Emma Stone at premiere.jpg", width: 1600, height: 1000 };

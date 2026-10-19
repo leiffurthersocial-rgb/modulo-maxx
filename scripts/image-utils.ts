@@ -12,10 +12,14 @@ export interface Candidate {
   licenseUrl?: string;
   author: string;
   year?: number;
-  yearSource: "taken" | "uploaded" | "unknown";
+  yearSource: "taken" | "title" | "uploaded" | "unknown";
   description: string;
   categories: string;
   fromPageImage: boolean;
+  /** Wikidata's image (P18) for the person. */
+  fromWikidata?: boolean;
+  /** Found only by a Commons text search, and not filed under the person's Commons category. */
+  offCategory?: boolean;
 }
 
 export const MIN_SIZE = 400;
@@ -35,6 +39,12 @@ export function stripHtml(html: string | undefined): string {
     .trim();
 }
 
+/** Year in a file title such as "File:Ryan Gosling in 2018 (cropped).jpg" (ignores Flickr-style ids). */
+export function yearFromTitle(title: string): number | undefined {
+  const m = title.replace(/\d{5,}/g, " ").match(/(?:^|[^\d])((?:19|20)\d{2})(?:[^\d]|$)/);
+  return m ? Number(m[1]) : undefined;
+}
+
 /** First plausible 4-digit year (1900-2099) in a date string. */
 export function parseYear(s: string | undefined): number | undefined {
   if (!s) return undefined;
@@ -52,6 +62,9 @@ export function isFreeLicense(shortName: string, licenseCode = ""): boolean {
 const BAD_WORDS =
   /\b(and|with|family|team|cast|group|crowd|statue|wax|tussauds|mural|graffiti|caricature|signature|autograph|logo|poster|cartoon|drawing|painting|sketch|banner|fans?|parade|trophy|car|house|grave|memorial)\b|&/i;
 const ACTION_WORDS = /\b(concert|performing|performs|live|stage|match|game|vs\.?|playing|race|fight|training|celebrat\w*|goal)\b/i;
+// Things that hide or distort the face.
+const ACCESSORY_WORDS = /\b(sunglasses|shades|hat|cap|beanie|helmet|hood(ed|ie)?|mask|costume|cosplay|makeup|wig|in character|filter)\b/i;
+const ANGLE_WORDS = /\b(profile|side view|from behind|back view|silhouette)\b/i;
 const PORTRAIT_WORDS = /\b(portrait|headshot|head shot|close-?up|face|cropped|crop)\b/i;
 
 export function surname(name: string): string {
@@ -80,16 +93,18 @@ export function rejectReason(c: Candidate): Rejection | null {
 export type Era = [number, number];
 
 /**
- * Heuristic score for a front-facing, close-up, single-person portrait that shows the celeb
- * the way their rating assumes. When an era (year range) is given, photos from that range win.
- * Front-facing and neutral expression can't be checked from metadata, so the
- * contact sheet exists for the manual pass.
+ * Heuristic score for a front-facing, close-up, single-person portrait, preferably from the last
+ * 10 years. When an era (year range) is pinned in image-overrides.json, photos from that range win
+ * instead. Front-facing and neutral expression can't be checked from metadata, so the contact
+ * sheet exists for the manual pass.
  */
-export function scoreCandidate(c: Candidate, celebName: string, era?: Era): number {
+export function scoreCandidate(c: Candidate, celebName: string, era?: Era, now = CURRENT_YEAR): number {
   const title = normalize(c.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/[_()]/g, " "));
   const text = `${title} ${normalize(c.description)}`;
   let score = 0;
   if (c.fromPageImage) score += 6;
+  if (c.fromWikidata) score += c.fromPageImage ? 1 : 4;
+  if (c.offCategory) score -= 3;
   if (title.includes(normalize(surname(celebName)))) score += 2;
   if (title.includes(normalize(celebName))) score += 1;
   if (/\bcropped\b/.test(title)) score += 3;
@@ -97,10 +112,12 @@ export function scoreCandidate(c: Candidate, celebName: string, era?: Era): numb
   // Other people's names or group shots in the title.
   if (BAD_WORDS.test(title.replace(normalize(celebName), ""))) score -= 4;
   if (ACTION_WORDS.test(text)) score -= 2;
+  if (ACCESSORY_WORDS.test(text)) score -= 2.5;
+  if (ANGLE_WORDS.test(text)) score -= 2;
   const ratio = c.height / c.width;
   if (ratio >= 1 && ratio <= 1.6) score += 2;
   else if (ratio < 0.8) score -= 2;
-  if (era) score += eraScore(c, era);
+  score += era ? eraScore(c, era) : recencyScore(c, now);
 
   // Bigger source images make cleaner 600px crops, up to a point.
   score += Math.min(1, Math.min(c.width, c.height) / 1200);
@@ -118,6 +135,20 @@ export function eraScore(c: Candidate, [from, to]: Era): number {
   return c.yearSource === "uploaded" && off === 0 ? s - 1.5 : s;
 }
 
+export const CURRENT_YEAR = new Date().getFullYear();
+
+/**
+ * Recency: +3 within the last 10 years, fading to -1 at 15 years, then -0.3 per extra year.
+ * An upload date only bounds the photo's date from above, so it earns less than a capture date.
+ */
+export function recencyScore(c: Candidate, now = CURRENT_YEAR): number {
+  if (c.year === undefined) return -1;
+  const age = now - c.year;
+  let s = age <= 10 ? 3 : age <= 15 ? 3 - (4 * (age - 10)) / 5 : -1 - 0.3 * (age - 15);
+  if (c.yearSource === "uploaded" && s > 0) s -= 1.5;
+  return Math.max(s, -5);
+}
+
 export interface CliArgs {
   only: string[];
   force: boolean;
@@ -125,20 +156,22 @@ export interface CliArgs {
 }
 
 export function parseArgs(argv: string[]): CliArgs {
-  const args: CliArgs = { only: [], force: false, delayMs: 250 };
+  const args: CliArgs = { only: [], force: false, delayMs: 300 };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--only") args.only.push(...(argv[++i] ?? "").split(",").map((s) => s.trim()).filter(Boolean));
     else if (a.startsWith("--only=")) args.only.push(...a.slice(7).split(",").map((s) => s.trim()).filter(Boolean));
     else if (a === "--force") args.force = true;
-    else if (a === "--delay") args.delayMs = Number(argv[++i] ?? 250);
+    else if (a === "--delay") args.delayMs = Number(argv[++i] ?? 300);
   }
   return args;
 }
 
-export type Override = string | { file?: string; reject?: string[]; drop?: boolean; years?: Era };
+export type Override = string | { file?: string; reject?: string[]; drop?: boolean; years?: Era; wiki?: string };
 
 export interface NormalizedOverride {
+  /** English Wikipedia article title, for names that land on a disambiguation page. */
+  wiki?: string;
   file?: string;
   reject: string[];
   drop: boolean;
@@ -149,6 +182,7 @@ export function normalizeOverride(o: Override | undefined): NormalizedOverride {
   if (!o) return { reject: [], drop: false };
   if (typeof o === "string") return { file: withFilePrefix(o), reject: [], drop: false };
   return {
+    ...(o.wiki ? { wiki: o.wiki } : {}),
     file: o.file ? withFilePrefix(o.file) : undefined,
     reject: (o.reject ?? []).map(withFilePrefix),
     drop: !!o.drop,
