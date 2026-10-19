@@ -6,3 +6,4 @@ next-env.d.ts
 .vercel
 scripts/out/
 .DS_Store
+scripts/contact-sheet.html
