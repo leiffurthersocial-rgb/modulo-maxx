@@ -23,6 +23,7 @@ import {
   parseArgs,
   parseYear,
   rejectReason,
+  resolveOnly,
   scoreCandidate,
   stripHtml,
   withFilePrefix,
@@ -405,9 +406,9 @@ async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.mkdirSync(REPORT_DIR, { recursive: true });
 
-  const unknown = args.only.filter((n) => !celebs.some((c) => c.name.toLowerCase() === n.toLowerCase()));
-  if (unknown.length) throw new Error(`Not in data/celebs.json: ${unknown.join(", ")}`);
-  const only = new Set(args.only.map((n) => n.toLowerCase()));
+  const resolved = resolveOnly(args.only, celebs.map((c) => c.name));
+  if (resolved.unknown.length) throw new Error(`Not in data/celebs.json: ${resolved.unknown.join(", ")}`);
+  const only = new Set(resolved.names.map((n) => n.toLowerCase()));
   const targets = only.size ? celebs.filter((c) => only.has(c.name.toLowerCase())) : celebs;
 
   for (const [i, { name, category }] of targets.entries()) {

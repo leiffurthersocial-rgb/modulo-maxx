@@ -161,12 +161,36 @@ export function parseArgs(argv: string[]): CliArgs {
   const args: CliArgs = { only: [], force: false, delayMs: 300 };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === "--only") args.only.push(...(argv[++i] ?? "").split(",").map((s) => s.trim()).filter(Boolean));
-    else if (a.startsWith("--only=")) args.only.push(...a.slice(7).split(",").map((s) => s.trim()).filter(Boolean));
+    if (a === "--only") args.only.push(argv[++i] ?? "");
+    else if (a.startsWith("--only=")) args.only.push(a.slice(7));
     else if (a === "--force") args.force = true;
     else if (a === "--delay") args.delayMs = Number(argv[++i] ?? 300);
   }
   return args;
+}
+
+/**
+ * Split comma-separated --only values into known names, keeping names that contain a comma
+ * ("Tyler, the Creator") whole. Returns the matched names and any leftovers that matched nothing.
+ */
+export function resolveOnly(raw: string[], names: string[]): { names: string[]; unknown: string[] } {
+  const byLower = new Map(names.map((n) => [n.toLowerCase(), n]));
+  const out: string[] = [];
+  const unknown: string[] = [];
+  for (const value of raw) {
+    let buf: string[] = [];
+    for (const part of value.split(",")) {
+      buf.push(part);
+      const hit = byLower.get(buf.join(",").trim().toLowerCase());
+      if (hit) {
+        out.push(hit);
+        buf = [];
+      }
+    }
+    const rest = buf.join(",").trim();
+    if (rest) unknown.push(rest);
+  }
+  return { names: out, unknown };
 }
 
 export type Override = string | { file?: string; reject?: string[]; drop?: boolean; years?: Era; wiki?: string };

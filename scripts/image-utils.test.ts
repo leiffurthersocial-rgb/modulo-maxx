@@ -5,6 +5,7 @@ import {
   parseArgs,
   parseYear,
   recencyScore,
+  resolveOnly,
   rejectReason,
   scoreCandidate,
   stripHtml,
@@ -96,8 +97,14 @@ describe("filters", () => {
 
 describe("cli and overrides", () => {
   it("parses --only and --force", () => {
-    expect(parseArgs(["--only", "Ryan Gosling, Drake", "--force"])).toMatchObject({ only: ["Ryan Gosling", "Drake"], force: true });
+    expect(parseArgs(["--only", "Ryan Gosling, Drake", "--force"])).toMatchObject({ only: ["Ryan Gosling, Drake"], force: true });
     expect(parseArgs(["--only=Drake"]).only).toEqual(["Drake"]);
+  });
+  it("resolves --only names, including names with commas", () => {
+    const names = ["Ryan Gosling", "Drake", "Tyler, the Creator"];
+    expect(resolveOnly(["ryan gosling, Drake"], names)).toEqual({ names: ["Ryan Gosling", "Drake"], unknown: [] });
+    expect(resolveOnly(["Drake,Tyler, the Creator"], names)).toEqual({ names: ["Drake", "Tyler, the Creator"], unknown: [] });
+    expect(resolveOnly(["Drake, Nobody"], names)).toEqual({ names: ["Drake"], unknown: ["Nobody"] });
   });
   it("normalises override shapes", () => {
     expect(normalizeOverride("Foo_bar.jpg").file).toBe("File:Foo bar.jpg");
