@@ -33,19 +33,25 @@ describe("filters", () => {
     expect(parseYear("circa 1999")).toBe(1999);
     expect(parseYear("unknown")).toBeUndefined();
   });
-  it("rejects low-res, old, non-free and art", () => {
-    expect(rejectReason(base, 2026)).toBeNull();
-    expect(rejectReason({ ...base, width: 300 }, 2026)).toBe("lowres");
-    expect(rejectReason({ ...base, year: 2009 }, 2026)).toBe("old");
-    expect(rejectReason({ ...base, year: 2009 }, 2026, { ignoreAge: true })).toBeNull();
-    expect(rejectReason({ ...base, license: "CC BY-NC 2.0" }, 2026)).toBe("license");
-    expect(rejectReason({ ...base, categories: "Caricatures of actors" }, 2026)).toBe("art");
+  it("rejects low-res, non-free and art, but not old photos", () => {
+    expect(rejectReason(base)).toBeNull();
+    expect(rejectReason({ ...base, year: 2003 })).toBeNull();
+    expect(rejectReason({ ...base, width: 300 })).toBe("lowres");
+    expect(rejectReason({ ...base, license: "CC BY-NC 2.0" })).toBe("license");
+    expect(rejectReason({ ...base, categories: "Caricatures of actors" })).toBe("art");
+  });
+  it("prefers photos from the celeb's era when one is set", () => {
+    const era: [number, number] = [2005, 2012];
+    const prime = { ...base, year: 2008 };
+    const recent = { ...base, year: 2024 };
+    expect(scoreCandidate(prime, "Ryan Gosling", era)).toBeGreaterThan(scoreCandidate(recent, "Ryan Gosling", era));
+    expect(scoreCandidate(prime, "Ryan Gosling")).toBeCloseTo(scoreCandidate(recent, "Ryan Gosling"));
   });
   it("prefers cropped single portraits over group and action shots", () => {
     const group = { ...base, title: "File:Ryan Gosling and Emma Stone at premiere.jpg", width: 1600, height: 1000 };
     const action = { ...base, title: "File:Ryan Gosling performing live.jpg" };
-    expect(scoreCandidate(base, "Ryan Gosling", 2026)).toBeGreaterThan(scoreCandidate(group, "Ryan Gosling", 2026));
-    expect(scoreCandidate(base, "Ryan Gosling", 2026)).toBeGreaterThan(scoreCandidate(action, "Ryan Gosling", 2026));
+    expect(scoreCandidate(base, "Ryan Gosling")).toBeGreaterThan(scoreCandidate(group, "Ryan Gosling"));
+    expect(scoreCandidate(base, "Ryan Gosling")).toBeGreaterThan(scoreCandidate(action, "Ryan Gosling"));
   });
   it("strips HTML from author fields", () => {
     expect(stripHtml('<a href="x">Gage Skidmore</a> from Peoria, AZ')).toBe("Gage Skidmore from Peoria, AZ");
@@ -59,7 +65,8 @@ describe("cli and overrides", () => {
   });
   it("normalises override shapes", () => {
     expect(normalizeOverride("Foo_bar.jpg").file).toBe("File:Foo bar.jpg");
-    expect(normalizeOverride({ reject: ["File:X.jpg"] })).toEqual({ file: undefined, reject: ["File:X.jpg"], drop: false });
+    expect(normalizeOverride({ reject: ["File:X.jpg"] })).toEqual({ file: undefined, reject: ["File:X.jpg"], drop: false, years: undefined });
+    expect(normalizeOverride({ years: [2005, 2012] }).years).toEqual([2005, 2012]);
     expect(normalizeOverride({ drop: true }).drop).toBe(true);
   });
 });

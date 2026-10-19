@@ -2,7 +2,8 @@
  "meta": {
   "scale": "0-10 for the general adult male population, bell curve with mean 5.5 and SD 1.5. 5-6 = average guy, 4 = bottom ~16%, 3 = bottom ~5%, 7 = top ~16%, 8.5 = top ~1%, 9.5 = top ~0.1%.",
   "bank_note": "Celebrity bank is deliberately wider than the population: low end filled with comedians, chefs, athletes and character actors, since fame normally selects for looks.",
-  "note": "Ratings assume a current-era, front-facing photo. Rough consensus estimates, edit freely. Older celebs are rated as they look in a recent photo, not at their peak."
+  "note": "Ratings assume a current-era, front-facing photo. Rough consensus estimates, edit freely.",
+  "photo_note": "Each photo should show the celeb the way their rating assumes (often their prime, not today). Pin an era per celeb with \"years\" in data/image-overrides.json."
  },
  "celebs": [
   {
@@ -36,6 +37,11 @@
    "category": "actor"
   },
   {
+   "name": "Brad Pitt",
+   "rating": 8.6,
+   "category": "actor"
+  },
+  {
    "name": "Bradley Cooper",
    "rating": 8.6,
    "category": "actor"
@@ -43,6 +49,16 @@
   {
    "name": "Idris Elba",
    "rating": 8.6,
+   "category": "actor"
+  },
+  {
+   "name": "Jon Hamm",
+   "rating": 8.6,
+   "category": "actor"
+  },
+  {
+   "name": "George Clooney",
+   "rating": 8.5,
    "category": "actor"
   },
   {
@@ -57,6 +73,26 @@
   },
   {
    "name": "Alexander Skarsgård",
+   "rating": 8.4,
+   "category": "actor"
+  },
+  {
+   "name": "Cristiano Ronaldo",
+   "rating": 8.4,
+   "category": "athlete"
+  },
+  {
+   "name": "David Beckham",
+   "rating": 8.4,
+   "category": "athlete"
+  },
+  {
+   "name": "Hugh Jackman",
+   "rating": 8.4,
+   "category": "actor"
+  },
+  {
+   "name": "Leonardo DiCaprio",
    "rating": 8.4,
    "category": "actor"
   },
@@ -76,33 +112,8 @@
    "category": "actor"
   },
   {
-   "name": "Jon Hamm",
-   "rating": 8.2,
-   "category": "actor"
-  },
-  {
-   "name": "Brad Pitt",
-   "rating": 8.1,
-   "category": "actor"
-  },
-  {
-   "name": "Cristiano Ronaldo",
-   "rating": 8.1,
-   "category": "athlete"
-  },
-  {
-   "name": "David Beckham",
-   "rating": 8.1,
-   "category": "athlete"
-  },
-  {
-   "name": "George Clooney",
-   "rating": 7.9,
-   "category": "actor"
-  },
-  {
-   "name": "Hugh Jackman",
-   "rating": 7.9,
+   "name": "Zac Efron",
+   "rating": 8.3,
    "category": "actor"
   },
   {
@@ -116,12 +127,12 @@
    "category": "musician"
   },
   {
-   "name": "Paul Mescal",
+   "name": "Keanu Reeves",
    "rating": 7.8,
    "category": "actor"
   },
   {
-   "name": "Zac Efron",
+   "name": "Paul Mescal",
    "rating": 7.8,
    "category": "actor"
   },
@@ -132,11 +143,6 @@
   },
   {
    "name": "Charlie Hunnam",
-   "rating": 7.7,
-   "category": "actor"
-  },
-  {
-   "name": "Leonardo DiCaprio",
    "rating": 7.7,
    "category": "actor"
   },
@@ -161,12 +167,12 @@
    "category": "actor"
   },
   {
-   "name": "Glen Powell",
+   "name": "Denzel Washington",
    "rating": 7.4,
    "category": "actor"
   },
   {
-   "name": "Keanu Reeves",
+   "name": "Glen Powell",
    "rating": 7.4,
    "category": "actor"
   },
@@ -301,11 +307,6 @@
    "category": "athlete"
   },
   {
-   "name": "Denzel Washington",
-   "rating": 6.8,
-   "category": "actor"
-  },
-  {
    "name": "Dwayne Johnson",
    "rating": 6.8,
    "category": "actor"
@@ -371,6 +372,11 @@
    "category": "musician"
   },
   {
+   "name": "Colin Firth",
+   "rating": 6.6,
+   "category": "actor"
+  },
+  {
    "name": "Daniel Craig",
    "rating": 6.6,
    "category": "actor"
@@ -414,6 +420,11 @@
    "name": "Jude Bellingham",
    "rating": 6.6,
    "category": "athlete"
+  },
+  {
+   "name": "Kevin Costner",
+   "rating": 6.6,
+   "category": "actor"
   },
   {
    "name": "Matt Damon",
@@ -556,11 +567,6 @@
    "category": "actor"
   },
   {
-   "name": "Colin Firth",
-   "rating": 6.2,
-   "category": "actor"
-  },
-  {
    "name": "Drake",
    "rating": 6.2,
    "category": "musician"
@@ -584,11 +590,6 @@
    "name": "Zlatan Ibrahimović",
    "rating": 6.2,
    "category": "athlete"
-  },
-  {
-   "name": "Kevin Costner",
-   "rating": 6.0,
-   "category": "actor"
   },
   {
    "name": "Woody Harrelson",
@@ -626,6 +627,11 @@
    "category": "actor"
   },
   {
+   "name": "Jeff Goldblum",
+   "rating": 5.9,
+   "category": "actor"
+  },
+  {
    "name": "Jeremy Renner",
    "rating": 5.9,
    "category": "actor"
@@ -656,6 +662,16 @@
    "category": "athlete"
   },
   {
+   "name": "Morgan Freeman",
+   "rating": 5.8,
+   "category": "actor"
+  },
+  {
+   "name": "Samuel L. Jackson",
+   "rating": 5.8,
+   "category": "actor"
+  },
+  {
    "name": "Dan Levy",
    "rating": 5.7,
    "category": "actor"
@@ -677,11 +693,6 @@
   },
   {
    "name": "Ben Stiller",
-   "rating": 5.6,
-   "category": "actor"
-  },
-  {
-   "name": "Jeff Goldblum",
    "rating": 5.6,
    "category": "actor"
   },
@@ -716,9 +727,19 @@
    "category": "athlete"
   },
   {
+   "name": "Al Pacino",
+   "rating": 5.5,
+   "category": "actor"
+  },
+  {
    "name": "Eminem",
    "rating": 5.5,
    "category": "musician"
+  },
+  {
+   "name": "Robert De Niro",
+   "rating": 5.5,
+   "category": "actor"
   },
   {
    "name": "Sacha Baron Cohen",
@@ -781,11 +802,6 @@
    "category": "actor"
   },
   {
-   "name": "Samuel L. Jackson",
-   "rating": 5.3,
-   "category": "actor"
-  },
-  {
    "name": "Elijah Wood",
    "rating": 5.2,
    "category": "actor"
@@ -831,11 +847,6 @@
    "category": "actor"
   },
   {
-   "name": "Morgan Freeman",
-   "rating": 4.9,
-   "category": "actor"
-  },
-  {
    "name": "Chris Rock",
    "rating": 4.8,
    "category": "comedian"
@@ -846,14 +857,14 @@
    "category": "musician"
   },
   {
-   "name": "Robert De Niro",
-   "rating": 4.8,
-   "category": "actor"
-  },
-  {
    "name": "Bill Burr",
    "rating": 4.7,
    "category": "comedian"
+  },
+  {
+   "name": "Christopher Walken",
+   "rating": 4.7,
+   "category": "actor"
   },
   {
    "name": "Jonah Hill",
@@ -868,11 +879,6 @@
   {
    "name": "Willem Dafoe",
    "rating": 4.7,
-   "category": "actor"
-  },
-  {
-   "name": "Al Pacino",
-   "rating": 4.6,
    "category": "actor"
   },
   {
@@ -903,11 +909,6 @@
   {
    "name": "Kevin James",
    "rating": 4.4,
-   "category": "actor"
-  },
-  {
-   "name": "Christopher Walken",
-   "rating": 4.3,
    "category": "actor"
   },
   {

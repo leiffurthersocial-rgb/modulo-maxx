@@ -6,7 +6,7 @@ A static Next.js app (TypeScript, Tailwind, `output: 'export'`). No backend, acc
 
 1. **Scaffold**: Next.js App Router, Tailwind, vitest, static export config, base theme
    (off-white/black, one accent, Inter/system font, dark mode via `prefers-color-scheme`).
-2. **Data pass**: light edits to `data/celebs.json` (age-adjusted ratings for current photos,
+2. **Data pass**: light edits to `data/celebs.json` (
    spread out the 7.0 clump, `coach` category).
 3. **Engine** (`src/lib/engine.ts`): grid posterior over theta in [0,10] (step 0.05) and rater
    noise s in {0.3, 0.5, 0.8, 1.2}. Ordered-logit likelihood for More / About equal / Less.
@@ -16,7 +16,7 @@ A static Next.js app (TypeScript, Tailwind, `output: 'export'`). No backend, acc
 4. **Scoring** (`src/lib/scoring.ts`, `src/lib/builds.ts`): height, body (BMI + build slider),
    overall with flaw penalty, Monte Carlo range, population percentile.
 5. **Image pipeline**: `scripts/fetch-images.ts` (Wikipedia + Commons APIs, free licenses only,
-   recent, >= 400px, idempotent, `--only`, overrides, failure report), and
+   photo era matching the rating, >= 400px, idempotent, `--only`, overrides, failure report), and
    `scripts/contact-sheet.ts`, which generates `scripts/contact-sheet.html`.
 6. **UI flow**: Landing, Subject, Handoff, Rating, Results. State in localStorage, Start over.
 7. **Results extras**: celeb match, strongest and weakest attribute, copy text, save as PNG (canvas).

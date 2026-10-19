@@ -45,6 +45,7 @@ export function writeContactSheet(): string {
     "data/celeb-images.json",
     {},
   );
+  const overrides = readJson<Record<string, string | { years?: [number, number] }>>("data/image-overrides.json", {});
   const report = new Map(readJson<Report[]>("scripts/out/image-report.json", []).map((r) => [r.slug, r]));
 
   const cards = celebs
@@ -52,6 +53,8 @@ export function writeContactSheet(): string {
       const slug = slugify(c.name);
       const img = images[slug];
       const rep = report.get(slug);
+      const ov = overrides[c.name];
+      const era = typeof ov === "object" && ov.years ? `${ov.years[0]}-${ov.years[1]}` : "";
       const alts = (rep?.alternatives ?? []).filter((a) => a.title !== img?.title).slice(0, 5);
       const main = img
         ? `<a href="${esc(img.sourceUrl)}" target="_blank"><img class="main" src="../public/celebs/${esc(img.file)}" loading="lazy"></a>`
@@ -67,7 +70,7 @@ export function writeContactSheet(): string {
         .join("");
       return `<section class="card${img ? "" : " bad"}" data-name="${esc(c.name.toLowerCase())}">
   ${main}
-  <h2>${esc(c.name)} <span>${c.rating.toFixed(1)} · ${esc(c.category)}</span></h2>
+  <h2>${esc(c.name)} <span>${c.rating.toFixed(1)} · ${esc(c.category)}${era ? ` · era ${esc(era)}` : ""}</span></h2>
   ${img ? `<p>${esc(img.year ?? "year?")} · ${esc(img.license)} · ${esc(img.author)}</p><p class="t">${esc(img.title)}</p>` : ""}
   ${img ? `<button data-copy='${esc(JSON.stringify({ [c.name]: { reject: [img.title] } }).slice(1, -1))}'>Reject current</button>` : ""}
   ${altHtml ? `<div class="alts">${altHtml}</div>` : ""}
@@ -103,6 +106,7 @@ export function writeContactSheet(): string {
 </style></head><body>
 <header><h1>Contact sheet</h1><span>${have}/${celebs.length} with images</span>
 <input id="q" placeholder="Filter by name"><label><input type="checkbox" id="bad"> Missing only</label></header>
+<p style="margin-bottom:8px">Check that each photo looks like its rating (the number next to the name). Set an era with <code>"Name": { "years": [2005, 2014] }</code> to steer the pick.</p>
 <p style="margin-bottom:16px">"Use this" / "Reject current" copies a line for <code>data/image-overrides.json</code>. Then run <code>npm run images -- --only "Name"</code>.</p>
 <div class="grid">${cards}</div>
 <div id="toast">Copied</div>

@@ -19,7 +19,6 @@ export interface Candidate {
 }
 
 export const MIN_SIZE = 400;
-export const RECENT_YEARS = 10;
 const OK_MIME = new Set(["image/jpeg", "image/png", "image/webp"]);
 
 export function stripHtml(html: string | undefined): string {
@@ -67,24 +66,26 @@ export function normalize(s: string): string {
     .toLowerCase();
 }
 
-export type Rejection = "license" | "lowres" | "old" | "mime" | "art";
+export type Rejection = "license" | "lowres" | "mime" | "art";
 
 /** Hard filters. Returns a reason when the candidate is unusable. */
-export function rejectReason(c: Candidate, nowYear: number, opts: { ignoreAge?: boolean } = {}): Rejection | null {
+export function rejectReason(c: Candidate): Rejection | null {
   if (!OK_MIME.has(c.mime)) return "mime";
   if (!isFreeLicense(c.license)) return "license";
   if (c.width < MIN_SIZE || c.height < MIN_SIZE) return "lowres";
   if (/caricature|in art|drawings|paintings|wax figures|statues/i.test(c.categories)) return "art";
-  if (!opts.ignoreAge && c.year !== undefined && c.year < nowYear - RECENT_YEARS) return "old";
   return null;
 }
 
+export type Era = [number, number];
+
 /**
- * Heuristic score for "recent, front-facing, close-up, single-person portrait".
+ * Heuristic score for a front-facing, close-up, single-person portrait that shows the celeb
+ * the way their rating assumes. When an era (year range) is given, photos from that range win.
  * Front-facing and neutral expression can't be checked from metadata, so the
  * contact sheet exists for the manual pass.
  */
-export function scoreCandidate(c: Candidate, celebName: string, nowYear: number): number {
+export function scoreCandidate(c: Candidate, celebName: string, era?: Era): number {
   const title = normalize(c.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/[_()]/g, " "));
   const text = `${title} ${normalize(c.description)}`;
   let score = 0;
@@ -99,12 +100,22 @@ export function scoreCandidate(c: Candidate, celebName: string, nowYear: number)
   const ratio = c.height / c.width;
   if (ratio >= 1 && ratio <= 1.6) score += 2;
   else if (ratio < 0.8) score -= 2;
-  if (c.year !== undefined) score += Math.max(0, Math.min(2, (c.year - (nowYear - RECENT_YEARS)) * 0.25));
-  else score -= 1;
-  if (c.yearSource === "uploaded") score -= 0.5;
+  if (era) score += eraScore(c, era);
+
   // Bigger source images make cleaner 600px crops, up to a point.
   score += Math.min(1, Math.min(c.width, c.height) / 1200);
   return score;
+}
+
+/**
+ * Era fit: +4 inside the range, then -0.5 per year outside it. Upload dates only bound the
+ * photo from above, so an upload inside the range counts for less, and an undated photo is neutral-ish.
+ */
+export function eraScore(c: Candidate, [from, to]: Era): number {
+  if (c.year === undefined) return -1;
+  const off = c.year < from ? from - c.year : c.year > to ? c.year - to : 0;
+  const s = off === 0 ? 4 : -0.5 * off;
+  return c.yearSource === "uploaded" && off === 0 ? s - 1.5 : s;
 }
 
 export interface CliArgs {
@@ -125,12 +136,24 @@ export function parseArgs(argv: string[]): CliArgs {
   return args;
 }
 
-export type Override = string | { file?: string; reject?: string[]; drop?: boolean };
+export type Override = string | { file?: string; reject?: string[]; drop?: boolean; years?: Era };
 
-export function normalizeOverride(o: Override | undefined): { file?: string; reject: string[]; drop: boolean } {
+export interface NormalizedOverride {
+  file?: string;
+  reject: string[];
+  drop: boolean;
+  years?: Era;
+}
+
+export function normalizeOverride(o: Override | undefined): NormalizedOverride {
   if (!o) return { reject: [], drop: false };
   if (typeof o === "string") return { file: withFilePrefix(o), reject: [], drop: false };
-  return { file: o.file ? withFilePrefix(o.file) : undefined, reject: (o.reject ?? []).map(withFilePrefix), drop: !!o.drop };
+  return {
+    file: o.file ? withFilePrefix(o.file) : undefined,
+    reject: (o.reject ?? []).map(withFilePrefix),
+    drop: !!o.drop,
+    years: o.years,
+  };
 }
 
 export function withFilePrefix(t: string): string {

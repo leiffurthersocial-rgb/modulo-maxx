@@ -31,11 +31,14 @@ a Commons search, and the Commons category. It keeps only candidates that are:
 
 - under a free license (CC0, CC BY, CC BY-SA, public domain; no NC, ND or fair use)
 - at least 400 px on both sides
-- from the last 10 years (by date taken, or upload date when that's missing)
 - not drawings, caricatures or statues
 
 It then ranks them with heuristics: the article's lead image, "cropped" in the title, portrait aspect
-ratio, recency, and no other names or "and"/"with" in the title. The winner is resized to 600 px wide and
+ratio, and no other names or "and"/"with" in the title.
+
+Photos don't need to be recent. They should show the celeb **the way their rating assumes**, which for
+older celebs usually means their prime. Set an era per celeb with `"years"` in
+`data/image-overrides.json`; photos taken in that range win. Eras are pre-filled for older celebs. The winner is resized to 600 px wide and
 saved as `public/celebs/<slug>.jpg`. Its author, license and source go into `data/celeb-images.json`,
 which feeds `/credits`.
 
@@ -43,13 +46,14 @@ Celebs with no usable image are left out of `celeb-images.json`, and the app dro
 `data/celebs.json` itself is never edited, so a later run can pick them up. Failures are listed in
 `scripts/out/image-report.md`.
 
-**Spot-checking.** Open `scripts/contact-sheet.html` in a browser. Each card shows the chosen photo plus
-the next-best candidates. "Use this" or "Reject current" copies a line for `data/image-overrides.json`:
+**Spot-checking.** Open `scripts/contact-sheet.html` in a browser. Each card shows the chosen photo next to
+the celeb's rating and era, plus the next-best candidates. Check that the photo looks like the rating. "Use this" or "Reject current" copies a line for `data/image-overrides.json`:
 
 ```json
 {
   "Ryan Gosling": "File:Ryan Gosling in 2018.jpg",
   "Drake": { "reject": ["File:Drake at some event.jpg"] },
+  "George Clooney": { "years": [2005, 2014] },
   "Someone": { "drop": true }
 }
 ```

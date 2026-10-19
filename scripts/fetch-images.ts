@@ -1,4 +1,6 @@
 // Fetch one free-licensed portrait per celeb from Wikipedia / Wikimedia Commons.
+// The photo should show the celeb the way their rating assumes (e.g. their prime, not
+// necessarily today). Set an era per celeb with "years" in data/image-overrides.json.
 //
 //   npm run images                       # fetch everything missing (idempotent)
 //   npm run images -- --only "Ryan Gosling"   # (re)fetch specific celebs, comma-separated
@@ -38,7 +40,6 @@ const THUMB_WIDTH = 960;
 const USER_AGENT = "ModuloMaxx/0.1 (non-commercial hobby project; image credits fetcher)";
 const WIKI_API = "https://en.wikipedia.org/w/api.php";
 const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
-const NOW_YEAR = new Date().getFullYear();
 
 interface ImageEntry {
   name: string;
@@ -200,24 +201,24 @@ async function processCeleb(name: string, override: Override | undefined): Promi
   let candidates: Candidate[];
   if (ov.file) {
     candidates = await imageInfo([ov.file]);
-    const reason = candidates[0] ? rejectReason(candidates[0], NOW_YEAR, { ignoreAge: true }) : "missing";
+    const reason = candidates[0] ? rejectReason(candidates[0]) : "missing";
     if (!candidates[0] || reason) return { report: { ...report, reason: `override ${ov.file}: ${reason}` } };
   } else {
     const { titles, pageImage } = await candidateTitles(name);
     const all = (await imageInfo(titles, pageImage)).filter((c) => !ov.reject.includes(c.title));
     candidates = [];
     for (const c of all) {
-      const reason = rejectReason(c, NOW_YEAR);
+      const reason = rejectReason(c);
       if (reason) report.rejected[reason] = (report.rejected[reason] ?? 0) + 1;
       else candidates.push(c);
     }
-    candidates.sort((a, b) => scoreCandidate(b, name, NOW_YEAR) - scoreCandidate(a, name, NOW_YEAR));
+    candidates.sort((a, b) => scoreCandidate(b, name, ov.years) - scoreCandidate(a, name, ov.years));
   }
 
   report.alternatives = candidates.slice(0, 6).map((c) => ({
     title: c.title,
     thumbUrl: c.thumbUrl ?? c.url,
-    score: Math.round(scoreCandidate(c, name, NOW_YEAR) * 10) / 10,
+    score: Math.round(scoreCandidate(c, name, ov.years) * 10) / 10,
     license: c.license,
     year: c.year,
   }));
