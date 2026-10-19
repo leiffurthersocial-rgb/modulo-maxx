@@ -1,4 +1,7 @@
 {
+ "Adam Sandler": {
+  "file": "File:Adam Sandler Jay Kelly-33 (cropped).jpg"
+ },
  "Al Pacino": {
   "years": [
    2000,
@@ -17,11 +20,23 @@
    2016
   ]
  },
+ "Bruno Mars": {
+  "file": "File:Bruno Mars - 24K Magic Tour (37320927992) (cropped).jpg"
+ },
  "Bryan Cranston": {
   "years": [
    2010,
    2018
   ]
+ },
+ "Charlie Day": {
+  "file": "File:Charlie Day by Gage Skidmore (cropped).jpg"
+ },
+ "Chris Martin": {
+  "file": "File:Chris Martin 2023 (52950419334) (cropped).jpg"
+ },
+ "Chris Stapleton": {
+  "file": "File:Chris Stapleton Concert (48519730107) (cropped).jpg"
  },
  "Christopher Walken": {
   "years": [
@@ -39,7 +54,8 @@
   "years": [
    2014,
    2021
-  ]
+  ],
+  "file": "File:Cristiano Ronaldo entrenando (crop) (cropped).jpg"
  },
  "Daniel Craig": {
   "years": [
@@ -57,7 +73,8 @@
   "years": [
    2008,
    2017
-  ]
+  ],
+  "file": "File:David Beckham at US Embassy in London (cropped).jpg"
  },
  "Denzel Washington": {
   "years": [
@@ -71,17 +88,24 @@
    2016
   ]
  },
+ "Eminem": {
+  "file": "File:Eminem in 2021.jpg"
+ },
  "Gene Simmons": {
   "years": [
    2008,
    2017
-  ]
+  ],
+  "file": "File:Gene Simmons - Wacken Open Air 2024 05 (cropped).jpg"
  },
  "George Clooney": {
   "years": [
    2005,
    2014
   ]
+ },
+ "Guy Fieri": {
+  "file": "File:Guy Fieri 2022.png"
  },
  "Hugh Grant": {
   "years": [
@@ -95,6 +119,15 @@
    2017
   ]
  },
+ "Jack Harlow": {
+  "file": "File:Jack Harlow at the 2022 NBA All-Star Celebrity Game.jpg"
+ },
+ "Jamie Foxx": {
+  "file": "File:Jamie Foxx by Gage Skidmore.jpg"
+ },
+ "Jason Sudeikis": {
+  "file": "File:Jason Sudeikis on March 20, 2023 in the Oval Office of the White House - P20230320AS-2571 (cropped).jpg"
+ },
  "Javier Bardem": {
   "years": [
    2008,
@@ -105,7 +138,8 @@
   "years": [
    2010,
    2019
-  ]
+  ],
+  "file": "File:Jeff Goldblum by Gage Skidmore.jpg"
  },
  "Jerry Seinfeld": {
   "years": [
@@ -113,11 +147,23 @@
    2017
   ]
  },
+ "Jesse Eisenberg": {
+  "file": "File:Jesse Eisenberg-62192 (cropped).jpg"
+ },
+ "Jimmy Kimmel": {
+  "file": "File:Jimmy Kimmel June 2022.jpg"
+ },
+ "John C. Reilly": {
+  "file": "File:John C. Reilly (43646997525) (cropped 2).jpg"
+ },
  "Jon Hamm": {
   "years": [
    2008,
    2017
   ]
+ },
+ "Justin Bieber": {
+  "file": "File:Justin Bieber (cropped).png"
  },
  "Keanu Reeves": {
   "years": [
@@ -135,7 +181,17 @@
   "years": [
    2003,
    2014
-  ]
+  ],
+  "file": "File:Kevin Costner 2014.jpg"
+ },
+ "Kevin Durant": {
+  "file": "File:Kevin Durant Day (36573174561) (cropped).jpg"
+ },
+ "Kevin James": {
+  "file": "File:Kevin-james-dickste-freunde-berlin-17-01-11 (cropped).jpg"
+ },
+ "Lakeith Stanfield": {
+  "file": "File:Keith Stanfield by Gage Skidmore.jpg"
  },
  "Larry David": {
   "years": [
@@ -143,11 +199,20 @@
    2017
   ]
  },
+ "LeBron James": {
+  "file": "File:LeBron James and Kevin Love (cropped).jpg"
+ },
  "Leonardo DiCaprio": {
   "years": [
    2008,
    2016
   ]
+ },
+ "Luke Combs": {
+  "file": "File:Luke Combs in 2020.png"
+ },
+ "Machine Gun Kelly": {
+  "file": "File:Machine Gun Kelly Charity Softball (53117851335)crop.png"
  },
  "Mark Wahlberg": {
   "years": [
@@ -161,6 +226,9 @@
    2018
   ]
  },
+ "Michael Fassbender": {
+  "file": "File:Michael Fassbender (25882726425).jpg"
+ },
  "Michael Jordan": {
   "years": [
    2005,
@@ -171,13 +239,32 @@
   "years": [
    2005,
    2014
-  ]
+  ],
+  "file": "File:Mike Myers David Shankbone 2010 NYC.jpg"
  },
  "Morgan Freeman": {
   "years": [
    2005,
    2014
   ]
+ },
+ "Morgan Wallen": {
+  "file": "File:Morgan Wallen performing at Bank of America Stadium (cropped).png"
+ },
+ "Neymar": {
+  "file": "File:Neymar Jr presentation - Press conference for PSG 001 (cropped).jpg"
+ },
+ "Patrick Mahomes": {
+  "file": "File:Patrick Mahomes in the Oval Office of the White House on June 5, 2023 - P20230605AS-0902 (cropped).jpg"
+ },
+ "Peter Crouch": {
+  "file": "File:Chelsea 3 Stoke 0 (13677350585) - Peter Crouch (cropped).jpg"
+ },
+ "Pharrell Williams": {
+  "file": "File:Pharrell Williams at the 2024 Telluride Film Festival (cropped).jpg"
+ },
+ "Post Malone": {
+  "file": "File:Post Malone 2018 (cropped).jpg"
  },
  "Robert De Niro": {
   "years": [
@@ -195,7 +282,14 @@
   "years": [
    2005,
    2015
-  ]
+  ],
+  "file": "File:Samuel L. Jackson SDCC 2014 (cropped).jpg"
+ },
+ "Snoop Dogg": {
+  "file": "File:Snoop Dogg, WrestleMania XL (cropped) (cropped).jpg"
+ },
+ "Stephen Curry": {
+  "file": "File:Stephen Curry Shooting (1).jpg"
  },
  "Steve Buscemi": {
   "years": [
@@ -203,11 +297,23 @@
    2017
   ]
  },
+ "The Weeknd": {
+  "file": "File:The Weeknd Cannes 2023.png"
+ },
  "Tom Cruise": {
   "years": [
    2008,
    2018
   ]
+ },
+ "Travis Kelce": {
+  "file": "File:Travis kelce 2017 training camp (cropped).jpg"
+ },
+ "Tyler, the Creator": {
+  "file": "File:Tyler the Creator 2022 cropped (cropped).png"
+ },
+ "Wayne Rooney": {
+  "file": "File:Wayne Rooney (50121495731) (cropped).jpg"
  },
  "Will Smith": {
   "years": [
