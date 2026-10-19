@@ -33,7 +33,7 @@ interface Run {
 }
 
 /** Run one simulated session until the stopping rule fires (or `maxQ`). */
-function simulate(theta: number, s: number, seed: number, maxQ = ENGINE.maxQuestions): Run {
+function simulate(theta: number, s: number, seed: number, maxQ: number = ENGINE.maxQuestions): Run {
   const rng = makeRng(seed);
   const votes: Vote[] = [];
   let stoppedAt: number | null = null;
