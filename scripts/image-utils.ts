@@ -102,7 +102,9 @@ export function scoreCandidate(c: Candidate, celebName: string, era?: Era, now =
   const title = normalize(c.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/[_()]/g, " "));
   const text = `${title} ${normalize(c.description)}`;
   let score = 0;
-  if (c.fromPageImage) score += 6;
+  // The article's lead image is the best-curated pick, but it shouldn't outweigh the date window.
+  const inWindow = c.year !== undefined && (era ? c.year >= era[0] && c.year <= era[1] : now - c.year <= 10);
+  if (c.fromPageImage) score += inWindow ? 6 : 3;
   if (c.fromWikidata) score += c.fromPageImage ? 1 : 4;
   if (c.offCategory) score -= 3;
   if (title.includes(normalize(surname(celebName)))) score += 2;

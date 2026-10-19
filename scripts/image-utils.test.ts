@@ -64,6 +64,12 @@ describe("filters", () => {
     expect(recencyScore({ ...base, year: 2022, yearSource: "uploaded" }, 2026)).toBeLessThan(recencyScore(recent, 2026));
     expect(recencyScore({ ...base, year: undefined }, 2026)).toBeLessThan(recencyScore(recent, 2026));
   });
+  it("gives a stale page image less of a head start", () => {
+    const fresh = scoreCandidate({ ...base, year: 2022, fromPageImage: true }, "Ryan Gosling", undefined, 2026);
+    const stale = scoreCandidate({ ...base, year: 2006, fromPageImage: true }, "Ryan Gosling", undefined, 2026);
+    expect(fresh - scoreCandidate({ ...base, year: 2022 }, "Ryan Gosling", undefined, 2026)).toBe(6);
+    expect(stale - scoreCandidate({ ...base, year: 2006 }, "Ryan Gosling", undefined, 2026)).toBe(3);
+  });
   it("penalises sunglasses, hats and profile shots", () => {
     for (const title of ["File:Ryan Gosling in sunglasses.jpg", "File:Ryan Gosling wearing a hat.jpg", "File:Ryan Gosling profile.jpg"])
       expect(scoreCandidate({ ...base, title }, "Ryan Gosling")).toBeLessThan(scoreCandidate(base, "Ryan Gosling"));

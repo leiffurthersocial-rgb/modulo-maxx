@@ -28,6 +28,7 @@ import {
   withFilePrefix,
   yearFromTitle,
   type Candidate,
+  type Era,
   type Override,
   type Rejection,
 } from "./image-utils";
@@ -195,8 +196,11 @@ async function categoryFiles(cat: string, limit = 50): Promise<string[]> {
   return (data?.query?.categorymembers ?? []).map((m: { title: string }) => withFilePrefix(m.title));
 }
 
-/** Year subcategories such as "Ryan Gosling in 2023" from the last RECENT_YEARS years, newest first. */
-async function recentYearCategories(cat: string): Promise<string[]> {
+/**
+ * Year subcategories such as "Ryan Gosling in 2023", inside the pinned era or else from the last
+ * RECENT_YEARS years, newest first.
+ */
+async function yearCategories(cat: string, era?: Era): Promise<string[]> {
   const data = await api(COMMONS_API, {
     action: "query",
     list: "categorymembers",
@@ -204,11 +208,11 @@ async function recentYearCategories(cat: string): Promise<string[]> {
     cmtype: "subcat",
     cmlimit: "200",
   });
-  const minYear = new Date().getFullYear() - RECENT_YEARS;
+  const [from, to] = era ?? [new Date().getFullYear() - RECENT_YEARS, Infinity];
   return (data?.query?.categorymembers ?? [])
     .map((m: { title: string }) => m.title.replace(/^Category:/, ""))
     .map((t: string) => ({ t, y: Number(t.match(/\b(?:in|at|during)\s+((?:19|20)\d{2})$/)?.[1]) }))
-    .filter((x: { y: number }) => x.y >= minYear)
+    .filter((x: { y: number }) => x.y >= from && x.y <= to)
     .sort((a: { y: number }, b: { y: number }) => b.y - a.y)
     .map((x: { t: string }) => x.t);
 }
@@ -223,7 +227,7 @@ interface Sources {
 }
 
 /** Candidate file titles: the article's images, Wikidata's image, the Commons category (plus recent year subcategories) and a Commons search. */
-async function candidateTitles(name: string, category: string, wikiOverride?: string): Promise<Sources> {
+async function candidateTitles(name: string, category: string, wikiOverride?: string, era?: Era): Promise<Sources> {
   const titles = new Set<string>();
   const article = await resolveArticle(name, category, wikiOverride);
   if (article?.pageImage) titles.add(article.pageImage);
@@ -236,7 +240,7 @@ async function candidateTitles(name: string, category: string, wikiOverride?: st
 
   if (commonsCat) {
     for (const t of await categoryFiles(commonsCat)) titles.add(t);
-    for (const sub of (await recentYearCategories(commonsCat)).slice(0, 6)) {
+    for (const sub of (await yearCategories(commonsCat, era)).slice(0, 6)) {
       for (const t of await categoryFiles(sub, 20)) titles.add(t);
     }
   }
@@ -341,7 +345,7 @@ async function processCeleb(
     const reason = candidates[0] ? rejectReason(candidates[0]) : "missing on Commons";
     if (!candidates[0] || reason) return { report: { ...report, reason: `override ${ov.file}: ${reason}` } };
   } else {
-    const src = await candidateTitles(name, category, ov.wiki);
+    const src = await candidateTitles(name, category, ov.wiki, ov.years);
     report.article = src.article?.title;
     // With an ambiguous name (article title isn't the bare name), search hits outside the
     // person's Commons category are too likely to be someone else.
