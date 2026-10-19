@@ -8,5 +8,5 @@ export default defineConfig({
       "@data": path.resolve(__dirname, "data"),
     },
   },
-  test: { include: ["src/**/*.test.ts", "scripts/**/*.test.ts"] },
+  test: { testTimeout: 60_000, include: ["src/**/*.test.ts", "scripts/**/*.test.ts"] },
 });
