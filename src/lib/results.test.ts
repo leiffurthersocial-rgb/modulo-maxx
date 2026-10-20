@@ -6,7 +6,10 @@ import { initialState, newRater, type AppState } from "./state";
 
 function votesFor(theta: number, s: number, seed: number, n = 14): Vote[] {
   const rng = makeRng(seed);
-  const pool = [...BANK].sort(() => rng() - 0.5).slice(0, n);
+  // Celebs spread evenly across the rating range near the truth, so the test doesn't depend on the bank's exact contents.
+  const sorted = [...BANK].sort((a, b) => a.rating - b.rating);
+  const near = sorted.filter((c) => Math.abs(c.rating - theta) <= 2);
+  const pool = Array.from({ length: n }, (_, i) => near[Math.floor(((i + (seed % 2) * 0.5) * near.length) / n)]);
   return pool.map((c) => {
     const [more, equal] = answerProbs(theta, c.rating, s);
     const u = rng();
