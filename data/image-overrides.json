@@ -8,11 +8,20 @@
    2012
   ]
  },
+ "Alex Turner": {
+  "wiki": "Alex Turner"
+ },
+ "Archie Madekwe": {
+  "drop": true
+ },
  "Ben Stiller": {
   "years": [
    2008,
    2016
   ]
+ },
+ "Bert Kreischer": {
+  "drop": true
  },
  "Bobby Moynihan": {
   "drop": true
@@ -52,6 +61,15 @@
    2005,
    2014
   ]
+ },
+ "Cole Palmer": {
+  "file": "File:Cole Palmer (Chelsea) vs Leicester City, 9th March 2025 (cropped).jpg",
+  "crop": {
+   "x": 0.18,
+   "y": 0.0,
+   "w": 0.64,
+   "h": 0.4
+  }
  },
  "Colin Firth": {
   "years": [
@@ -131,6 +149,9 @@
    2017
   ]
  },
+ "Ian Somerhalder": {
+  "file": "File:Ian Somerhalder (9116302091) (cropped).jpg"
+ },
  "Jack Harlow": {
   "file": "File:Jack Harlow at the 2022 NBA All-Star Celebrity Game.jpg"
  },
@@ -167,6 +188,9 @@
  },
  "John C. Reilly": {
   "file": "File:John C. Reilly (43646997525) (cropped 2).jpg"
+ },
+ "Joji": {
+  "drop": true
  },
  "Jon Hamm": {
   "years": [
@@ -284,6 +308,9 @@
  "Nicholas Galitzine": {
   "file": "File:Nicholas Galitzine on Dulce Osuna.jpg"
  },
+ "Nick Robinson": {
+  "wiki": "Nick Robinson (actor)"
+ },
  "Noah Centineo": {
   "file": "File:Noah Centineo (55230816636).jpg",
   "crop": {
@@ -348,6 +375,9 @@
    2017
   ]
  },
+ "Steve Lacy": {
+  "drop": true
+ },
  "The Weeknd": {
   "file": "File:The Weeknd Cannes 2023.png"
  },
@@ -368,6 +398,9 @@
  },
  "V (BTS)": {
   "wiki": "V (singer)"
+ },
+ "Vinícius Júnior": {
+  "wiki": "Vinícius Júnior"
  },
  "Wayne Rooney": {
   "file": "File:Wayne Rooney (50121495731) (cropped).jpg"
