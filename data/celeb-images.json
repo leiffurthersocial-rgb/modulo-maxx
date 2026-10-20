@@ -2078,14 +2078,14 @@
  "matt-rife": {
   "name": "Matt Rife",
   "file": "matt-rife.jpg",
-  "title": "File:Matt Rife 2024.jpg",
-  "author": "Jaime Aquino",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matt_Rife_2024.jpg",
-  "width": 554,
-  "height": 661,
-  "year": 2024
+  "title": "File:Matt Rife, 2021.jpg",
+  "author": "OVERNIGHT",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matt_Rife,_2021.jpg",
+  "width": 600,
+  "height": 800,
+  "year": 2021
  },
  "matthew-gray-gubler": {
   "name": "Matthew Gray Gubler",
@@ -2194,6 +2194,18 @@
   "width": 600,
   "height": 800,
   "year": 2023
+ },
+ "miles-teller": {
+  "name": "Miles Teller",
+  "file": "miles-teller.jpg",
+  "title": "File:Miles Teller TIFF 2025 (3x4 cropped).png",
+  "author": "JoshPopov",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miles_Teller_TIFF_2025_(3x4_cropped).png",
+  "width": 600,
+  "height": 800,
+  "year": 2025
  },
  "morgan-freeman": {
   "name": "Morgan Freeman",
