@@ -13,56 +13,76 @@
   },
   {
    "name": "Sean O'Pry",
-   "rating": 9.3,
+   "rating": 9.5,
    "category": "model"
   },
   {
    "name": "Henry Cavill",
-   "rating": 9.0,
+   "rating": 9.2,
    "category": "actor"
   },
   {
    "name": "Jordan Barrett",
-   "rating": 8.6,
+   "rating": 9.1,
    "category": "model"
   },
   {
-   "name": "Chace Crawford",
-   "rating": 8.5,
-   "category": "actor"
-  },
-  {
    "name": "Brad Pitt",
-   "rating": 8.4,
+   "rating": 8.8,
    "category": "actor"
   },
   {
    "name": "Chris Hemsworth",
-   "rating": 8.4,
-   "category": "actor"
-  },
-  {
-   "name": "Austin Butler",
-   "rating": 8.3,
-   "category": "actor"
-  },
-  {
-   "name": "Charles Melton",
-   "rating": 8.3,
-   "category": "actor"
-  },
-  {
-   "name": "Chris Evans",
-   "rating": 8.3,
-   "category": "actor"
-  },
-  {
-   "name": "Jacob Elordi",
-   "rating": 8.3,
+   "rating": 8.7,
    "category": "actor"
   },
   {
    "name": "Zac Efron",
+   "rating": 8.7,
+   "category": "actor"
+  },
+  {
+   "name": "Chace Crawford",
+   "rating": 8.6,
+   "category": "actor"
+  },
+  {
+   "name": "Charles Melton",
+   "rating": 8.6,
+   "category": "actor"
+  },
+  {
+   "name": "Ian Somerhalder",
+   "rating": 8.6,
+   "category": "actor"
+  },
+  {
+   "name": "David Beckham",
+   "rating": 8.5,
+   "category": "athlete"
+  },
+  {
+   "name": "Robert Pattinson",
+   "rating": 8.5,
+   "category": "actor"
+  },
+  {
+   "name": "Theo James",
+   "rating": 8.5,
+   "category": "actor"
+  },
+  {
+   "name": "Leonardo DiCaprio",
+   "rating": 8.4,
+   "category": "actor"
+  },
+  {
+   "name": "Zayn Malik",
+   "rating": 8.4,
+   "category": "musician"
+  },
+  {
+   "name": "Austin Butler",
    "rating": 8.3,
    "category": "actor"
   },
@@ -72,24 +92,19 @@
    "category": "musician"
   },
   {
-   "name": "David Beckham",
-   "rating": 8.2,
-   "category": "athlete"
-  },
-  {
-   "name": "Michael B. Jordan",
+   "name": "Chris Evans",
    "rating": 8.2,
    "category": "actor"
   },
   {
-   "name": "Theo James",
+   "name": "Tom Cruise",
    "rating": 8.2,
    "category": "actor"
   },
   {
-   "name": "Zayn Malik",
-   "rating": 8.2,
-   "category": "musician"
+   "name": "Jacob Elordi",
+   "rating": 8.1,
+   "category": "actor"
   },
   {
    "name": "Jon Hamm",
@@ -97,14 +112,14 @@
    "category": "actor"
   },
   {
-   "name": "Ian Somerhalder",
-   "rating": 8.0,
-   "category": "actor"
+   "name": "Lucky Blue Smith",
+   "rating": 8.1,
+   "category": "model"
   },
   {
-   "name": "Lucky Blue Smith",
-   "rating": 8.0,
-   "category": "model"
+   "name": "Cristiano Ronaldo",
+   "rating": 7.9,
+   "category": "athlete"
   },
   {
    "name": "Drew Starkey",
@@ -142,18 +157,8 @@
    "category": "actor"
   },
   {
-   "name": "Ryan Gosling",
-   "rating": 7.8,
-   "category": "actor"
-  },
-  {
    "name": "Tom Blyth",
    "rating": 7.8,
-   "category": "actor"
-  },
-  {
-   "name": "Robert Pattinson",
-   "rating": 7.7,
    "category": "actor"
   },
   {
@@ -167,17 +172,12 @@
    "category": "actor"
   },
   {
-   "name": "Cristiano Ronaldo",
-   "rating": 7.6,
-   "category": "athlete"
-  },
-  {
    "name": "Jensen Ackles",
    "rating": 7.6,
    "category": "actor"
   },
   {
-   "name": "Leonardo DiCaprio",
+   "name": "Michael B. Jordan",
    "rating": 7.6,
    "category": "actor"
   },
@@ -188,6 +188,11 @@
   },
   {
    "name": "Jude Law",
+   "rating": 7.5,
+   "category": "actor"
+  },
+  {
+   "name": "Ryan Gosling",
    "rating": 7.5,
    "category": "actor"
   },
@@ -232,11 +237,6 @@
    "category": "actor"
   },
   {
-   "name": "Tom Cruise",
-   "rating": 7.4,
-   "category": "actor"
-  },
-  {
    "name": "V (BTS)",
    "rating": 7.4,
    "category": "musician"
@@ -250,6 +250,11 @@
    "name": "Joe Alwyn",
    "rating": 7.3,
    "category": "actor"
+  },
+  {
+   "name": "Justin Bieber",
+   "rating": 7.3,
+   "category": "musician"
   },
   {
    "name": "Kit Harington",
@@ -412,9 +417,24 @@
    "category": "actor"
   },
   {
+   "name": "Neymar",
+   "rating": 6.7,
+   "category": "athlete"
+  },
+  {
    "name": "Taylor Lautner",
    "rating": 6.7,
    "category": "actor"
+  },
+  {
+   "name": "Timothée Chalamet",
+   "rating": 6.7,
+   "category": "actor"
+  },
+  {
+   "name": "Tom Brady",
+   "rating": 6.7,
+   "category": "athlete"
   },
   {
    "name": "Tom Hiddleston",
@@ -433,16 +453,6 @@
   },
   {
    "name": "Paul Mescal",
-   "rating": 6.6,
-   "category": "actor"
-  },
-  {
-   "name": "Timothée Chalamet",
-   "rating": 6.6,
-   "category": "actor"
-  },
-  {
-   "name": "Tom Holland",
    "rating": 6.6,
    "category": "actor"
   },
@@ -487,6 +497,11 @@
    "category": "actor"
   },
   {
+   "name": "Mads Mikkelsen",
+   "rating": 6.5,
+   "category": "actor"
+  },
+  {
    "name": "Nick Jonas",
    "rating": 6.5,
    "category": "musician"
@@ -498,6 +513,11 @@
   },
   {
    "name": "Paul Rudd",
+   "rating": 6.5,
+   "category": "actor"
+  },
+  {
+   "name": "Tom Holland",
    "rating": 6.5,
    "category": "actor"
   },
@@ -567,6 +587,11 @@
    "category": "comedian"
   },
   {
+   "name": "Pedro Pascal",
+   "rating": 6.4,
+   "category": "actor"
+  },
+  {
    "name": "Drake",
    "rating": 6.3,
    "category": "musician"
@@ -580,11 +605,6 @@
    "name": "Jeremy Allen White",
    "rating": 6.3,
    "category": "actor"
-  },
-  {
-   "name": "Justin Bieber",
-   "rating": 6.3,
-   "category": "musician"
   },
   {
    "name": "Logan Paul",
@@ -642,6 +662,11 @@
    "category": "athlete"
   },
   {
+   "name": "Kylian Mbappé",
+   "rating": 6.2,
+   "category": "athlete"
+  },
+  {
    "name": "Mason Mount",
    "rating": 6.2,
    "category": "athlete"
@@ -657,14 +682,14 @@
    "category": "athlete"
   },
   {
-   "name": "Charlie Puth",
+   "name": "Central Cee",
    "rating": 6.1,
    "category": "musician"
   },
   {
-   "name": "Tom Brady",
+   "name": "Charlie Puth",
    "rating": 6.1,
-   "category": "athlete"
+   "category": "musician"
   },
   {
    "name": "Austin Abrams",
@@ -678,11 +703,6 @@
   },
   {
    "name": "Bruno Mars",
-   "rating": 6.0,
-   "category": "musician"
-  },
-  {
-   "name": "Central Cee",
    "rating": 6.0,
    "category": "musician"
   },
@@ -715,11 +735,6 @@
    "name": "Lakeith Stanfield",
    "rating": 6.0,
    "category": "actor"
-  },
-  {
-   "name": "Neymar",
-   "rating": 6.0,
-   "category": "athlete"
   },
   {
    "name": "Niall Horan",
@@ -792,16 +807,6 @@
    "category": "musician"
   },
   {
-   "name": "Kylian Mbappé",
-   "rating": 5.9,
-   "category": "athlete"
-  },
-  {
-   "name": "Lionel Messi",
-   "rating": 5.9,
-   "category": "athlete"
-  },
-  {
    "name": "Mark Ruffalo",
    "rating": 5.9,
    "category": "actor"
@@ -857,14 +862,14 @@
    "category": "musician"
   },
   {
+   "name": "Lionel Messi",
+   "rating": 5.8,
+   "category": "athlete"
+  },
+  {
    "name": "Machine Gun Kelly",
    "rating": 5.8,
    "category": "musician"
-  },
-  {
-   "name": "Mads Mikkelsen",
-   "rating": 5.8,
-   "category": "actor"
   },
   {
    "name": "Pedri",
@@ -895,11 +900,6 @@
    "name": "Marcus Rashford",
    "rating": 5.7,
    "category": "athlete"
-  },
-  {
-   "name": "Pedro Pascal",
-   "rating": 5.7,
-   "category": "actor"
   },
   {
    "name": "Rafael Nadal",
@@ -1022,6 +1022,11 @@
    "category": "actor"
   },
   {
+   "name": "Elijah Wood",
+   "rating": 5.5,
+   "category": "actor"
+  },
+  {
    "name": "Ja Morant",
    "rating": 5.5,
    "category": "athlete"
@@ -1063,11 +1068,6 @@
   },
   {
    "name": "Aaron Paul",
-   "rating": 5.4,
-   "category": "actor"
-  },
-  {
-   "name": "Adam Driver",
    "rating": 5.4,
    "category": "actor"
   },
@@ -1152,11 +1152,6 @@
    "category": "athlete"
   },
   {
-   "name": "MrBeast",
-   "rating": 5.4,
-   "category": "creator"
-  },
-  {
    "name": "Patrick Mahomes",
    "rating": 5.4,
    "category": "athlete"
@@ -1177,8 +1172,18 @@
    "category": "actor"
   },
   {
+   "name": "Eminem",
+   "rating": 5.3,
+   "category": "musician"
+  },
+  {
    "name": "Sacha Baron Cohen",
    "rating": 5.3,
+   "category": "actor"
+  },
+  {
+   "name": "Adam Driver",
+   "rating": 5.2,
    "category": "actor"
   },
   {
@@ -1222,6 +1227,11 @@
    "category": "coach"
   },
   {
+   "name": "MrBeast",
+   "rating": 5.2,
+   "category": "creator"
+  },
+  {
    "name": "Paul Bettany",
    "rating": 5.2,
    "category": "actor"
@@ -1242,16 +1252,6 @@
    "category": "actor"
   },
   {
-   "name": "Elijah Wood",
-   "rating": 5.0,
-   "category": "actor"
-  },
-  {
-   "name": "Eminem",
-   "rating": 5.0,
-   "category": "musician"
-  },
-  {
    "name": "Jim Carrey",
    "rating": 5.0,
    "category": "comedian"
@@ -1263,11 +1263,6 @@
   },
   {
    "name": "Mark Strong",
-   "rating": 5.0,
-   "category": "actor"
-  },
-  {
-   "name": "Michael Cera",
    "rating": 5.0,
    "category": "actor"
   },
@@ -1400,6 +1395,11 @@
    "name": "KSI",
    "rating": 4.7,
    "category": "creator"
+  },
+  {
+   "name": "Michael Cera",
+   "rating": 4.7,
+   "category": "actor"
   },
   {
    "name": "Seth Rogen",
@@ -1572,11 +1572,6 @@
    "category": "musician"
   },
   {
-   "name": "Post Malone",
-   "rating": 4.2,
-   "category": "musician"
-  },
-  {
    "name": "Ricky Gervais",
    "rating": 4.2,
    "category": "actor"
@@ -1615,6 +1610,11 @@
    "name": "Peter Crouch",
    "rating": 4.0,
    "category": "athlete"
+  },
+  {
+   "name": "Post Malone",
+   "rating": 4.0,
+   "category": "musician"
   },
   {
    "name": "Rick Ross",
@@ -1722,6 +1722,11 @@
    "category": "actor"
   },
   {
+   "name": "Steve Buscemi",
+   "rating": 3.5,
+   "category": "actor"
+  },
+  {
    "name": "Joe Pesci",
    "rating": 3.4,
    "category": "actor"
@@ -1749,11 +1754,6 @@
   {
    "name": "Stephen Root",
    "rating": 3.4,
-   "category": "actor"
-  },
-  {
-   "name": "Steve Buscemi",
-   "rating": 3.2,
    "category": "actor"
   },
   {
