@@ -1,5 +1,3 @@
-import buildPhotoData from "@data/build-photo-credits.json";
-
 // Body types for the subject form. Scoring reads `muscle` and `fat`; `shape` only drives the
 // picture (see BodyFigure).
 //
@@ -42,18 +40,6 @@ export const BUILDS: Build[] = [
 ];
 
 export const DEFAULT_BUILD_ID = "average";
-
-export interface BuildPhoto {
-  file: string;
-  title: string;
-  author: string;
-  license: string;
-  licenseUrl?: string;
-  sourceUrl: string;
-}
-
-/** Torso photos for some body types (scripts/fetch-build-photos.ts); the rest use a drawn figure. */
-export const BUILD_PHOTOS = buildPhotoData as Record<string, BuildPhoto>;
 
 export function getBuild(id: string | undefined): Build {
   return BUILDS.find((b) => b.id === id) ?? BUILDS.find((b) => b.id === DEFAULT_BUILD_ID)!;

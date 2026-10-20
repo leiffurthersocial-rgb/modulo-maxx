@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { imageCredits } from "@/lib/bank";
-import { BUILD_PHOTOS, BUILDS } from "@/lib/builds";
 
 export const metadata: Metadata = { title: "Photo credits · Modulo Maxx" };
 
 export default function Credits() {
   const credits = imageCredits();
-  const bodyCredits = BUILDS.flatMap((b) => (BUILD_PHOTOS[b.id] ? [{ ...BUILD_PHOTOS[b.id], name: `Body type: ${b.label}` }] : []));
   return (
     <div className="fade-in">
       <Link href="/" className="text-sm text-muted underline-offset-4 hover:underline">
@@ -22,8 +20,8 @@ export default function Credits() {
         <p className="mt-10">No photos yet.</p>
       ) : (
         <ul className="mt-10 flex flex-col gap-5">
-          {[...credits, ...bodyCredits].map((c) => (
-            <li key={c.sourceUrl} className="border-t border-line pt-4">
+          {credits.map((c) => (
+            <li key={c.file} className="border-t border-line pt-4">
               <p className="font-medium">{c.name}</p>
               <p className="text-sm text-muted">
                 <a href={c.sourceUrl} className="underline-offset-4 hover:underline" target="_blank" rel="noreferrer">
