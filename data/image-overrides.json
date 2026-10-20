@@ -1,4 +1,10 @@
 {
+ "A$AP Rocky": {
+  "file": "File:ASAP Rocky VMA 2015.jpg"
+ },
+ "Aaron Taylor-Johnson": {
+  "file": "File:Aaron Taylor-Johnson SDCC 2014 01.jpg"
+ },
  "Adam Sandler": {
   "file": "File:Adam Sandler Jay Kelly-33 (cropped).jpg"
  },
@@ -10,6 +16,9 @@
  },
  "Alex Turner": {
   "wiki": "Alex Turner"
+ },
+ "Andrew Garfield": {
+  "file": "File:Andrew Garfield 82nd Venice Film Festival (cropped).jpg"
  },
  "Archie Madekwe": {
   "drop": true
@@ -40,6 +49,15 @@
    2010,
    2018
   ]
+ },
+ "Central Cee": {
+  "file": "File:Central cee-5.jpg",
+  "crop": {
+   "x": 0.2,
+   "y": 0.0,
+   "w": 0.6,
+   "h": 0.42
+  }
  },
  "Chace Crawford": {
   "file": "File:Chace Crawford 2012 Shankbone 4.JPG"
@@ -77,6 +95,9 @@
    2015
   ]
  },
+ "Conan Gray": {
+  "file": "File:Conan Gray at 2026 Montreux Jazz Festival-05.jpg"
+ },
  "Cristiano Ronaldo": {
   "years": [
    2014,
@@ -97,11 +118,7 @@
   ]
  },
  "David Beckham": {
-  "years": [
-   2008,
-   2017
-  ],
-  "file": "File:David Beckham at US Embassy in London (cropped).jpg"
+  "file": "File:David Beckham 2009.jpg"
  },
  "Drew Starkey": {
   "file": "File:Drew Starkey.jpg",
@@ -265,6 +282,9 @@
    2018
   ]
  },
+ "Mason Mount": {
+  "file": "File:Mason Mount - 2021-12-08 - FC Zenit Saint Petersburg v Chelsea F.C.jpg"
+ },
  "Matt Rife": {
   "file": "File:Matt Rife, 2021.jpg"
  },
@@ -282,6 +302,9 @@
    2005,
    2015
   ]
+ },
+ "Michael Keaton": {
+  "file": "File:Michael Keaton (NYCC 2014) (cropped).JPG"
  },
  "Mike Myers": {
   "years": [
@@ -380,6 +403,9 @@
  },
  "The Weeknd": {
   "file": "File:The Weeknd Cannes 2023.png"
+ },
+ "Tim Robinson": {
+  "drop": true
  },
  "Tom Cruise": {
   "years": [
