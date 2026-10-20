@@ -1,0 +1,1331 @@
+{
+ "note": "Vibe archetypes per celeb, best fit first. Edit freely: ids are defined in src/lib/archetypes.ts.",
+ "celebs": {
+  "A$AP Rocky": [
+   "bad-boy",
+   "artsy"
+  ],
+  "Aaron Paul": [
+   "bad-boy",
+   "rugged"
+  ],
+  "Aaron Taylor-Johnson": [
+   "rugged",
+   "bad-boy"
+  ],
+  "Adam Driver": [
+   "artsy",
+   "character"
+  ],
+  "Adam Levine": [
+   "bad-boy"
+  ],
+  "Adam Sandler": [
+   "funny-guy"
+  ],
+  "Al Pacino": [
+   "character",
+   "silver-fox"
+  ],
+  "Alex Turner": [
+   "artsy",
+   "bad-boy"
+  ],
+  "Alexander Skarsgård": [
+   "leading-man",
+   "rugged"
+  ],
+  "Andrew Garfield": [
+   "artsy",
+   "boy-next-door"
+  ],
+  "Andrew Schulz": [
+   "funny-guy"
+  ],
+  "Andrew Scott": [
+   "character",
+   "artsy"
+  ],
+  "Andy Richter": [
+   "funny-guy"
+  ],
+  "Ansel Elgort": [
+   "pretty-boy",
+   "boy-next-door"
+  ],
+  "Anthony Edwards": [
+   "athlete"
+  ],
+  "Anthony Mackie": [
+   "leading-man",
+   "funny-guy"
+  ],
+  "Asa Butterfield": [
+   "pretty-boy",
+   "artsy"
+  ],
+  "Austin Abrams": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Austin Butler": [
+   "leading-man",
+   "model"
+  ],
+  "Bad Bunny": [
+   "bad-boy",
+   "artsy"
+  ],
+  "Barry Keoghan": [
+   "character",
+   "bad-boy"
+  ],
+  "Ben Affleck": [
+   "leading-man",
+   "rugged"
+  ],
+  "Ben Stiller": [
+   "funny-guy",
+   "silver-fox"
+  ],
+  "Benedict Cumberbatch": [
+   "character",
+   "artsy"
+  ],
+  "Benson Boone": [
+   "boy-next-door",
+   "artsy"
+  ],
+  "Bill Burr": [
+   "funny-guy"
+  ],
+  "Bill Hader": [
+   "funny-guy",
+   "character"
+  ],
+  "Bo Burnham": [
+   "artsy",
+   "funny-guy"
+  ],
+  "Bob Odenkirk": [
+   "funny-guy",
+   "character"
+  ],
+  "Bobby Lee": [
+   "funny-guy"
+  ],
+  "Brad Pitt": [
+   "leading-man",
+   "silver-fox"
+  ],
+  "Bradley Cooper": [
+   "leading-man",
+   "rugged"
+  ],
+  "Brendan Gleeson": [
+   "rugged",
+   "character"
+  ],
+  "Bruno Mars": [
+   "bad-boy",
+   "funny-guy"
+  ],
+  "Bryan Cranston": [
+   "silver-fox",
+   "character"
+  ],
+  "Bukayo Saka": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Caleb McLaughlin": [
+   "boy-next-door"
+  ],
+  "Callum Turner": [
+   "leading-man",
+   "artsy"
+  ],
+  "Central Cee": [
+   "bad-boy"
+  ],
+  "Cha Eun-woo": [
+   "pretty-boy"
+  ],
+  "Chace Crawford": [
+   "leading-man",
+   "pretty-boy"
+  ],
+  "Channing Tatum": [
+   "boy-next-door",
+   "athlete"
+  ],
+  "Charles Barkley": [
+   "athlete",
+   "funny-guy"
+  ],
+  "Charles Melton": [
+   "model",
+   "leading-man"
+  ],
+  "Charlie Day": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Charlie Hunnam": [
+   "rugged",
+   "bad-boy"
+  ],
+  "Charlie Puth": [
+   "boy-next-door",
+   "pretty-boy"
+  ],
+  "Chico Lachowski": [
+   "model",
+   "pretty-boy"
+  ],
+  "Chris Evans": [
+   "leading-man",
+   "rugged"
+  ],
+  "Chris Hemsworth": [
+   "rugged",
+   "leading-man"
+  ],
+  "Chris Martin": [
+   "artsy",
+   "boy-next-door"
+  ],
+  "Chris Pine": [
+   "leading-man",
+   "rugged"
+  ],
+  "Chris Pratt": [
+   "funny-guy",
+   "boy-next-door",
+   "leading-man"
+  ],
+  "Chris Rock": [
+   "funny-guy"
+  ],
+  "Chris Stapleton": [
+   "rugged"
+  ],
+  "Christian Bale": [
+   "tough-guy",
+   "leading-man"
+  ],
+  "Christopher Walken": [
+   "character",
+   "silver-fox"
+  ],
+  "Cillian Murphy": [
+   "artsy"
+  ],
+  "Cole Palmer": [
+   "athlete",
+   "pretty-boy"
+  ],
+  "Cole Sprouse": [
+   "boy-next-door",
+   "artsy"
+  ],
+  "Colin Farrell": [
+   "bad-boy",
+   "rugged"
+  ],
+  "Colin Firth": [
+   "silver-fox",
+   "leading-man"
+  ],
+  "Colman Domingo": [
+   "silver-fox",
+   "artsy"
+  ],
+  "Conan Gray": [
+   "pretty-boy",
+   "artsy"
+  ],
+  "Conan O'Brien": [
+   "funny-guy",
+   "character"
+  ],
+  "Conor McGregor": [
+   "tough-guy",
+   "athlete",
+   "bad-boy"
+  ],
+  "Cristiano Ronaldo": [
+   "athlete"
+  ],
+  "Dacre Montgomery": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Dan Levy": [
+   "funny-guy",
+   "artsy"
+  ],
+  "Daniel Caesar": [
+   "artsy"
+  ],
+  "Daniel Craig": [
+   "silver-fox",
+   "tough-guy",
+   "leading-man"
+  ],
+  "Daniel Kaluuya": [
+   "character",
+   "artsy"
+  ],
+  "Daniel Radcliffe": [
+   "character",
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Danny DeVito": [
+   "character",
+   "funny-guy"
+  ],
+  "Danny McBride": [
+   "funny-guy",
+   "rugged"
+  ],
+  "Danny Trejo": [
+   "tough-guy",
+   "character"
+  ],
+  "Dave Chappelle": [
+   "funny-guy"
+  ],
+  "Dave Franco": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "David Beckham": [
+   "athlete",
+   "leading-man"
+  ],
+  "Declan Rice": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Denzel Washington": [
+   "silver-fox",
+   "leading-man"
+  ],
+  "Dev Patel": [
+   "rugged",
+   "leading-man"
+  ],
+  "Dominic Fike": [
+   "bad-boy",
+   "pretty-boy",
+   "artsy"
+  ],
+  "Donald Glover": [
+   "artsy",
+   "funny-guy"
+  ],
+  "Drake": [
+   "bad-boy",
+   "leading-man"
+  ],
+  "Drew Starkey": [
+   "bad-boy",
+   "rugged"
+  ],
+  "Dwayne Johnson": [
+   "tough-guy",
+   "athlete"
+  ],
+  "Dylan O'Brien": [
+   "boy-next-door",
+   "rugged"
+  ],
+  "Dylan Sprouse": [
+   "bad-boy",
+   "boy-next-door"
+  ],
+  "Ed Sheeran": [
+   "boy-next-door",
+   "artsy"
+  ],
+  "Eddie Murphy": [
+   "funny-guy"
+  ],
+  "Eddie Redmayne": [
+   "pretty-boy",
+   "character"
+  ],
+  "Elijah Wood": [
+   "pretty-boy",
+   "character"
+  ],
+  "Eminem": [
+   "bad-boy"
+  ],
+  "Eric Bana": [
+   "leading-man",
+   "silver-fox"
+  ],
+  "Erling Haaland": [
+   "athlete",
+   "tough-guy"
+  ],
+  "Evan Peters": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Ewan McGregor": [
+   "leading-man",
+   "silver-fox"
+  ],
+  "Finn Wolfhard": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Flavor Flav": [
+   "character",
+   "funny-guy"
+  ],
+  "Fred Armisen": [
+   "funny-guy",
+   "artsy"
+  ],
+  "Gary Neville": [
+   "athlete"
+  ],
+  "Gaten Matarazzo": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Gene Simmons": [
+   "character",
+   "bad-boy"
+  ],
+  "George Clooney": [
+   "silver-fox",
+   "leading-man"
+  ],
+  "George MacKay": [
+   "artsy",
+   "character"
+  ],
+  "Gerard Butler": [
+   "rugged",
+   "leading-man"
+  ],
+  "Glen Powell": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "Glenn Howerton": [
+   "funny-guy",
+   "leading-man"
+  ],
+  "Gordon Ramsay": [
+   "character",
+   "tough-guy"
+  ],
+  "Guy Fieri": [
+   "character",
+   "funny-guy"
+  ],
+  "Harris Dickinson": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Harry Kane": [
+   "athlete"
+  ],
+  "Harry Styles": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Henry Cavill": [
+   "leading-man"
+  ],
+  "Henry Golding": [
+   "leading-man"
+  ],
+  "Horatio Sanz": [
+   "funny-guy"
+  ],
+  "Hugh Grant": [
+   "silver-fox",
+   "leading-man"
+  ],
+  "Hugh Jackman": [
+   "silver-fox",
+   "rugged"
+  ],
+  "IShowSpeed": [
+   "funny-guy",
+   "athlete"
+  ],
+  "Ian Somerhalder": [
+   "leading-man",
+   "bad-boy"
+  ],
+  "Idris Elba": [
+   "leading-man",
+   "rugged",
+   "silver-fox"
+  ],
+  "Ja Morant": [
+   "athlete",
+   "bad-boy"
+  ],
+  "Jack Black": [
+   "funny-guy",
+   "character"
+  ],
+  "Jack Grealish": [
+   "athlete",
+   "bad-boy"
+  ],
+  "Jack Harlow": [
+   "boy-next-door",
+   "bad-boy"
+  ],
+  "Jack Quaid": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Jacob Batalon": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Jacob Elordi": [
+   "model",
+   "bad-boy"
+  ],
+  "Jake Gyllenhaal": [
+   "leading-man",
+   "rugged"
+  ],
+  "Jake Paul": [
+   "bad-boy",
+   "athlete"
+  ],
+  "Jamie Dornan": [
+   "rugged",
+   "leading-man"
+  ],
+  "Jamie Foxx": [
+   "funny-guy",
+   "leading-man"
+  ],
+  "Jamie Vardy": [
+   "athlete",
+   "rugged"
+  ],
+  "Jared Leto": [
+   "artsy",
+   "bad-boy"
+  ],
+  "Jared Padalecki": [
+   "boy-next-door",
+   "rugged"
+  ],
+  "Jason Bateman": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Jason Mantzoukas": [
+   "funny-guy",
+   "character"
+  ],
+  "Jason Momoa": [
+   "rugged",
+   "tough-guy"
+  ],
+  "Jason Segel": [
+   "funny-guy",
+   "rugged"
+  ],
+  "Jason Statham": [
+   "tough-guy"
+  ],
+  "Jason Sudeikis": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Javier Bardem": [
+   "rugged",
+   "character"
+  ],
+  "Jeff Goldblum": [
+   "silver-fox",
+   "character",
+   "artsy"
+  ],
+  "Jensen Ackles": [
+   "leading-man",
+   "rugged"
+  ],
+  "Jeremy Allen White": [
+   "artsy",
+   "bad-boy"
+  ],
+  "Jeremy Renner": [
+   "tough-guy",
+   "leading-man"
+  ],
+  "Jerry Seinfeld": [
+   "funny-guy"
+  ],
+  "Jesse Eisenberg": [
+   "artsy",
+   "character"
+  ],
+  "Jim Carrey": [
+   "funny-guy",
+   "character"
+  ],
+  "Jim Gaffigan": [
+   "funny-guy"
+  ],
+  "Jimmy Fallon": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Jimmy Kimmel": [
+   "funny-guy"
+  ],
+  "Joaquin Phoenix": [
+   "character",
+   "artsy"
+  ],
+  "Joe Alwyn": [
+   "boy-next-door",
+   "pretty-boy"
+  ],
+  "Joe Burrow": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Joe Keery": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Joe Manganiello": [
+   "tough-guy",
+   "rugged"
+  ],
+  "Joe Pesci": [
+   "tough-guy",
+   "character"
+  ],
+  "Joe Rogan": [
+   "tough-guy",
+   "funny-guy"
+  ],
+  "John Boyega": [
+   "boy-next-door",
+   "leading-man"
+  ],
+  "John C. Reilly": [
+   "funny-guy",
+   "character"
+  ],
+  "John Goodman": [
+   "character",
+   "funny-guy"
+  ],
+  "John Legend": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "John Mulaney": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Jon Bernthal": [
+   "tough-guy",
+   "rugged"
+  ],
+  "Jon Favreau": [
+   "funny-guy",
+   "artsy"
+  ],
+  "Jon Hamm": [
+   "leading-man",
+   "silver-fox"
+  ],
+  "Jon Lovitz": [
+   "funny-guy"
+  ],
+  "Jonah Hill": [
+   "funny-guy",
+   "artsy"
+  ],
+  "Jonathan Bailey": [
+   "leading-man",
+   "artsy"
+  ],
+  "Jonathan Banks": [
+   "tough-guy",
+   "silver-fox"
+  ],
+  "Jordan Barrett": [
+   "model",
+   "bad-boy"
+  ],
+  "Joseph Gordon-Levitt": [
+   "boy-next-door",
+   "artsy"
+  ],
+  "Joseph Quinn": [
+   "artsy",
+   "character",
+   "boy-next-door"
+  ],
+  "Josh Brolin": [
+   "tough-guy",
+   "silver-fox",
+   "rugged"
+  ],
+  "Josh Gad": [
+   "funny-guy"
+  ],
+  "Josh Hartnett": [
+   "rugged",
+   "leading-man"
+  ],
+  "Joshua Bassett": [
+   "pretty-boy",
+   "boy-next-door"
+  ],
+  "José Mourinho": [
+   "silver-fox"
+  ],
+  "Jude Bellingham": [
+   "athlete"
+  ],
+  "Jude Law": [
+   "leading-man",
+   "silver-fox"
+  ],
+  "Jungkook": [
+   "pretty-boy"
+  ],
+  "Justin Bieber": [
+   "bad-boy",
+   "pretty-boy"
+  ],
+  "KJ Apa": [
+   "boy-next-door",
+   "athlete"
+  ],
+  "KSI": [
+   "funny-guy",
+   "athlete"
+  ],
+  "Kai Cenat": [
+   "funny-guy",
+   "bad-boy"
+  ],
+  "Keanu Reeves": [
+   "rugged",
+   "artsy"
+  ],
+  "Kellan Lutz": [
+   "rugged",
+   "leading-man"
+  ],
+  "Kevin Bacon": [
+   "silver-fox",
+   "leading-man"
+  ],
+  "Kevin Costner": [
+   "silver-fox",
+   "rugged"
+  ],
+  "Kevin De Bruyne": [
+   "athlete"
+  ],
+  "Kevin Durant": [
+   "athlete"
+  ],
+  "Kevin Hart": [
+   "funny-guy"
+  ],
+  "Kevin James": [
+   "funny-guy"
+  ],
+  "Kevin Smith": [
+   "funny-guy",
+   "artsy"
+  ],
+  "Kit Connor": [
+   "pretty-boy",
+   "boy-next-door"
+  ],
+  "Kit Harington": [
+   "rugged",
+   "boy-next-door"
+  ],
+  "Kumail Nanjiani": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Kylian Mbappé": [
+   "athlete"
+  ],
+  "Lakeith Stanfield": [
+   "artsy",
+   "character"
+  ],
+  "Larry David": [
+   "funny-guy",
+   "character"
+  ],
+  "LeBron James": [
+   "athlete"
+  ],
+  "Leonardo DiCaprio": [
+   "leading-man"
+  ],
+  "Lewis Capaldi": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Lil Dicky": [
+   "funny-guy",
+   "artsy"
+  ],
+  "Lil Nas X": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Lil Uzi Vert": [
+   "bad-boy",
+   "artsy"
+  ],
+  "Lil Yachty": [
+   "bad-boy",
+   "artsy"
+  ],
+  "Lionel Messi": [
+   "athlete"
+  ],
+  "Logan Paul": [
+   "athlete",
+   "funny-guy"
+  ],
+  "Louis Partridge": [
+   "pretty-boy",
+   "boy-next-door"
+  ],
+  "Louis Tomlinson": [
+   "boy-next-door",
+   "bad-boy"
+  ],
+  "Lucas Hedges": [
+   "pretty-boy",
+   "artsy"
+  ],
+  "Lucky Blue Smith": [
+   "model",
+   "pretty-boy"
+  ],
+  "Luka Dončić": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Lukas Gage": [
+   "pretty-boy",
+   "bad-boy"
+  ],
+  "Luke Combs": [
+   "boy-next-door",
+   "rugged"
+  ],
+  "Machine Gun Kelly": [
+   "bad-boy"
+  ],
+  "Mads Mikkelsen": [
+   "silver-fox",
+   "character"
+  ],
+  "Marcus Rashford": [
+   "athlete"
+  ],
+  "Mark Ruffalo": [
+   "rugged",
+   "silver-fox",
+   "boy-next-door"
+  ],
+  "Mark Strong": [
+   "tough-guy",
+   "silver-fox"
+  ],
+  "Mark Wahlberg": [
+   "tough-guy",
+   "leading-man"
+  ],
+  "Mason Mount": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Matt Damon": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "Matt Rife": [
+   "funny-guy",
+   "pretty-boy"
+  ],
+  "Matthew Gray Gubler": [
+   "artsy",
+   "character"
+  ],
+  "Matthew McConaughey": [
+   "silver-fox",
+   "rugged"
+  ],
+  "Matty Healy": [
+   "artsy",
+   "bad-boy"
+  ],
+  "Michael B. Jordan": [
+   "leading-man",
+   "athlete"
+  ],
+  "Michael Cera": [
+   "artsy",
+   "funny-guy"
+  ],
+  "Michael Fassbender": [
+   "leading-man",
+   "character"
+  ],
+  "Michael Jordan": [
+   "athlete",
+   "silver-fox"
+  ],
+  "Michael Keaton": [
+   "silver-fox",
+   "character"
+  ],
+  "Michael Phelps": [
+   "athlete"
+  ],
+  "Mike Myers": [
+   "funny-guy"
+  ],
+  "Mike Tyson": [
+   "tough-guy",
+   "athlete"
+  ],
+  "Miles Teller": [
+   "boy-next-door",
+   "athlete"
+  ],
+  "Morgan Freeman": [
+   "silver-fox"
+  ],
+  "Morgan Wallen": [
+   "rugged",
+   "bad-boy"
+  ],
+  "MrBeast": [
+   "boy-next-door"
+  ],
+  "Nathan Fillion": [
+   "leading-man",
+   "funny-guy"
+  ],
+  "Neymar": [
+   "athlete"
+  ],
+  "Niall Horan": [
+   "boy-next-door"
+  ],
+  "Nicholas Galitzine": [
+   "pretty-boy",
+   "leading-man"
+  ],
+  "Nick Jonas": [
+   "boy-next-door",
+   "leading-man"
+  ],
+  "Nick Kroll": [
+   "funny-guy"
+  ],
+  "Nick Offerman": [
+   "rugged",
+   "funny-guy"
+  ],
+  "Nick Robinson": [
+   "boy-next-door"
+  ],
+  "Nico Hiraga": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Nikola Jokić": [
+   "athlete"
+  ],
+  "Noah Centineo": [
+   "boy-next-door"
+  ],
+  "Noah Schnapp": [
+   "pretty-boy",
+   "boy-next-door"
+  ],
+  "Novak Djokovic": [
+   "athlete"
+  ],
+  "Orlando Bloom": [
+   "leading-man",
+   "pretty-boy"
+  ],
+  "Oscar Isaac": [
+   "rugged",
+   "silver-fox",
+   "leading-man"
+  ],
+  "Owen Wilson": [
+   "funny-guy",
+   "character"
+  ],
+  "Patrick Mahomes": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Patton Oswalt": [
+   "funny-guy"
+  ],
+  "Paul Bettany": [
+   "artsy",
+   "leading-man"
+  ],
+  "Paul Giamatti": [
+   "character"
+  ],
+  "Paul Mescal": [
+   "artsy",
+   "rugged"
+  ],
+  "Paul Rudd": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Paul Walter Hauser": [
+   "character",
+   "funny-guy"
+  ],
+  "Paul Wesley": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "Pedri": [
+   "athlete",
+   "pretty-boy"
+  ],
+  "Pedro Pascal": [
+   "silver-fox",
+   "rugged"
+  ],
+  "Penn Badgley": [
+   "artsy",
+   "boy-next-door"
+  ],
+  "Pep Guardiola": [
+   "athlete",
+   "silver-fox"
+  ],
+  "Peso Pluma": [
+   "bad-boy"
+  ],
+  "Pete Davidson": [
+   "bad-boy",
+   "funny-guy"
+  ],
+  "Pete Holmes": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Peter Crouch": [
+   "athlete",
+   "character"
+  ],
+  "Pharrell Williams": [
+   "artsy",
+   "pretty-boy"
+  ],
+  "Phil Foden": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Post Malone": [
+   "bad-boy",
+   "artsy"
+  ],
+  "Rafael Nadal": [
+   "athlete",
+   "leading-man"
+  ],
+  "Rainn Wilson": [
+   "funny-guy",
+   "character"
+  ],
+  "Rami Malek": [
+   "character",
+   "artsy"
+  ],
+  "Ray Romano": [
+   "funny-guy"
+  ],
+  "Richard Madden": [
+   "leading-man"
+  ],
+  "Rick Ross": [
+   "tough-guy",
+   "bad-boy"
+  ],
+  "Ricky Gervais": [
+   "funny-guy"
+  ],
+  "Rob McElhenney": [
+   "funny-guy",
+   "boy-next-door"
+  ],
+  "Robert De Niro": [
+   "tough-guy",
+   "silver-fox"
+  ],
+  "Robert Pattinson": [
+   "artsy",
+   "rugged"
+  ],
+  "Roger Federer": [
+   "athlete",
+   "leading-man"
+  ],
+  "Ron Perlman": [
+   "tough-guy",
+   "character"
+  ],
+  "Ross Lynch": [
+   "boy-next-door",
+   "bad-boy"
+  ],
+  "Rowan Atkinson": [
+   "funny-guy",
+   "character"
+  ],
+  "Rudy Pankow": [
+   "pretty-boy",
+   "bad-boy"
+  ],
+  "Rupert Grint": [
+   "boy-next-door",
+   "funny-guy"
+  ],
+  "Ryan Gosling": [
+   "leading-man",
+   "artsy"
+  ],
+  "Ryan Reynolds": [
+   "leading-man",
+   "funny-guy"
+  ],
+  "Sacha Baron Cohen": [
+   "funny-guy",
+   "character"
+  ],
+  "Sam Heughan": [
+   "rugged",
+   "leading-man"
+  ],
+  "Sam Rockwell": [
+   "artsy",
+   "character"
+  ],
+  "Samuel L. Jackson": [
+   "tough-guy",
+   "character"
+  ],
+  "Sean O'Pry": [
+   "model"
+  ],
+  "Sebastian Stan": [
+   "leading-man",
+   "rugged"
+  ],
+  "Seth Rogen": [
+   "funny-guy"
+  ],
+  "Shane Gillis": [
+   "funny-guy"
+  ],
+  "Shaquille O'Neal": [
+   "athlete",
+   "funny-guy"
+  ],
+  "Shawn Mendes": [
+   "boy-next-door",
+   "pretty-boy"
+  ],
+  "Snoop Dogg": [
+   "bad-boy",
+   "funny-guy"
+  ],
+  "Stephen Curry": [
+   "athlete",
+   "boy-next-door"
+  ],
+  "Stephen Merchant": [
+   "funny-guy",
+   "character"
+  ],
+  "Stephen Root": [
+   "character"
+  ],
+  "Steve Buscemi": [
+   "character"
+  ],
+  "Steve Carell": [
+   "funny-guy",
+   "silver-fox"
+  ],
+  "Steve Harvey": [
+   "funny-guy"
+  ],
+  "Taron Egerton": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "Taylor Lautner": [
+   "boy-next-door",
+   "athlete"
+  ],
+  "The Weeknd": [
+   "bad-boy",
+   "artsy"
+  ],
+  "Theo James": [
+   "leading-man",
+   "rugged"
+  ],
+  "Theo Von": [
+   "funny-guy"
+  ],
+  "Timothée Chalamet": [
+   "pretty-boy",
+   "artsy"
+  ],
+  "Tom Blyth": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "Tom Brady": [
+   "athlete",
+   "leading-man"
+  ],
+  "Tom Cruise": [
+   "leading-man"
+  ],
+  "Tom Felton": [
+   "boy-next-door",
+   "bad-boy"
+  ],
+  "Tom Hardy": [
+   "rugged",
+   "tough-guy"
+  ],
+  "Tom Hiddleston": [
+   "leading-man",
+   "artsy"
+  ],
+  "Tom Holland": [
+   "boy-next-door"
+  ],
+  "Tom Segura": [
+   "funny-guy"
+  ],
+  "Tracy Morgan": [
+   "funny-guy"
+  ],
+  "Travis Kelce": [
+   "athlete",
+   "funny-guy"
+  ],
+  "Travis Scott": [
+   "bad-boy"
+  ],
+  "Trent Alexander-Arnold": [
+   "athlete"
+  ],
+  "Troye Sivan": [
+   "pretty-boy",
+   "artsy"
+  ],
+  "Tyler, the Creator": [
+   "artsy",
+   "bad-boy"
+  ],
+  "Usain Bolt": [
+   "athlete"
+  ],
+  "V (BTS)": [
+   "pretty-boy",
+   "artsy"
+  ],
+  "Victor Wembanyama": [
+   "athlete"
+  ],
+  "Vin Diesel": [
+   "tough-guy"
+  ],
+  "Vince Vaughn": [
+   "funny-guy",
+   "leading-man"
+  ],
+  "Vinícius Júnior": [
+   "athlete"
+  ],
+  "Wallace Shawn": [
+   "character",
+   "funny-guy"
+  ],
+  "Wayne Rooney": [
+   "athlete"
+  ],
+  "Will Ferrell": [
+   "funny-guy"
+  ],
+  "Will Smith": [
+   "leading-man",
+   "funny-guy"
+  ],
+  "Willem Dafoe": [
+   "character",
+   "artsy"
+  ],
+  "Woody Harrelson": [
+   "character",
+   "rugged",
+   "funny-guy"
+  ],
+  "Zac Efron": [
+   "leading-man",
+   "boy-next-door"
+  ],
+  "Zach Galifianakis": [
+   "funny-guy",
+   "character"
+  ],
+  "Zayn Malik": [
+   "bad-boy",
+   "model"
+  ],
+  "Zlatan Ibrahimović": [
+   "athlete",
+   "tough-guy"
+  ]
+ }
+}
