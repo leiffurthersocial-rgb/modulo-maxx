@@ -23,7 +23,7 @@
   figcaption { font-size:11px; color:var(--muted); }
   #toast { position:fixed; bottom:16px; left:50%; transform:translateX(-50%); background:var(--fg); color:var(--bg); padding:8px 12px; border-radius:6px; opacity:0; transition:opacity .2s; }
 </style></head><body>
-<header><h1>Contact sheet</h1><span>272/277 with images</span>
+<header><h1>Contact sheet</h1><span>274/277 with images</span>
 <input id="q" placeholder="Filter by name"><label><input type="checkbox" id="bad"> Missing only</label></header>
 <p style="margin-bottom:8px">Check that each photo looks like its rating (the number next to the name). Set an era with <code>"Name": { "years": [2005, 2014] }</code> to steer the pick.</p>
 <p style="margin-bottom:16px">"Use this" / "Reject current" copies a line for <code>data/image-overrides.json</code>. Then run <code>npm run images -- --only "Name"</code>.</p>
@@ -759,11 +759,11 @@
   <button data-copy='&quot;Tom Blyth&quot;:&quot;File:2017 Toy Dolls - Tom Blyth - by 2eight - DSC5140.jpg&quot;'>Use this</button>
 </figure></div>
 </section>
-<section class="card bad" data-name="drew starkey">
-  <div class="main missing">no image<small>dropped in image-overrides.json</small></div>
+<section class="card" data-name="drew starkey">
+  <a href="https://commons.wikimedia.org/wiki/File:Drew_Starkey.jpg" target="_blank"><img class="main" src="../public/celebs/drew-starkey.jpg" loading="lazy"></a>
   <h2>Drew Starkey <span>7.9 · actor</span></h2>
-  
-  
+  <p>2023 · CC0 · Itsyaara</p><p class="t">File:Drew Starkey.jpg</p>
+  <button data-copy='&quot;Drew Starkey&quot;:{&quot;reject&quot;:[&quot;File:Drew Starkey.jpg&quot;]}'>Reject current</button>
   
 </section>
 <section class="card" data-name="jungkook">
@@ -1158,11 +1158,11 @@
   <button data-copy='&quot;Matthew McConaughey&quot;:&quot;File:Matthew McConaughey Cannes 2015.jpg&quot;'>Use this</button>
 </figure></div>
 </section>
-<section class="card bad" data-name="rudy pankow">
-  <div class="main missing">no image<small>dropped in image-overrides.json</small></div>
+<section class="card" data-name="rudy pankow">
+  <a href="https://commons.wikimedia.org/wiki/File:Rudy_pankow.jpg" target="_blank"><img class="main" src="../public/celebs/rudy-pankow.jpg" loading="lazy"></a>
   <h2>Rudy Pankow <span>7.4 · actor</span></h2>
-  
-  
+  <p>2019 · CC BY-SA 4.0 · לא יודעת</p><p class="t">File:Rudy pankow.jpg</p>
+  <button data-copy='&quot;Rudy Pankow&quot;:{&quot;reject&quot;:[&quot;File:Rudy pankow.jpg&quot;]}'>Reject current</button>
   
 </section>
 <section class="card" data-name="sebastian stan">

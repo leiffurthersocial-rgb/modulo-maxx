@@ -788,6 +788,18 @@
   "height": 831,
   "year": 2017
  },
+ "drew-starkey": {
+  "name": "Drew Starkey",
+  "file": "drew-starkey.jpg",
+  "title": "File:Drew Starkey.jpg",
+  "author": "Itsyaara",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Drew_Starkey.jpg",
+  "width": 449,
+  "height": 366,
+  "year": 2023
+ },
  "dwayne-johnson": {
   "name": "Dwayne Johnson",
   "file": "dwayne-johnson.jpg",
@@ -2684,6 +2696,18 @@
   "width": 600,
   "height": 817,
   "year": 2013
+ },
+ "rudy-pankow": {
+  "name": "Rudy Pankow",
+  "file": "rudy-pankow.jpg",
+  "title": "File:Rudy pankow.jpg",
+  "author": "לא יודעת",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rudy_pankow.jpg",
+  "width": 372,
+  "height": 384,
+  "year": 2019
  },
  "ryan-gosling": {
   "name": "Ryan Gosling",

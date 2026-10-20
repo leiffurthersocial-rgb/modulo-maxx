@@ -162,6 +162,11 @@
    "category": "actor"
   },
   {
+   "name": "Drew Starkey",
+   "rating": 7.9,
+   "category": "actor"
+  },
+  {
    "name": "Jungkook",
    "rating": 7.9,
    "category": "musician"
@@ -233,6 +238,11 @@
   },
   {
    "name": "Matthew McConaughey",
+   "rating": 7.4,
+   "category": "actor"
+  },
+  {
+   "name": "Rudy Pankow",
    "rating": 7.4,
    "category": "actor"
   },

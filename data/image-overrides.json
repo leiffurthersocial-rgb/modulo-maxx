@@ -86,7 +86,13 @@
   "file": "File:David Beckham at US Embassy in London (cropped).jpg"
  },
  "Drew Starkey": {
-  "drop": true
+  "file": "File:Drew Starkey.jpg",
+  "crop": {
+   "x": 0.18,
+   "y": 0.08,
+   "w": 0.6,
+   "h": 0.5
+  }
  },
  "Eddie Murphy": {
   "years": [
@@ -309,7 +315,13 @@
   ]
  },
  "Rudy Pankow": {
-  "drop": true
+  "file": "File:Rudy pankow.jpg",
+  "crop": {
+   "x": 0.3,
+   "y": 0.0,
+   "w": 0.62,
+   "h": 0.48
+  }
  },
  "Samuel L. Jackson": {
   "years": [
