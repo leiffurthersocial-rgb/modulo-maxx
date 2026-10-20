@@ -17,8 +17,20 @@
  "Alex Turner": {
   "wiki": "Alex Turner"
  },
+ "Alexander Skarsgård": {
+  "years": [
+   2004,
+   2012
+  ]
+ },
  "Andrew Garfield": {
   "file": "File:Andrew Garfield 82nd Venice Film Festival (cropped).jpg"
+ },
+ "Anthony Mackie": {
+  "years": [
+   2004,
+   2014
+  ]
  },
  "Archie Madekwe": {
   "drop": true
@@ -37,8 +49,14 @@
  },
  "Brad Pitt": {
   "years": [
-   2005,
-   2016
+   2004,
+   2008
+  ]
+ },
+ "Bradley Cooper": {
+  "years": [
+   2004,
+   2011
   ]
  },
  "Bruno Mars": {
@@ -65,19 +83,61 @@
  "Charlie Day": {
   "file": "File:Charlie Day by Gage Skidmore (cropped).jpg"
  },
+ "Charlie Hunnam": {
+  "years": [
+   2004,
+   2016
+  ]
+ },
  "Chico Lachowski": {
   "wiki": "Francisco Lachowski"
+ },
+ "Chris Evans": {
+  "years": [
+   2005,
+   2017
+  ]
+ },
+ "Chris Hemsworth": {
+  "years": [
+   2007,
+   2019
+  ]
  },
  "Chris Martin": {
   "file": "File:Chris Martin 2023 (52950419334) (cropped).jpg"
  },
+ "Chris Pine": {
+  "years": [
+   2004,
+   2016
+  ]
+ },
+ "Chris Pratt": {
+  "years": [
+   2004,
+   2015
+  ]
+ },
  "Chris Stapleton": {
   "file": "File:Chris Stapleton Concert (48519730107) (cropped).jpg"
+ },
+ "Christian Bale": {
+  "years": [
+   2004,
+   2010
+  ]
  },
  "Christopher Walken": {
   "years": [
    2005,
    2014
+  ]
+ },
+ "Cillian Murphy": {
+  "years": [
+   2004,
+   2012
   ]
  },
  "Cole Palmer": {
@@ -88,6 +148,15 @@
    "w": 0.64,
    "h": 0.4
   }
+ },
+ "Colin Farrell": {
+  "years": [
+   2004,
+   2012
+  ],
+  "reject": [
+   "File:Colin Farrell by David Shankbone.jpg"
+  ]
  },
  "Colin Firth": {
   "years": [
@@ -107,14 +176,23 @@
  },
  "Daniel Craig": {
   "years": [
-   2008,
-   2016
+   2004,
+   2008
+  ],
+  "reject": [
+   "File:Daniel Craig 2, 2007.jpg"
   ]
  },
  "Danny DeVito": {
   "years": [
    2008,
    2017
+  ]
+ },
+ "Dave Franco": {
+  "years": [
+   2009,
+   2021
   ]
  },
  "David Beckham": {
@@ -135,8 +213,29 @@
    2016
   ]
  },
+ "Eddie Redmayne": {
+  "years": [
+   2006,
+   2018
+  ]
+ },
  "Eminem": {
   "file": "File:Eminem in 2021.jpg"
+ },
+ "Eric Bana": {
+  "years": [
+   2004,
+   2008
+  ],
+  "reject": [
+   "File:Eric Bana by David Shankbone.jpg"
+  ]
+ },
+ "Ewan McGregor": {
+  "years": [
+   2004,
+   2008
+  ]
  },
  "Gene Simmons": {
   "years": [
@@ -147,8 +246,14 @@
  },
  "George Clooney": {
   "years": [
-   2005,
-   2014
+   2004,
+   2008
+  ]
+ },
+ "Gerard Butler": {
+  "years": [
+   2004,
+   2008
   ]
  },
  "Guy Fieri": {
@@ -161,27 +266,72 @@
   ]
  },
  "Hugh Jackman": {
-  "years": [
-   2008,
-   2017
+  "reject": [
+   "File:Hugh Jackman navy.jpg",
+   "File:Hugh Jackman.jpg"
   ]
  },
  "Ian Somerhalder": {
   "file": "File:Ian Somerhalder (9116302091) (cropped).jpg"
  },
+ "Idris Elba": {
+  "years": [
+   2004,
+   2008
+  ]
+ },
  "Jack Harlow": {
   "file": "File:Jack Harlow at the 2022 NBA All-Star Celebrity Game.jpg"
  },
+ "Jake Gyllenhaal": {
+  "years": [
+   2004,
+   2016
+  ]
+ },
+ "Jamie Dornan": {
+  "years": [
+   2006,
+   2018
+  ]
+ },
  "Jamie Foxx": {
   "file": "File:Jamie Foxx by Gage Skidmore.jpg"
+ },
+ "Jared Leto": {
+  "years": [
+   2004,
+   2008
+  ],
+  "reject": [
+   "File:Jaredletoinconcert2006.jpg"
+  ]
+ },
+ "Jared Padalecki": {
+  "years": [
+   2006,
+   2018
+  ]
+ },
+ "Jason Momoa": {
+  "years": [
+   2004,
+   2015
+  ]
+ },
+ "Jason Statham": {
+  "years": [
+   2004,
+   2008
+  ]
  },
  "Jason Sudeikis": {
   "file": "File:Jason Sudeikis on March 20, 2023 in the Oval Office of the White House - P20230320AS-2571 (cropped).jpg"
  },
  "Javier Bardem": {
   "years": [
-   2008,
-   2016
+   2004,
+   2008
   ]
  },
  "Jeff Goldblum": {
@@ -190,6 +340,12 @@
    2019
   ],
   "file": "File:Jeff Goldblum by Gage Skidmore.jpg"
+ },
+ "Jensen Ackles": {
+  "years": [
+   2004,
+   2014
+  ]
  },
  "Jerry Seinfeld": {
   "years": [
@@ -203,28 +359,64 @@
  "Jimmy Kimmel": {
   "file": "File:Jimmy Kimmel June 2022.jpg"
  },
+ "Joe Manganiello": {
+  "years": [
+   2004,
+   2012
+  ],
+  "reject": [
+   "File:Joe Manganiello 4 cropped.jpg"
+  ]
+ },
  "John C. Reilly": {
   "file": "File:John C. Reilly (43646997525) (cropped 2).jpg"
+ },
+ "John Legend": {
+  "years": [
+   2004,
+   2014
+  ],
+  "reject": [
+   "File:John Legend by Sachyn Mital (cropped).jpg"
+  ]
  },
  "Joji": {
   "drop": true
  },
  "Jon Hamm": {
   "years": [
-   2008,
-   2017
+   2004,
+   2008
   ]
  },
  "Jonathan Bailey": {
   "file": "File:Jonathan Bailey press for Wicked.png"
  },
+ "Josh Hartnett": {
+  "years": [
+   2004,
+   2014
+  ]
+ },
+ "Jude Law": {
+  "years": [
+   2004,
+   2008
+  ]
+ },
  "Justin Bieber": {
   "file": "File:Justin Bieber (cropped).png"
  },
  "Keanu Reeves": {
+  "reject": [
+   "File:Keanu Reeves Star.jpg",
+   "File:Keanu Reeves at TIFF 2025 02 (Cropped).jpg"
+  ]
+ },
+ "Kellan Lutz": {
   "years": [
-   2005,
-   2017
+   2009,
+   2021
   ]
  },
  "Kevin Bacon": {
@@ -278,8 +470,11 @@
  },
  "Mark Wahlberg": {
   "years": [
-   2008,
-   2018
+   2004,
+   2008
+  ],
+  "reject": [
+   "File:Mark Wahlberg 2007.jpg"
   ]
  },
  "Mason Mount": {
@@ -290,8 +485,11 @@
  },
  "Matthew McConaughey": {
   "years": [
-   2010,
-   2018
+   2004,
+   2008
+  ],
+  "reject": [
+   "File:Matthew McConaughey.jpg"
   ]
  },
  "Michael Fassbender": {
@@ -343,8 +541,32 @@
    "h": 0.78
   }
  },
+ "Orlando Bloom": {
+  "years": [
+   2004,
+   2013
+  ]
+ },
+ "Oscar Isaac": {
+  "reject": [
+   "File:Oscar Isaac at the premiere of Ten Year, Toronto Film Festival 2011.jpg",
+   "File:Oscar Isaac.JPG"
+  ]
+ },
  "Patrick Mahomes": {
   "file": "File:Patrick Mahomes in the Oval Office of the White House on June 5, 2023 - P20230605AS-0902 (cropped).jpg"
+ },
+ "Paul Rudd": {
+  "years": [
+   2004,
+   2008
+  ]
+ },
+ "Paul Wesley": {
+  "years": [
+   2006,
+   2018
+  ]
  },
  "Peter Crouch": {
   "file": "File:Chelsea 3 Stoke 0 (13677350585) - Peter Crouch (cropped).jpg"
@@ -364,6 +586,12 @@
    2013
   ]
  },
+ "Robert Pattinson": {
+  "years": [
+   2010,
+   2022
+  ]
+ },
  "Ron Perlman": {
   "years": [
    2008,
@@ -378,6 +606,24 @@
    "w": 0.62,
    "h": 0.48
   }
+ },
+ "Ryan Gosling": {
+  "years": [
+   2004,
+   2016
+  ]
+ },
+ "Ryan Reynolds": {
+  "years": [
+   2004,
+   2012
+  ]
+ },
+ "Sam Heughan": {
+  "years": [
+   2004,
+   2016
+  ]
  },
  "Samuel L. Jackson": {
   "years": [
@@ -407,10 +653,28 @@
  "Tim Robinson": {
   "drop": true
  },
+ "Tom Brady": {
+  "reject": [
+   "File:Tom Brady (cropped).jpg",
+   "File:Tom Brady7.jpg"
+  ]
+ },
  "Tom Cruise": {
   "years": [
-   2008,
-   2018
+   2004,
+   2008
+  ]
+ },
+ "Tom Hardy": {
+  "years": [
+   2004,
+   2013
+  ]
+ },
+ "Tom Hiddleston": {
+  "years": [
+   2005,
+   2017
   ]
  },
  "Travis Kelce": {
@@ -432,9 +696,9 @@
   "file": "File:Wayne Rooney (50121495731) (cropped).jpg"
  },
  "Will Smith": {
-  "years": [
-   2008,
-   2018
+  "reject": [
+   "File:Will Smith 2.jpg",
+   "File:Will Smith’s costume from I Am Legend.jpg"
   ]
  },
  "Zac Efron": {
