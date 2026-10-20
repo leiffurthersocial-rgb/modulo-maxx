@@ -359,6 +359,18 @@
   "height": 788,
   "year": 2025
  },
+ "chace-crawford": {
+  "name": "Chace Crawford",
+  "file": "chace-crawford.jpg",
+  "title": "File:Chace Crawford 2012 Shankbone 4.JPG",
+  "author": "David Shankbone",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chace_Crawford_2012_Shankbone_4.JPG",
+  "width": 600,
+  "height": 750,
+  "year": 2012
+ },
  "channing-tatum": {
   "name": "Channing Tatum",
   "file": "channing-tatum.jpg",
@@ -2270,13 +2282,13 @@
  "noah-centineo": {
   "name": "Noah Centineo",
   "file": "noah-centineo.jpg",
-  "title": "File:Noah Centineo by Gage Skidmore (cropped).jpg",
-  "author": "Gage Skidmore",
-  "license": "CC BY-SA 3.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noah_Centineo_by_Gage_Skidmore_(cropped).jpg",
+  "title": "File:Noah Centineo (55230816636).jpg",
+  "author": "Gage Skidmore from Surprise, AZ, United States of America",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noah_Centineo_(55230816636).jpg",
   "width": 600,
-  "height": 779,
+  "height": 743,
   "year": 2026
  },
  "noah-schnapp": {

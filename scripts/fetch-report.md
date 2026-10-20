@@ -1,6 +1,6 @@
 # Image fetch report
 
-271 of 276 celebs have an image. 5 without (left out of data/bank.json).
+272 of 277 celebs have an image. 5 without (left out of data/bank.json).
 
 | Celeb | Reason |
 |---|---|

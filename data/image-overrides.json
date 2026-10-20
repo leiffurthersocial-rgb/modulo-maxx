@@ -32,6 +32,9 @@
    2018
   ]
  },
+ "Chace Crawford": {
+  "file": "File:Chace Crawford 2012 Shankbone 4.JPG"
+ },
  "Charlie Day": {
   "file": "File:Charlie Day by Gage Skidmore (cropped).jpg"
  },
@@ -268,6 +271,15 @@
  },
  "Nicholas Galitzine": {
   "file": "File:Nicholas Galitzine on Dulce Osuna.jpg"
+ },
+ "Noah Centineo": {
+  "file": "File:Noah Centineo (55230816636).jpg",
+  "crop": {
+   "x": 0.29,
+   "y": 0.0,
+   "w": 0.42,
+   "h": 0.78
+  }
  },
  "Patrick Mahomes": {
   "file": "File:Patrick Mahomes in the Oval Office of the White House on June 5, 2023 - P20230605AS-0902 (cropped).jpg"
