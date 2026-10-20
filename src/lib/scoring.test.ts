@@ -27,12 +27,24 @@ describe("bodyScore", () => {
   });
   it("treats high BMI differently depending on the build", () => {
     const w = 29 * 1.8 ** 2;
-    expect(bodyScore("very-muscular", 180, w)).toBeGreaterThan(bodyScore("average", 180, w) + 2);
+    expect(bodyScore("muscular", 180, w)).toBeGreaterThan(bodyScore("average", 180, w) + 2);
   });
   it("orders builds sensibly at a healthy BMI", () => {
-    const scores = BUILDS.map((b) => bodyScore(b.id, 180, 23 * 1.8 ** 2));
-    expect(scores[0]).toBeLessThan(scores[2]);
-    expect(scores[4]).toBeGreaterThan(scores[2]);
+    const at = (id: string) => bodyScore(id, 180, 23 * 1.8 ** 2);
+    expect(at("skinny")).toBeLessThan(at("average"));
+    expect(at("athletic")).toBeGreaterThan(at("average"));
+    expect(at("soft")).toBeLessThan(at("average"));
+    expect(at("heavy")).toBeLessThan(at("soft"));
+  });
+  it("makes too much muscle a minus", () => {
+    const at = (id: string) => bodyScore(id, 180, 25 * 1.8 ** 2);
+    expect(at("athletic")).toBeGreaterThan(at("muscular"));
+    expect(at("muscular")).toBeGreaterThan(at("very-muscular"));
+    expect(bodyScore("very-muscular")).toBeLessThan(bodyScore("average"));
+  });
+  it("has a population share for every body type", () => {
+    expect(SCORING.population.buildShares).toHaveLength(BUILDS.length);
+    expect(SCORING.population.buildShares.reduce((a, b) => a + b, 0)).toBeCloseTo(1);
   });
   it("falls back to the slider alone without height or weight", () => {
     expect(bodyScore("average")).toBeCloseTo(5.5);

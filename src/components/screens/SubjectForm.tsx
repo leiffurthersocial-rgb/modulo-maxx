@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { BUILDS, getBuild } from "@/lib/builds";
 import type { Subject } from "@/lib/state";
+import { BodyFigure } from "../BodyFigure";
 import { Button, Screen, SegmentedToggle } from "../ui";
 
 const CM_PER_IN = 2.54;
@@ -39,7 +40,7 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
   const [{ ft, inch }, setFtIn] = useState(toFtIn(subject.heightCm));
   const [kg, setKg] = useState(str(subject.weightKg));
   const [lb, setLb] = useState(str(subject.weightKg === undefined ? undefined : subject.weightKg / KG_PER_LB));
-  const [buildIndex, setBuildIndex] = useState(BUILDS.indexOf(getBuild(subject.buildId)));
+  const [buildId, setBuildId] = useState(getBuild(subject.buildId).id);
 
   const heightCm = (() => {
     if (heightUnit === "cm") return num(cm);
@@ -69,7 +70,7 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
     setWeightUnit(u);
   }
 
-  const build = BUILDS[buildIndex];
+  const build = getBuild(buildId);
 
   return (
     <Screen top={top}>
@@ -160,28 +161,29 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
 
         <div>
           <div className="mb-3 flex items-baseline justify-between">
-            <span className="text-sm text-muted">Build</span>
+            <span className="text-sm text-muted">Body type</span>
             <span className="text-xl font-medium">{build.label}</span>
           </div>
-          <input
-            type="range"
-            min={0}
-            max={BUILDS.length - 1}
-            step={1}
-            value={buildIndex}
-            onChange={(e) => setBuildIndex(Number(e.target.value))}
-            aria-label="Build"
-            aria-valuetext={build.label}
-            className="w-full accent-[var(--accent)]"
-          />
-          <div className="mt-1 flex justify-between px-[7px]" aria-hidden>
-            {BUILDS.map((b, i) => (
-              <span key={b.id} className={`h-2 w-px ${i === buildIndex ? "bg-accent" : "bg-muted"}`} />
-            ))}
-          </div>
-          <div className="mt-1 flex justify-between text-xs text-muted" aria-hidden>
-            <span>{BUILDS[0].label}</span>
-            <span>{BUILDS[BUILDS.length - 1].label}</span>
+          <div role="radiogroup" aria-label="Body type" className="grid grid-cols-5 gap-2">
+            {BUILDS.map((b) => {
+              const on = b.id === buildId;
+              return (
+                <button
+                  key={b.id}
+                  type="button"
+                  role="radio"
+                  aria-checked={on}
+                  aria-label={b.label}
+                  onClick={() => setBuildId(b.id)}
+                  className={`flex flex-col items-center rounded-xl border px-1 pb-1.5 pt-2 transition-colors ${
+                    on ? "border-accent text-accent" : "border-line text-muted hover:text-fg"
+                  }`}
+                >
+                  <BodyFigure shape={b.shape} className="h-24 w-full" />
+                  <span className="mt-1 text-[11px] leading-tight">{b.label}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

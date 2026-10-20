@@ -30,10 +30,13 @@ export const SCORING = {
     // Muscle explains weight: each muscularity level credits this many BMI points above `muscleFrom`.
     muscleFrom: 23,
     musclePerLevel: 2.5,
-    // Tone bonus from the slider: m >= 0 -> toneLinear*m - toneQuad*m^2; m < 0 -> toneBelow*m.
-    toneLinear: 1.2,
-    toneQuad: 0.25,
+    // Tone from the body type: m >= 0 -> toneLinear*m - toneQuad*m^2 (peaks at athletic, m ~ 1,
+    // and turns negative past m ~ 2.1, so a bodybuilder scores below average); m < 0 -> toneBelow*m.
+    toneLinear: 1.5,
+    toneQuad: 0.7,
     toneBelow: 0.6,
+    // Soft / heavy types: penalty per fat level, on top of what BMI already says.
+    fatPenalty: 0.6,
     // Baseline when BMI is unknown (no height or weight given).
     unknownBmiBaseline: 5.5,
   },
@@ -41,8 +44,8 @@ export const SCORING = {
   population: {
     bmiMean: 26.5,
     bmiSd: 4.2,
-    // Share of guys at each build step, in BUILDS order.
-    buildShares: [0.08, 0.17, 0.38, 0.17, 0.12, 0.06, 0.02],
+    // Share of guys with each body type, in BUILDS order.
+    buildShares: [0.06, 0.12, 0.08, 0.27, 0.09, 0.05, 0.01, 0.17, 0.08, 0.07],
     samples: 20000,
     seed: 20240601,
   },
@@ -77,25 +80,24 @@ function bmiBaseline(b: number): number {
 }
 
 /**
- * Body score from BMI and the build slider.
+ * Body score from BMI and the body type.
  *
- *   m         = build muscularity level (BUILDS[].value, -1 .. 2, average = 0)
+ *   m, f      = body type muscle (-1 .. 2.5, average = 0) and fat (0 .. 2) levels
  *   credit    = m > 0 ? min(max(0, BMI - 23), 2.5 * m) : 0
  *   effective = BMI - credit                       (muscle explains some of the weight)
  *   baseline  = 6.3 for effective BMI 21-25, falling off as
  *               6.3 - 0.38 d - 0.008 d^2   above 25 (d = BMI - 25)
  *               6.3 - 0.50 d - 0.08  d^2   below 21 (d = 21 - BMI)
- *   tone      = m >= 0 ? 1.2 m - 0.25 m^2 : 0.6 m  (diminishing returns at the top)
- *   body      = clamp(baseline + tone, 0, 10)
+ *   tone      = m >= 0 ? 1.5 m - 0.7 m^2 : 0.6 m  (best at athletic, m = 1; too much muscle hurts)
+ *   body      = clamp(baseline + tone - 0.6 f, 0, 10)
  *
- * So BMI 29 + "Very muscular" scores like a lean BMI-24 guy with lots of muscle (~7.7),
- * while BMI 29 + "Average" scores ~4.7. Average guy (BMI ~27, Average build) ~5.5.
- * Without a BMI the baseline is 5.5 and only the tone term applies.
+ * At BMI 23: Athletic ~7.1, Lean ~6.9, Muscular ~7.0, Average 6.3, Bodybuilder ~5.7, Soft ~5.7.
+ * Average guy (BMI ~27, Average) ~5.5. Without a BMI the baseline is 5.5.
  */
 export function bodyScore(buildId: string, heightCm?: number, weightKg?: number): number {
   const c = SCORING.body;
-  const m = getBuild(buildId).value;
-  const tone = m >= 0 ? c.toneLinear * m - c.toneQuad * m * m : c.toneBelow * m;
+  const { muscle: m, fat } = getBuild(buildId);
+  const tone = (m >= 0 ? c.toneLinear * m - c.toneQuad * m * m : c.toneBelow * m) - c.fatPenalty * fat;
   if (!heightCm || !weightKg) return clamp10(c.unknownBmiBaseline + tone);
   const b = bmi(heightCm, weightKg);
   const credit = m > 0 ? Math.min(Math.max(0, b - c.muscleFrom), c.musclePerLevel * m) : 0;
