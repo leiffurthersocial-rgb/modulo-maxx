@@ -2,7 +2,7 @@
 
 A for-fun, non-commercial attractiveness calculator for guys. A friend compares the subject's face to
 celebrity photos (More / About equal / Less), and the app combines that with height and build into an
-overall score. It's a static site with no backend, no accounts and no analytics. For fun, not science.
+overall score. It's a static site with no backend, no accounts and no analytics. For fun, not science
 
 ## Setup
 
