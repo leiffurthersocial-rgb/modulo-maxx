@@ -15,12 +15,14 @@ export function Results({
   name,
   canKeepGoing,
   onKeepGoing,
+  onAddRater,
   onStartOver,
 }: {
   res: ResultsData;
   name: string;
   canKeepGoing: boolean;
   onKeepGoing: () => void;
+  onAddRater: () => void;
   onStartOver: () => void;
 }) {
   const [copied, setCopied] = useState<"" | "text" | "image" | "error">("");
@@ -79,11 +81,26 @@ export function Results({
             </div>
             <Bar value={a.value / 10} label={a.label} />
             {a.key === "face" && (
-              <p className="mt-2 text-xs text-muted">
-                {res.face.outOfBank
-                  ? "Outside the range of the celebrity bank, so the range is wide."
-                  : `${confidence} confidence, from ${res.answered} answers.`}
-              </p>
+              <>
+                <p className="mt-2 text-sm font-medium text-accent">Top {res.faceTop}% of guys for face</p>
+                <p className="mt-1 text-xs text-muted">
+                  {res.face.outOfBank
+                    ? "Outside the range of the celebrity bank, so the range is wide."
+                    : `${confidence} confidence, from ${res.answered} answers${res.raters.length > 1 ? ` by ${res.raters.length} people` : ""}.`}
+                </p>
+                {res.raters.length > 1 && (
+                  <ul className="mt-3 flex flex-col gap-1 text-sm">
+                    {res.raters.map((r) => (
+                      <li key={r.label} className="flex justify-between text-muted">
+                        <span>{r.label}</span>
+                        <span className="tabular-nums">
+                          {fmtFace(r.face)} · {r.answered} answers
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
             )}
           </div>
         ))}
@@ -121,6 +138,9 @@ export function Results({
           {copied === "image" ? "Saved" : "Save as image"}
         </Button>
         {copied === "error" && <p className="text-center text-sm text-muted">That didn&apos;t work in this browser.</p>}
+        <Button variant="outline" onClick={onAddRater}>
+          Add another person&apos;s rating
+        </Button>
         {canKeepGoing && (
           <Button variant="outline" onClick={onKeepGoing}>
             Keep going for more accuracy

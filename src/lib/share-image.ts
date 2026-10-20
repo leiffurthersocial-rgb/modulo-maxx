@@ -57,7 +57,7 @@ export async function renderResultImage(res: Results, name: string): Promise<Blo
     ctx.fillStyle = fg;
     ctx.font = `500 40px ${font}`;
     ctx.fillText(a.label, pad, y);
-    const label = a.key === "face" ? fmtFace(res.face) : fmt(a.value);
+    const label = a.key === "face" ? `${fmtFace(res.face)} · top ${res.faceTop}%` : fmt(a.value);
     ctx.font = `400 40px ${font}`;
     const lw = ctx.measureText(label).width;
     ctx.fillText(label, W - pad - lw, y);

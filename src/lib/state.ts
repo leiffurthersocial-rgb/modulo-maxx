@@ -12,7 +12,7 @@ export interface Subject {
   weightUnit: "kg" | "lb";
 }
 
-/** One person rating the subject. The app uses a single rater for now. */
+/** One person rating the subject. Answers from all raters are pooled into one face estimate. */
 export interface RaterState {
   id: string;
   votes: Vote[];

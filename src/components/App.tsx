@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { BANK, getCeleb } from "@/lib/bank";
 import { progress, type Answer } from "@/lib/engine";
 import { computeResults, faceState, isDone, limitsFor, pickNext } from "@/lib/results";
-import { clearState, initialState, loadState, saveState, subjectRef, type AppState, type RaterState } from "@/lib/state";
+import { clearState, initialState, loadState, newRater, saveState, subjectRef, type AppState, type RaterState } from "@/lib/state";
 import { Handoff } from "./screens/Handoff";
 import { Landing } from "./screens/Landing";
 import { Rating } from "./screens/Rating";
@@ -96,6 +96,13 @@ export function App() {
     setState(advance({ ...state, raters }));
   }
 
+  /** Hand the phone to the next person; their answers pool with everyone else's. */
+  function addRater() {
+    if (!state) return;
+    const raters = [...state.raters, newRater(`rater-${state.raters.length + 1}`)];
+    setState({ ...state, raters, activeRater: raters.length - 1, screen: "handoff" });
+  }
+
   switch (state.screen) {
     case "landing":
       return <Landing key="landing" onStart={() => set({ screen: "subject" })} />;
@@ -134,6 +141,7 @@ export function App() {
           name={state.subject.name}
           canKeepGoing={rater.votes.length < BANK.length}
           onKeepGoing={keepGoing}
+          onAddRater={addRater}
           onStartOver={startOver}
         />
       );

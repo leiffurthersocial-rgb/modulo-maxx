@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { BUILDS } from "./builds";
-import { bodyScore, effectiveWeights, heightScore, overallRange, overallScore, percentile, SCORING, topPercent } from "./scoring";
+import { bodyScore, effectiveWeights, faceTopPercent, heightScore, overallRange, overallScore, percentile, SCORING, topPercent } from "./scoring";
 
 describe("heightScore", () => {
   it("is 5.5 at the mean and 1.5 points per SD", () => {
@@ -89,5 +89,14 @@ describe("overallRange and percentile", () => {
     expect(topPercent(9.5)).toBeLessThan(2);
     expect(topPercent(5.3)).toBeGreaterThan(30);
     expect(topPercent(5.3)).toBeLessThan(70);
+  });
+});
+
+describe("faceTopPercent", () => {
+  it("follows the population bell curve", () => {
+    expect(faceTopPercent(5.5)).toBe(50);
+    expect(faceTopPercent(7)).toBe(16);
+    expect(faceTopPercent(8.5)).toBe(2);
+    expect(faceTopPercent(4)).toBe(84);
   });
 });

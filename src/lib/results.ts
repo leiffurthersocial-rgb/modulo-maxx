@@ -11,7 +11,7 @@ import {
   type Posterior,
   type StopLimits,
 } from "./engine";
-import { bodyScore, heightScore, overallRange, SCORING, topPercent, type AttributeKey, type Range } from "./scoring";
+import { bodyScore, faceTopPercent, heightScore, overallRange, SCORING, topPercent, type AttributeKey, type Range } from "./scoring";
 import type { AppState, RaterState } from "./state";
 
 export function votesByRater(state: AppState) {
@@ -51,8 +51,19 @@ export interface Attribute {
   value: number;
 }
 
+/** One person's view of the face, from their answers alone. */
+export interface RaterFace {
+  label: string;
+  face: FaceSummary;
+  answered: number;
+}
+
 export interface Results {
   face: FaceSummary;
+  /** "Top X%" on face alone. */
+  faceTop: number;
+  /** Per-person face estimates, when more than one person rated. */
+  raters: RaterFace[];
   height?: number;
   body: number;
   overall: Range;
@@ -62,6 +73,7 @@ export interface Results {
   strongest?: Attribute;
   weakest?: Attribute;
   verdict: string;
+  /** Answers from all raters together. */
   answered: number;
 }
 
@@ -100,8 +112,14 @@ export function computeResults(state: AppState, fs: FaceState = faceState(state)
   const sorted = [...attributes].sort((a, b) => b.value - a.value);
   const spread = sorted[0].value - sorted[sorted.length - 1].value;
 
+  const rated = state.raters.filter((x) => x.votes.length > 0);
   return {
     face: fs.face,
+    faceTop: faceTopPercent(faceCenter(fs.face)),
+    raters:
+      rated.length > 1
+        ? rated.map((x, i) => ({ label: `Person ${i + 1}`, face: summarize(posterior([x.votes]), BANK), answered: x.votes.length }))
+        : [],
     height,
     body,
     overall,
@@ -111,8 +129,13 @@ export function computeResults(state: AppState, fs: FaceState = faceState(state)
     strongest: spread >= 0.3 ? sorted[0] : undefined,
     weakest: spread >= 0.3 ? sorted[sorted.length - 1] : undefined,
     verdict: verdict(overall.mean),
-    answered: r.votes.length,
+    answered: state.raters.reduce((n, x) => n + x.votes.length, 0),
   };
+}
+
+/** Point estimate for a face: the mean, or the bank edge when it's out of range. */
+function faceCenter(face: FaceSummary): number {
+  return face.outOfBank === "above" ? face.lo : face.outOfBank === "below" ? face.hi : face.mean;
 }
 
 export const fmt = (x: number) => x.toFixed(1);
@@ -131,10 +154,11 @@ export function fmtFace(face: FaceSummary): string {
 export function shareText(res: Results, name: string): string {
   const who = name.trim() ? `${name.trim()}: ` : "";
   const parts = [
-    `face ${fmtFace(res.face)}`,
+    `face ${fmtFace(res.face)} (top ${res.faceTop}%)`,
     res.height !== undefined ? `height ${fmt(res.height)}` : null,
     `body ${fmt(res.body)}`,
   ].filter(Boolean);
   const match = res.match ? ` Face around the level of ${res.match.name}.` : "";
-  return `Modulo Maxx. ${who}${fmtRange(res.overall.mean, res.overall.sd)} overall, top ${res.top}% of guys. ${parts.join(", ")}.${match} For fun, not science.`;
+  const by = res.raters.length > 1 ? ` Rated by ${res.raters.length} people.` : "";
+  return `Modulo Maxx. ${who}${fmtRange(res.overall.mean, res.overall.sd)} overall, top ${res.top}% of guys. ${parts.join(", ")}.${match}${by} For fun, not science.`;
 }

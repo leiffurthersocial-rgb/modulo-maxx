@@ -191,9 +191,25 @@ export function percentile(overall: number): number {
   return lo / xs.length;
 }
 
+/** Standard normal CDF (Abramowitz-Stegun 7.1.26 via erf, error < 1.5e-7). */
+export function normalCdf(z: number): number {
+  const x = Math.abs(z) / Math.SQRT2;
+  const t = 1 / (1 + 0.3275911 * x);
+  const erf = 1 - ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x);
+  return z >= 0 ? (1 + erf) / 2 : (1 - erf) / 2;
+}
+
+/** "Top X%" for a face score alone: faces follow the population bell curve (mean 5.5, SD 1.5). */
+export function faceTopPercent(face: number): number {
+  return roundTop(100 * (1 - normalCdf((face - SCORING.average) / 1.5)));
+}
+
 /** "Top X%" label value, rounded sensibly. */
 export function topPercent(overall: number): number {
-  const top = 100 * (1 - percentile(overall));
+  return roundTop(100 * (1 - percentile(overall)));
+}
+
+function roundTop(top: number): number {
   if (top < 1) return Math.max(0.1, Math.round(top * 10) / 10);
   return Math.min(99, Math.round(top));
 }
