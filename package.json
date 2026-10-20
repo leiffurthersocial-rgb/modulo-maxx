@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/build-bank.ts",
     "build": "next build",
     "start": "npx serve out",
     "typecheck": "tsc --noEmit",
+    "pretest": "tsx scripts/build-bank.ts",
     "test": "vitest run",
     "images": "tsx scripts/fetch-images.ts",
     "contact-sheet": "tsx scripts/contact-sheet.ts",

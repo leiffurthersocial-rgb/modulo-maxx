@@ -74,6 +74,10 @@ in place of each photo.
 | Prior, noise grid, "about equal" band, stopping rule, probe spacing, question cap | `ENGINE` in `src/lib/engine.ts` |
 | Result copy per score range | `verdict()` in `src/lib/results.ts` |
 
+**Editing ratings by hand:** change the `rating` in `data/celebs.json` (on GitHub's web editor is fine) and
+commit. Don't edit `data/bank.json`: it's regenerated from `celebs.json` + `celeb-images.json` before every
+build and test (`prebuild` / `pretest`), so Vercel picks up your edit automatically.
+
 To add celebs, append `{name, rating, category}` to `data/celebs.json` and run `npm run images`.
 
 ## How it works
