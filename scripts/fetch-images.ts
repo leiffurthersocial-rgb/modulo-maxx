@@ -29,6 +29,7 @@ import {
   withFilePrefix,
   yearFromTitle,
   type Candidate,
+  type Crop,
   type Era,
   type Override,
   type Rejection,
@@ -319,11 +320,22 @@ async function imageInfo(titles: string[], src?: Partial<Sources>): Promise<Cand
   return out;
 }
 
-async function download(c: Candidate, dest: string): Promise<{ width: number; height: number }> {
-  const res = await fetchWithRetry(c.thumbUrl ?? c.url);
+async function download(c: Candidate, dest: string, crop?: Crop): Promise<{ width: number; height: number }> {
+  // A crop needs more pixels than the 960px thumbnail; 3840 is one of Wikimedia's standard thumbnail sizes.
+  const url = crop && c.thumbUrl && c.width > THUMB_WIDTH ? c.thumbUrl.replace(`/${THUMB_WIDTH}px-`, `/${Math.min(c.width, 3840)}px-`) : (c.thumbUrl ?? c.url);
+  const res = await fetchWithRetry(url);
   const buf = Buffer.from(await res.arrayBuffer());
-  const info = await sharp(buf)
-    .rotate()
+  let img = sharp(buf).rotate();
+  if (crop) {
+    const { width = 0, height = 0 } = await img.metadata();
+    img = sharp(await img.toBuffer()).extract({
+      left: Math.round(crop.x * width),
+      top: Math.round(crop.y * height),
+      width: Math.round(crop.w * width),
+      height: Math.round(crop.h * height),
+    });
+  }
+  const info = await img
     .flatten({ background: "#ffffff" })
     .resize({ width: WIDTH, withoutEnlargement: true })
     .jpeg({ quality: 82, mozjpeg: true })
@@ -382,7 +394,7 @@ async function processCeleb(
 
   const best = candidates[0];
   const file = `${slug}.jpg`;
-  const size = await download(best, path.join(OUT_DIR, file));
+  const size = await download(best, path.join(OUT_DIR, file), ov.file ? ov.crop : undefined);
   const entry: ImageEntry = {
     name,
     file,

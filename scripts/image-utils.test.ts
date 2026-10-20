@@ -111,5 +111,6 @@ describe("cli and overrides", () => {
     expect(normalizeOverride({ reject: ["File:X.jpg"] })).toEqual({ file: undefined, reject: ["File:X.jpg"], drop: false, years: undefined });
     expect(normalizeOverride({ years: [2005, 2012] }).years).toEqual([2005, 2012]);
     expect(normalizeOverride({ drop: true }).drop).toBe(true);
+    expect(normalizeOverride({ file: "A.jpg", crop: { x: 0.1, y: 0, w: 0.5, h: 0.6 } }).crop).toEqual({ x: 0.1, y: 0, w: 0.5, h: 0.6 });
   });
 });

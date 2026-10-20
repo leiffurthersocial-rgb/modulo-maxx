@@ -193,7 +193,15 @@ export function resolveOnly(raw: string[], names: string[]): { names: string[]; 
   return { names: out, unknown };
 }
 
-export type Override = string | { file?: string; reject?: string[]; drop?: boolean; years?: Era; wiki?: string };
+/** Crop box as fractions of the image (applies to a pinned "file" only). */
+export interface Crop {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+export type Override = string | { file?: string; crop?: Crop; reject?: string[]; drop?: boolean; years?: Era; wiki?: string };
 
 export interface NormalizedOverride {
   /** English Wikipedia article title, for names that land on a disambiguation page. */
@@ -202,6 +210,7 @@ export interface NormalizedOverride {
   reject: string[];
   drop: boolean;
   years?: Era;
+  crop?: Crop;
 }
 
 export function normalizeOverride(o: Override | undefined): NormalizedOverride {
@@ -213,6 +222,7 @@ export function normalizeOverride(o: Override | undefined): NormalizedOverride {
     reject: (o.reject ?? []).map(withFilePrefix),
     drop: !!o.drop,
     years: o.years,
+    ...(o.crop ? { crop: o.crop } : {}),
   };
 }
 
