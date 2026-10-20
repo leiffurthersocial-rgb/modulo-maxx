@@ -61,6 +61,7 @@ const QUALIFIERS: Record<string, string[]> = {
   coach: ["football manager", "footballer"],
   chef: ["chef"],
   creator: ["YouTuber"],
+  model: ["model"],
 };
 
 interface ImageEntry {

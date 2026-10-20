@@ -182,7 +182,9 @@ describe("out of bank", () => {
   it("flags faces above the bank and widens the interval", () => {
     const run = simulate(9.95, 0.3, 11, 20);
     expect(run.face.outOfBank).toBe("above");
-    expect(run.face.hi - run.face.lo).toBeGreaterThan(0.5);
+    const top = Math.max(...BANK.map((c) => c.rating));
+    expect(run.face.lo).toBe(top);
+    expect(run.face.hi).toBeCloseTo(Math.min(ENGINE.thetaMax, top + ENGINE.outOfBankWidth));
   });
 
   it("flags faces below the bank", () => {
