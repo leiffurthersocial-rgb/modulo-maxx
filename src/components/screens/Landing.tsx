@@ -20,14 +20,14 @@ export function Landing({ onStart }: { onStart: () => void }) {
           Mog battle
         </Link>
         <Link
-          href="/vibe/"
+          href="/archetypes/"
           className="flex h-14 items-center justify-center rounded-xl border border-fg/80 text-lg font-medium active:bg-fg active:text-bg"
         >
-          Vibe check
+          Archetypes
         </Link>
       </div>
       <p className="mt-3 text-center text-xs text-muted">
-        Mog battle: rank your group&apos;s faces head-to-head. Vibe check: find his archetype.
+        Mog battle: rank your group&apos;s faces head-to-head. Archetypes: hero, vampire, surfer… which one is he?
       </p>
       <Link href="/credits/" className="mt-6 self-center text-sm text-muted underline-offset-4 hover:underline">
         Photo credits

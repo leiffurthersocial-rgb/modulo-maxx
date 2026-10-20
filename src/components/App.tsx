@@ -133,6 +133,7 @@ export function App() {
           progress={progress(rater.votes.length, fs.face, limitsFor(rater))}
           onAnswer={answer}
           onUndo={rater.votes.length > 0 ? undo : undefined}
+          photo={state.subject.photo}
         />
       );
     }

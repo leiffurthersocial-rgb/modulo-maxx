@@ -10,6 +10,8 @@ export interface Subject {
   buildId: string;
   heightUnit: "cm" | "ftin";
   weightUnit: "kg" | "lb";
+  /** Optional downscaled photo (data URL) shown next to each celeb for side-by-side comparison. */
+  photo?: string;
 }
 
 /** One person rating the subject. Answers from all raters are pooled into one face estimate. */

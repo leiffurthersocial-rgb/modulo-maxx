@@ -11,6 +11,7 @@ export function Rating({
   onAnswer,
   onUndo,
   top,
+  photo,
 }: {
   celeb: BankCeleb;
   who: string;
@@ -19,6 +20,8 @@ export function Rating({
   onAnswer: (a: Answer) => void;
   onUndo?: () => void;
   top: React.ReactNode;
+  /** The subject's own photo, shown side by side when given. */
+  photo?: string;
 }) {
   return (
     <Screen top={top}>
@@ -28,10 +31,24 @@ export function Rating({
       </div>
 
       {/* Key on the celeb so each new photo fades in. */}
-      <div key={celeb.id} className="fade-in mt-4">
-        <CelebPhoto celeb={celeb} className="max-h-[46dvh]" />
-        {celeb.image && <p className="mt-2 text-center text-sm text-muted">{celeb.name}</p>}
-      </div>
+      {photo ? (
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={photo} alt={who} className="aspect-[4/5] w-full rounded-xl bg-line object-cover object-[50%_25%]" />
+            <p className="mt-2 text-center text-sm text-muted">{who === "he" ? "Him" : who}</p>
+          </div>
+          <div key={celeb.id} className="fade-in">
+            <CelebPhoto celeb={celeb} />
+            {celeb.image && <p className="mt-2 text-center text-sm text-muted">{celeb.name}</p>}
+          </div>
+        </div>
+      ) : (
+        <div key={celeb.id} className="fade-in mt-4">
+          <CelebPhoto celeb={celeb} className="max-h-[46dvh]" />
+          {celeb.image && <p className="mt-2 text-center text-sm text-muted">{celeb.name}</p>}
+        </div>
+      )}
 
       <p className="mt-5 text-xl leading-snug">
         Compared to this person, is {who} more or less attractive? <span className="text-muted">Judge the face only.</span>

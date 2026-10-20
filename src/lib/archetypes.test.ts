@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ARCHETYPES, archetypesOf, nextVibeCeleb, scoreVibe, VIBE_POOL, VIBE_QUESTIONS, type VibeVote } from "./archetypes";
+import { ARCHETYPES, archetypesOf, MIN_RATING, nextVibeCeleb, scoreVibe, VIBE_POOL, VIBE_QUESTIONS, type VibeVote } from "./archetypes";
 import { BANK } from "./bank";
 import { makeRng } from "./engine";
 
@@ -15,9 +15,15 @@ function run(target: string, seed = 1): VibeVote[] {
 }
 
 describe("vibe check", () => {
-  it("tags every celeb in the bank", () => {
-    expect(BANK.filter((c) => archetypesOf(c).length === 0).map((c) => c.name)).toEqual([]);
-    expect(VIBE_POOL.length).toBeGreaterThan(200);
+  it("tags every attractive celeb and keeps the rest out", () => {
+    const eligible = BANK.filter((c) => c.image && c.rating >= MIN_RATING);
+    expect(eligible.filter((c) => archetypesOf(c).length === 0).map((c) => c.name)).toEqual([]);
+    expect(VIBE_POOL.every((c) => c.rating >= MIN_RATING)).toBe(true);
+    expect(VIBE_POOL.length).toBeGreaterThan(80);
+  });
+
+  it("has several celebs for every archetype", () => {
+    for (const a of ARCHETYPES) expect(VIBE_POOL.filter((c) => archetypesOf(c).includes(a.id)).length).toBeGreaterThanOrEqual(5);
   });
 
   it("asks a fixed number of questions without repeats", () => {
@@ -27,7 +33,7 @@ describe("vibe check", () => {
   });
 
   it("finds the archetype a consistent answerer has", () => {
-    for (const a of ["pretty-boy", "rugged", "funny-guy", "athlete", "artsy"]) {
+    for (const a of ["vampire", "werewolf", "surfer", "hero", "nerd", "jock", "bully"]) {
       expect(scoreVibe(run(a))[0].archetype.id).toBe(a);
     }
   });

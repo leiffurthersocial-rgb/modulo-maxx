@@ -1,4 +1,4 @@
-// Vibe check: which archetype does a guy fit? Separate from the attractiveness test.
+// Archetypes: which character would a guy be cast as? Separate from the attractiveness test.
 //
 // The rater sees one celeb at a time and says how similar the guy's vibe is (very / a bit / not).
 // Each celeb belongs to 1-3 archetypes (data/archetypes.json, best fit first), so an answer counts
@@ -15,18 +15,33 @@ export interface Archetype {
 }
 
 export const ARCHETYPES: Archetype[] = [
-  { id: "pretty-boy", label: "Pretty boy", blurb: "Soft, youthful features. More beautiful than rugged." },
-  { id: "model", label: "Model", blurb: "Striking, angular, editorial. Looks like he walks runways." },
-  { id: "leading-man", label: "Leading man", blurb: "Classic, polished handsome. Movie-poster face." },
-  { id: "rugged", label: "Rugged", blurb: "Weathered, stubbled, outdoorsy. Masculine with an edge." },
-  { id: "boy-next-door", label: "Boy next door", blurb: "Warm, friendly and approachable. Easy to like." },
-  { id: "bad-boy", label: "Bad boy", blurb: "Edgy, brooding, a bit of trouble." },
-  { id: "artsy", label: "Artsy", blurb: "Indie, creative, a little unconventional." },
-  { id: "athlete", label: "Athlete", blurb: "Sporty, competitive, jock energy." },
-  { id: "funny-guy", label: "Funny guy", blurb: "Goofy, lovable, the one who makes the room laugh." },
-  { id: "silver-fox", label: "Silver fox", blurb: "Distinguished, mature, aging like wine." },
-  { id: "tough-guy", label: "Tough guy", blurb: "Hard, intimidating, don't-mess-with-me." },
-  { id: "character", label: "Character", blurb: "Distinctive and memorable. A face nobody forgets." },
+  { id: "prince", label: "Prince charming", blurb: "Regal, elegant, fairytale lead. Born for a ballroom." },
+  { id: "hero", label: "Hero", blurb: "The good guy who saves the day. Noble, square-jawed, trustworthy." },
+  { id: "villain", label: "Villain", blurb: "The antagonist everyone secretly roots for. Cold, sharp, magnetic." },
+  { id: "vampire", label: "Vampire", blurb: "Pale, dark, brooding, intense stare. Centuries old, still 17." },
+  { id: "werewolf", label: "Werewolf", blurb: "Wild, warm, rugged and a little feral. Runs hot." },
+  { id: "bad-boy", label: "Bad boy", blurb: "Leather jacket, rebellious streak, definitely trouble." },
+  { id: "bully", label: "The bully", blurb: "Cocky, popular, smug. Peaked in high school and knows it." },
+  { id: "jock", label: "Jock", blurb: "Team captain energy. Sporty, competitive, everyone knows him." },
+  { id: "surfer", label: "Surfer", blurb: "Sun-kissed, salty hair, laid-back. Lives in boardshorts." },
+  { id: "skater", label: "Skater", blurb: "Lanky, messy hair, streetwear, unbothered." },
+  { id: "rockstar", label: "Rockstar", blurb: "Stage presence, messy hair, all the charisma." },
+  { id: "cowboy", label: "Cowboy", blurb: "Southern charm, rugged americana, yes ma'am." },
+  { id: "soldier", label: "Soldier", blurb: "Disciplined, stoic, buzzcut-ready. Strong silent type." },
+  { id: "nerd", label: "Cute nerd", blurb: "Smart, a bit awkward, adorable in glasses." },
+  { id: "artsy", label: "Indie artist", blurb: "Creative, thoughtful, film-student vibe." },
+  { id: "poet", label: "Poet", blurb: "Soulful, romantic, longing looks. Period-drama lead." },
+  { id: "golden-retriever", label: "Golden retriever", blurb: "Sunny, loyal, enthusiastic boyfriend energy." },
+  { id: "boy-next-door", label: "Boy next door", blurb: "Wholesome, sweet and easy to talk to." },
+  { id: "pretty-boy", label: "Pretty boy", blurb: "Soft, delicate, youthful. Prettier than you." },
+  { id: "model", label: "Model", blurb: "Striking, angular, editorial. Belongs on a billboard." },
+  { id: "old-money", label: "Old money", blurb: "Polished, preppy heir. Country club on weekends." },
+  { id: "playboy", label: "Playboy", blurb: "Smooth, flirty, charming. Has a line for everyone." },
+  { id: "mysterious", label: "Mysterious loner", blurb: "Quiet, aloof, enigmatic. Sits in the back." },
+  { id: "silver-fox", label: "Silver fox", blurb: "Distinguished and aging like fine wine." },
+  { id: "e-boy", label: "E-boy", blurb: "Internet-era alt. Chains, dyed hair, Gen-Z aesthetic." },
+  { id: "frat-boy", label: "Frat boy", blurb: "Party, backwards cap, 'bro' in every sentence." },
+  { id: "rugged", label: "Lumberjack", blurb: "Bearded, weathered, outdoorsy. Smells like campfire." },
 ];
 
 const BY_ID = new Map(ARCHETYPES.map((a) => [a.id, a]));
@@ -42,8 +57,14 @@ export function archetypesOf(c: Pick<BankCeleb, "name">): string[] {
   return (TAGS[c.name] ?? []).filter((id) => BY_ID.has(id));
 }
 
-/** Celebs that can appear in the vibe check: tagged and with a photo. */
-export const VIBE_POOL: BankCeleb[] = BANK.filter((c) => c.image && archetypesOf(c).length > 0);
+/**
+ * Only reasonably attractive celebs (rating >= MIN_RATING) take part: matching a vibe only feels
+ * right against someone people find good-looking.
+ */
+export const MIN_RATING = 6.3;
+
+/** Celebs that can appear in the archetypes quiz: attractive, tagged and with a photo. */
+export const VIBE_POOL: BankCeleb[] = BANK.filter((c) => c.image && c.rating >= MIN_RATING && archetypesOf(c).length > 0);
 
 export type VibeAnswer = "very" | "bit" | "not";
 
@@ -58,7 +79,9 @@ const POSITION_WEIGHT = [1, 0.6, 0.4];
 /** Prior: as if each archetype had already been seen once with a "bit" answer at weight PRIOR. */
 const PRIOR = 0.5;
 
-export const VIBE_QUESTIONS = 18;
+export const VIBE_QUESTIONS = 20;
+/** Questions spent covering the least-seen archetypes before narrowing in on the leaders. */
+const EXPLORE = 12;
 
 export interface ArchetypeScore {
   archetype: Archetype;
@@ -91,16 +114,16 @@ export function scoreVibe(votes: VibeVote[], pool: BankCeleb[] = VIBE_POOL): Arc
 }
 
 /**
- * Next celeb to show. The first pass covers every archetype once; after that it probes the
- * archetypes least seen among the current top four, so the leaders get separated. Within an
+ * Next celeb to show. The first EXPLORE questions go to the least-seen archetypes (each celeb
+ * covers 2-4, so this reaches all of them); after that it probes the least-seen of the current
+ * top five, so the leaders get separated. Within an
  * archetype it prefers celebs who are mainly that archetype (first-listed, few tags).
  */
 export function nextVibeCeleb(votes: VibeVote[], rng: () => number = Math.random, pool: BankCeleb[] = VIBE_POOL): BankCeleb | null {
   if (votes.length >= VIBE_QUESTIONS) return null;
   const used = new Set(votes.map((v) => v.celebId));
   const scores = scoreVibe(votes, pool);
-  const firstPass = votes.length < ARCHETYPES.length;
-  const candidates = firstPass ? scores : scores.slice(0, 4);
+  const candidates = votes.length < EXPLORE ? scores : scores.slice(0, 5);
   const target = [...candidates].sort((a, b) => a.seen - b.seen || rng() - 0.5)[0].archetype.id;
 
   let best: BankCeleb | null = null;
@@ -134,7 +157,7 @@ export function vibeExamples(archetypeId: string, votes: VibeVote[], n = 3, pool
   return [...liked, ...typical].slice(0, n);
 }
 
-const KEY = "modulo-maxx:vibe:v1";
+const KEY = "modulo-maxx:archetypes:v1";
 
 export interface VibeState {
   version: 1;

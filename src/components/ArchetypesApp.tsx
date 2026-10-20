@@ -10,9 +10,11 @@ import {
   saveVibe,
   scoreVibe,
   vibeExamples,
+  ARCHETYPES,
   VIBE_QUESTIONS,
   type VibeAnswer,
   type VibeState,
+  type VibeVote,
 } from "@/lib/archetypes";
 import { CelebPhoto } from "./CelebPhoto";
 import { Bar, Button, Screen } from "./ui";
@@ -25,7 +27,7 @@ function advance(s: VibeState): VibeState {
   return next ? { ...s, current: next.id, done: false } : { ...s, current: undefined, done: true };
 }
 
-export function VibeApp() {
+export function ArchetypesApp() {
   const [state, setState] = useState<VibeState | null>(null);
   const [started, setStarted] = useState(false);
 
@@ -64,12 +66,14 @@ export function VibeApp() {
     return (
       <Screen top={top}>
         <div className="flex flex-1 flex-col justify-center">
-          <h1 className="text-5xl font-semibold leading-none tracking-tight">Vibe check</h1>
+          <h1 className="text-5xl font-semibold leading-none tracking-tight">Archetypes</h1>
           <p className="mt-6 text-xl leading-snug">
-            Which archetype is he? Pretty boy, rugged, boy next door, bad boy… Answer {VIBE_QUESTIONS} quick questions
-            about who he gives off a similar vibe to.
+            Hero or villain? Vampire or surfer? Find out which character he&apos;d be cast as. {VIBE_QUESTIONS} quick
+            questions about who he gives off a similar vibe to.
           </p>
-          <p className="mt-4 text-muted">Not about looks. Just the vibe.</p>
+          <p className="mt-4 text-muted">
+            {ARCHETYPES.length} archetypes, from prince charming to e-boy. Not about how good-looking he is, just the vibe.
+          </p>
           <label className="mt-8 block">
             <span className="mb-2 block text-sm text-muted">His name (optional)</span>
             <input
@@ -105,32 +109,35 @@ export function VibeApp() {
   }
 
   if (state.done) {
-    const [best, ...rest] = scores;
-    const examples = vibeExamples(best.archetype.id, state.votes);
+    const [best, second, third, ...rest] = scores;
+    // A clear second archetype makes a combo ("Hero × Golden retriever").
+    const combo = second && second.match >= best.match - 0.12 && second.match >= 0.5;
     return (
       <Screen top={top}>
-        <p className="text-sm text-muted">{state.name.trim() ? `${state.name.trim()}'s vibe` : "His vibe"}</p>
+        <p className="text-sm text-muted">{state.name.trim() ? `${state.name.trim()} is` : "He's"} the</p>
         <h1 className="mt-1 text-6xl font-semibold leading-none tracking-tight">{best.archetype.label}</h1>
-        <p className="mt-3 text-2xl font-medium text-accent">{Math.round(best.match * 100)}% match</p>
-        <p className="mt-4 text-lg leading-snug">{best.archetype.blurb}</p>
+        {combo && <p className="mt-2 text-2xl font-medium text-muted">× {second.archetype.label}</p>}
+        <p className="mt-4 text-2xl font-medium text-accent">{Math.round(best.match * 100)}% match</p>
+        <p className="mt-3 text-lg leading-snug">{best.archetype.blurb}</p>
 
-        {examples.length > 0 && (
-          <div className="mt-8 grid grid-cols-3 gap-3">
-            {examples.map((c) => (
-              <div key={c.id}>
-                <CelebPhoto celeb={c} />
-                <p className="mt-1 text-center text-xs text-muted">{c.name}</p>
-              </div>
-            ))}
-          </div>
-        )}
+        <ArchetypeCard label={`Who else is ${best.archetype.label.toLowerCase()}`} id={best.archetype.id} votes={state.votes} />
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-line pt-6">
-          <p className="text-sm text-muted">Also fits</p>
-          {rest.slice(0, 5).map((s) => (
+        <div className="mt-8 grid grid-cols-2 gap-4 border-t border-line pt-6">
+          {[second, third].filter(Boolean).map((s) => (
             <div key={s.archetype.id}>
-              <div className="mb-1 flex justify-between">
-                <span className="font-medium">{s.archetype.label}</span>
+              <p className="text-sm text-muted">{Math.round(s.match * 100)}% match</p>
+              <p className="text-xl font-semibold">{s.archetype.label}</p>
+              <p className="mt-1 text-sm leading-snug text-muted">{s.archetype.blurb}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 border-t border-line pt-6">
+          <p className="text-sm text-muted">Everything else</p>
+          {rest.slice(0, 6).map((s) => (
+            <div key={s.archetype.id}>
+              <div className="mb-1 flex justify-between text-sm">
+                <span>{s.archetype.label}</span>
                 <span className="tabular-nums text-muted">{Math.round(s.match * 100)}%</span>
               </div>
               <Bar value={s.match} label={s.archetype.label} />
@@ -139,7 +146,7 @@ export function VibeApp() {
         </div>
 
         <div className="mt-10 grid gap-3">
-          <Button onClick={restart}>Check someone else</Button>
+          <Button onClick={restart}>Try someone else</Button>
           <Button variant="outline" onClick={undo}>
             ← Undo last answer
           </Button>
@@ -149,6 +156,7 @@ export function VibeApp() {
         </Link>
       </Screen>
     );
+
   }
 
   const celeb = state.current ? getCeleb(state.current) : undefined;
@@ -179,5 +187,23 @@ export function VibeApp() {
         </Button>
       </div>
     </Screen>
+  );
+}
+
+function ArchetypeCard({ label, id, votes }: { label: string; id: string; votes: VibeVote[] }) {
+  const examples = vibeExamples(id, votes);
+  if (!examples.length) return null;
+  return (
+    <div className="mt-8">
+      <p className="mb-2 text-sm text-muted">{label}</p>
+      <div className="grid grid-cols-3 gap-3">
+        {examples.map((c) => (
+          <div key={c.id}>
+            <CelebPhoto celeb={c} />
+            <p className="mt-1 text-center text-xs text-muted">{c.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

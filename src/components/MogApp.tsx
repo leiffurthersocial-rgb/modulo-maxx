@@ -8,10 +8,12 @@ import {
   fitRanking,
   initialMog,
   loadMog,
+  ownFace,
   pairsForRater,
   saveMog,
   type MogState,
   type Player,
+  voterName,
 } from "@/lib/mog";
 import { Button, Screen } from "./ui";
 
@@ -53,8 +55,15 @@ export function MogApp() {
       </Button>
     </>
   );
-  const startRater = (s: MogState): MogState => ({ ...s, screen: "vote", queue: pairsForRater(s.players, s.votes) });
+  const startRater = (s: MogState): MogState => ({
+    ...s,
+    screen: "vote",
+    queue: pairsForRater(s.players, s.votes, Math.random, ownFace(s, s.rater)),
+  });
   const ratersDone = new Set(state.votes.map((v) => v.rater)).size;
+  const current = voterName(state.players, state.rater);
+  const upNext = voterName(state.players, state.rater + 1);
+  const allPlayersVoted = state.rater + 1 >= state.players.length;
 
   switch (state.screen) {
     case "setup":
@@ -65,13 +74,16 @@ export function MogApp() {
         <Screen top={top}>
           <div className="flex flex-1 flex-col justify-center">
             <p className="text-sm text-muted">Voter {state.rater + 1}</p>
-            <p className="mt-2 text-4xl font-semibold leading-tight tracking-tight">Pass the phone to the next person.</p>
+            <p className="mt-2 text-5xl font-semibold leading-tight tracking-tight">{current}&apos;s turn</p>
+            <p className="mt-4 text-xl">Pass the phone to {current}.</p>
             <p className="mt-4 text-muted">
-              You&apos;ll see two faces at a time. Tap the better-looking face. Votes are anonymous and nobody sees
-              results until the reveal.
+              You&apos;ll see two faces at a time. Tap the better-looking face.
+              {ownFace(state, state.rater) ? " Your own face won't come up." : ""} Votes are anonymous and nobody
+              sees results until the reveal.
             </p>
+            <p className="mt-6 text-sm text-muted">Up next: {upNext}</p>
           </div>
-          <Button onClick={() => setState(startRater(state))}>I&apos;m ready</Button>
+          <Button onClick={() => setState(startRater(state))}>I&apos;m {current}, start</Button>
         </Screen>
       );
 
@@ -82,14 +94,18 @@ export function MogApp() {
       return (
         <Screen top={top}>
           <div className="flex flex-1 flex-col justify-center">
-            <p className="text-4xl font-semibold leading-tight tracking-tight">Done, thanks!</p>
+            <p className="text-4xl font-semibold leading-tight tracking-tight">Thanks, {current}!</p>
             <p className="mt-4 text-muted">
-              {ratersDone} {ratersDone === 1 ? "person has" : "people have"} voted. Hand the phone on, or reveal the
-              ranking if everyone&apos;s had a turn.
+              {ratersDone} {ratersDone === 1 ? "person has" : "people have"} voted.
+              {allPlayersVoted
+                ? " Everyone in the battle has voted. Reveal the ranking, or let a guest vote too."
+                : " Hand the phone on."}
             </p>
+            <p className="mt-8 text-sm text-muted">Up next</p>
+            <p className="text-3xl font-semibold">{upNext}</p>
           </div>
           <div className="grid gap-3">
-            <Button onClick={() => set({ screen: "handoff", rater: state.rater + 1 })}>Next voter</Button>
+            <Button onClick={() => set({ screen: "handoff", rater: state.rater + 1 })}>Pass to {upNext}</Button>
             <Button
               variant="outline"
               onClick={() => confirm("Reveal the ranking to everyone?") && set({ screen: "reveal" })}
@@ -105,6 +121,7 @@ export function MogApp() {
         <Reveal
           state={state}
           top={top}
+          nextVoter={upNext}
           onMoreVotes={() => set({ screen: "handoff", rater: state.rater + 1 })}
           onRematch={() => setState({ ...state, screen: "handoff", votes: [], rater: 0, queue: [] })}
         />
@@ -206,6 +223,21 @@ function Setup({
           ))}
         </ul>
       )}
+      <label className="mt-6 flex items-start gap-3">
+        <input
+          type="checkbox"
+          className="mt-1 h-5 w-5 accent-[var(--accent)]"
+          checked={!!state.hideOwn}
+          onChange={(e) => onChange({ ...state, hideOwn: e.target.checked })}
+        />
+        <span>
+          <span className="block font-medium">Hide each voter&apos;s own face</span>
+          <span className="block text-sm text-muted">
+            Nobody judges themselves. Voters take turns in the order above, then guests can vote too.
+          </span>
+        </span>
+      </label>
+
       {!stored && (
         <p className="mt-4 text-sm text-accent">
           The browser&apos;s storage is full, so this battle won&apos;t survive a reload. It still works if you keep this
@@ -245,9 +277,12 @@ function Vote({ state, top, onChange }: { state: MogState; top: React.ReactNode;
 
   return (
     <Screen top={top}>
-      <p className="text-xs text-muted">
-        Voter {state.rater + 1} · {mine.length + 1} of {total}
-      </p>
+      <div className="flex justify-between text-xs text-muted">
+        <span>
+          {voterName(state.players, state.rater)} voting · {mine.length + 1} of {total}
+        </span>
+        <span>Next: {voterName(state.players, state.rater + 1)}</span>
+      </div>
       <p className="mt-3 text-2xl font-semibold leading-tight">Who has the better face?</p>
       <div key={`${a.id}-${b.id}`} className="fade-in mt-6 grid grid-cols-2 gap-3">
         {[a, b].map((p, i) => (
@@ -277,11 +312,13 @@ function Vote({ state, top, onChange }: { state: MogState; top: React.ReactNode;
 function Reveal({
   state,
   top,
+  nextVoter,
   onMoreVotes,
   onRematch,
 }: {
   state: MogState;
   top: React.ReactNode;
+  nextVoter: string;
   onMoreVotes: () => void;
   onRematch: () => void;
 }) {
@@ -318,7 +355,7 @@ function Reveal({
         matchups. More voters shrink the ± range.
       </p>
       <div className="mt-10 grid gap-3">
-        <Button onClick={onMoreVotes}>Add another voter</Button>
+        <Button onClick={onMoreVotes}>Add another voter ({nextVoter})</Button>
         <Button variant="outline" onClick={() => confirm("Clear all votes and start again with the same faces?") && onRematch()}>
           Rematch (same faces)
         </Button>

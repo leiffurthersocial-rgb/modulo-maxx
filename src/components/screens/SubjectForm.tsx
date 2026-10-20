@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { downscale } from "@/lib/mog";
 import { BUILDS, getBuild } from "@/lib/builds";
 import type { Subject } from "@/lib/state";
 import { BodyFigure } from "../BodyFigure";
@@ -41,6 +42,19 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
   const [kg, setKg] = useState(str(subject.weightKg));
   const [lb, setLb] = useState(str(subject.weightKg === undefined ? undefined : subject.weightKg / KG_PER_LB));
   const [buildId, setBuildId] = useState(getBuild(subject.buildId).id);
+  const [photo, setPhoto] = useState(subject.photo);
+  const [photoError, setPhotoError] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  async function pickPhoto(file: File | undefined) {
+    if (!file) return;
+    setPhotoError(false);
+    try {
+      setPhoto(await downscale(file, 480));
+    } catch {
+      setPhotoError(true);
+    }
+  }
 
   const heightCm = (() => {
     if (heightUnit === "cm") return num(cm);
@@ -77,6 +91,38 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
       <h1 className="text-4xl font-semibold tracking-tight">About him</h1>
 
       <div className="mt-8 flex flex-col gap-8">
+        <div>
+          <span className="mb-2 block text-sm text-muted">Photo (optional)</span>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={() => fileRef.current?.click()}
+              className="w-24 shrink-0 overflow-hidden rounded-xl border border-dashed border-line text-sm text-muted"
+              aria-label={photo ? "Change photo" : "Add photo"}
+            >
+              {photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={photo} alt="" className="aspect-[4/5] w-full object-cover object-[50%_25%]" />
+              ) : (
+                <div className="flex aspect-[4/5] items-center justify-center">+ Photo</div>
+              )}
+            </button>
+            <p className="text-sm text-muted">
+              Shows his photo next to each celeb for a side-by-side comparison. It stays on this device.
+              {photo && (
+                <>
+                  {" "}
+                  <button type="button" className="underline underline-offset-4" onClick={() => setPhoto(undefined)}>
+                    Remove
+                  </button>
+                </>
+              )}
+            </p>
+          </div>
+          <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={(e) => pickPhoto(e.target.files?.[0])} />
+          {photoError && <p className="mt-2 text-sm text-accent">Couldn&apos;t read that image. Try another one.</p>}
+        </div>
+
         <label className="block">
           <span className="mb-2 block text-sm text-muted">Name (optional)</span>
           <input className={inputCls} value={name} onChange={(e) => setName(e.target.value)} autoComplete="off" maxLength={40} />
@@ -197,6 +243,7 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
               heightCm: heightCm && !heightBad ? Math.round(heightCm * 10) / 10 : undefined,
               weightKg: weightKg && !weightBad ? Math.round(weightKg * 10) / 10 : undefined,
               buildId: build.id,
+              photo,
               heightUnit,
               weightUnit,
             })

@@ -25,8 +25,10 @@ export interface MogState {
   screen: "setup" | "handoff" | "vote" | "between" | "reveal";
   players: Player[];
   votes: MogVote[];
-  /** Index of the rater currently holding the device (0-based). */
+  /** Index of the voter holding the device. Voters go in player order, then guests. */
   rater: number;
+  /** Leave each voter's own face out of their matchups. */
+  hideOwn?: boolean;
   /** Pairs left for the current rater, as [aId, bId]. */
   queue: [string, string][];
 }
@@ -45,7 +47,17 @@ const KEY = "modulo-maxx:mog:v1";
 const ELO_SCALE = 400 / Math.LN10;
 
 export function initialMog(): MogState {
-  return { version: 1, screen: "setup", players: [], votes: [], rater: 0, queue: [] };
+  return { version: 1, screen: "setup", players: [], votes: [], rater: 0, queue: [], hideOwn: true };
+}
+
+/** Voter n is player n while there are players left, then "Guest 1", "Guest 2", … */
+export function voterName(players: Player[], rater: number): string {
+  return rater < players.length ? players[rater].name : `Guest ${rater - players.length + 1}`;
+}
+
+/** The player whose face this voter shouldn't judge, if any. */
+export function ownFace(s: Pick<MogState, "players" | "hideOwn">, rater: number): string | undefined {
+  return s.hideOwn && rater < s.players.length ? s.players[rater].id : undefined;
 }
 
 export function loadMog(): MogState | null {
@@ -96,8 +108,13 @@ function shuffle<T>(xs: T[], rng: () => number): T[] {
  * Pairs for the next rater. Small groups get every pair. Larger groups get the pairs that tell us
  * most: least-compared first, then closest in current rating, with each face spread evenly.
  */
-export function pairsForRater(players: Player[], votes: MogVote[], rng: () => number = Math.random): [string, string][] {
-  const ids = players.map((p) => p.id);
+export function pairsForRater(
+  players: Player[],
+  votes: MogVote[],
+  rng: () => number = Math.random,
+  exclude?: string,
+): [string, string][] {
+  const ids = players.map((p) => p.id).filter((id) => id !== exclude);
   const all: [string, string][] = [];
   for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) all.push([ids[i], ids[j]]);
   const k = questionsPerRater(ids.length);

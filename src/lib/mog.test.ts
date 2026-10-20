@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { makeRng } from "./engine";
-import { fitRanking, pairsForRater, questionsPerRater, winChance, type MogVote, type Player } from "./mog";
+import { fitRanking, ownFace, pairsForRater, questionsPerRater, voterName, winChance, type MogVote, type Player } from "./mog";
 
 const players: Player[] = ["A", "B", "C", "D", "E"].map((n) => ({ id: n, name: n, photo: "" }));
 
@@ -50,5 +50,21 @@ describe("mog battle", () => {
     const a = fitRanking(players, votes).map((x) => x.elo);
     const b = fitRanking(players, [...votes].reverse()).map((x) => x.elo);
     expect(a).toEqual(b);
+  });
+
+  it("names voters in player order, then guests", () => {
+    expect(voterName(players, 0)).toBe("A");
+    expect(voterName(players, 4)).toBe("E");
+    expect(voterName(players, 5)).toBe("Guest 1");
+  });
+
+  it("leaves a voter's own face out when the toggle is on", () => {
+    const own = ownFace({ players, hideOwn: true }, 1);
+    expect(own).toBe("B");
+    const pairs = pairsForRater(players, [], makeRng(2), own);
+    expect(pairs).toHaveLength(6);
+    expect(pairs.flat()).not.toContain("B");
+    expect(ownFace({ players, hideOwn: false }, 1)).toBeUndefined();
+    expect(ownFace({ players, hideOwn: true }, 7)).toBeUndefined();
   });
 });
