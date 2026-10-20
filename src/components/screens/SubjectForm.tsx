@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BUILDS, getBuild } from "@/lib/builds";
+import { BUILD_PHOTOS, BUILDS, getBuild } from "@/lib/builds";
 import type { Subject } from "@/lib/state";
 import { BodyFigure } from "../BodyFigure";
 import { Button, Screen, SegmentedToggle } from "../ui";
@@ -164,7 +164,7 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
             <span className="text-sm text-muted">Body type</span>
             <span className="text-xl font-medium">{build.label}</span>
           </div>
-          <div role="radiogroup" aria-label="Body type" className="grid grid-cols-5 gap-2">
+          <div role="radiogroup" aria-label="Body type" className="grid grid-cols-4 gap-2 sm:grid-cols-5">
             {BUILDS.map((b) => {
               const on = b.id === buildId;
               return (
@@ -179,7 +179,12 @@ export function SubjectForm({ subject, onDone, top }: { subject: Subject; onDone
                     on ? "border-accent text-accent" : "border-line text-muted hover:text-fg"
                   }`}
                 >
-                  <BodyFigure shape={b.shape} className="h-24 w-full" />
+                  {BUILD_PHOTOS[b.id] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={`/builds/${BUILD_PHOTOS[b.id].file}`} alt="" className="aspect-[4/5] w-full rounded-lg object-cover" />
+                  ) : (
+                    <BodyFigure shape={b.shape} className="aspect-[4/5] w-full" />
+                  )}
                   <span className="mt-1 text-[11px] leading-tight">{b.label}</span>
                 </button>
               );

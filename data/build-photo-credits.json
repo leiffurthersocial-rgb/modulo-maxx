@@ -1,0 +1,57 @@
+{
+ "fit": {
+  "file": "fit.jpg",
+  "title": "File:Shirtless Runner in Casual Shorts (48855595176).jpg",
+  "author": "Chris Hunkeler from Carlsbad, California, USA",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shirtless_Runner_in_Casual_Shorts_(48855595176).jpg"
+ },
+ "average": {
+  "file": "average.jpg",
+  "title": "File:Broad Man in Nike Swim Trunks (49145725328).jpg",
+  "author": "Chris Hunkeler from Carlsbad, California, USA",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Broad_Man_in_Nike_Swim_Trunks_(49145725328).jpg"
+ },
+ "athletic": {
+  "file": "athletic.jpg",
+  "title": "File:Shirtless man with abs - Nawid collection 34.jpg",
+  "author": "OliverSeitz",
+  "license": "Public domain",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shirtless_man_with_abs_-_Nawid_collection_34.jpg"
+ },
+ "muscular": {
+  "file": "muscular.jpg",
+  "title": "File:Fitness Model John Quinlan 1.jpg",
+  "author": "Photography by Sandra Kimball",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fitness_Model_John_Quinlan_1.jpg"
+ },
+ "very-muscular": {
+  "file": "very-muscular.jpg",
+  "title": "File:Serhii Dukhota posing in a gym.jpg",
+  "author": "Олександр Єрмоленко",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serhii_Dukhota_posing_in_a_gym.jpg"
+ },
+ "soft": {
+  "file": "soft.jpg",
+  "title": "File:Centrally Obese Man.jpg",
+  "author": "Pet4354",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Centrally_Obese_Man.jpg"
+ },
+ "heavy": {
+  "file": "heavy.jpg",
+  "title": "File:Obese Man - Front View - Transparent.png",
+  "author": "Transparency by Mikael Häggström of original work by FatM1ke",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Obese_Man_-_Front_View_-_Transparent.png"
+ }
+}
