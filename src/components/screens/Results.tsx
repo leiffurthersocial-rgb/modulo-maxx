@@ -16,6 +16,7 @@ export function Results({
   canKeepGoing,
   onKeepGoing,
   onAddRater,
+  onUndo,
   onStartOver,
 }: {
   res: ResultsData;
@@ -23,6 +24,7 @@ export function Results({
   canKeepGoing: boolean;
   onKeepGoing: () => void;
   onAddRater: () => void;
+  onUndo?: () => void;
   onStartOver: () => void;
 }) {
   const [copied, setCopied] = useState<"" | "text" | "image" | "error">("");
@@ -64,47 +66,71 @@ export function Results({
 
   return (
     <Screen>
-      <p className="text-sm text-muted">{name.trim() ? `${name.trim()}, overall` : "Overall"}</p>
+      <p className="text-sm text-muted">{name.trim() ? `${name.trim()}, face` : "Face"}</p>
       <div className="mt-1 flex items-baseline gap-3">
-        <span className="text-8xl font-semibold leading-none tracking-tight">{fmt(res.overall.mean)}</span>
-        <span className="text-2xl text-muted">± {fmt(Math.max(0.1, res.overall.sd))}</span>
+        {res.face.outOfBank ? (
+          <span className="text-5xl font-semibold leading-tight tracking-tight">{fmtFace(res.face)}</span>
+        ) : (
+          <>
+            <span className="text-8xl font-semibold leading-none tracking-tight">{fmt(res.face.mean)}</span>
+            <span className="text-2xl text-muted">± {fmt(Math.max(0.1, res.face.sd))}</span>
+          </>
+        )}
       </div>
-      <p className="mt-3 text-2xl font-medium text-accent">Top {res.top}% of guys</p>
-      <p className="mt-4 text-lg leading-snug">{res.verdict}</p>
+      <p className="mt-3 text-2xl font-medium text-accent">Top {res.faceTop}% of guys for face</p>
+      <p className="mt-2 text-xs text-muted">
+        {res.face.outOfBank
+          ? "Outside the range of the celebrity bank, so the range is wide."
+          : `${confidence} confidence, from ${res.answered} answers${res.raters.length > 1 ? ` by ${res.raters.length} people` : ""}.`}
+      </p>
+      {res.raters.length > 1 && (
+        <ul className="mt-3 flex flex-col gap-1 text-sm">
+          {res.raters.map((r) => (
+            <li key={r.label} className="flex justify-between text-muted">
+              <span>{r.label}</span>
+              <span className="tabular-nums">
+                {fmtFace(r.face)} · {r.answered} answers
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
 
-      <div className="mt-10 flex flex-col gap-6">
-        {res.attributes.map((a) => (
-          <div key={a.key}>
-            <div className="mb-2 flex items-baseline justify-between">
-              <span className="font-medium">{a.label}</span>
-              <span className="tabular-nums">{a.key === "face" ? fmtFace(res.face) : fmt(a.value)}</span>
-            </div>
-            <Bar value={a.value / 10} label={a.label} />
-            {a.key === "face" && (
-              <>
-                <p className="mt-2 text-sm font-medium text-accent">Top {res.faceTop}% of guys for face</p>
-                <p className="mt-1 text-xs text-muted">
-                  {res.face.outOfBank
-                    ? "Outside the range of the celebrity bank, so the range is wide."
-                    : `${confidence} confidence, from ${res.answered} answers${res.raters.length > 1 ? ` by ${res.raters.length} people` : ""}.`}
-                </p>
-                {res.raters.length > 1 && (
-                  <ul className="mt-3 flex flex-col gap-1 text-sm">
-                    {res.raters.map((r) => (
-                      <li key={r.label} className="flex justify-between text-muted">
-                        <span>{r.label}</span>
-                        <span className="tabular-nums">
-                          {fmtFace(r.face)} · {r.answered} answers
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </>
-            )}
+      {res.match && (
+        <div className="mt-8 flex items-center gap-5 border-t border-line pt-6">
+          <div className="w-28 shrink-0">
+            <CelebPhoto celeb={res.match} className="text-sm" />
           </div>
-        ))}
+          <div>
+            <p className="text-sm text-muted">{res.face.outOfBank === "above" ? "Face above even" : "Face around the level of"}</p>
+            <p className="text-2xl font-semibold leading-tight">{res.match.name}</p>
+          </div>
+        </div>
+      )}
+
+      <div className="mt-10 flex flex-col gap-6 border-t border-line pt-6">
+        {res.attributes
+          .filter((a) => a.key !== "face")
+          .map((a) => (
+            <div key={a.key}>
+              <div className="mb-2 flex items-baseline justify-between">
+                <span className="font-medium">{a.label}</span>
+                <span className="tabular-nums">{fmt(a.value)}</span>
+              </div>
+              <Bar value={a.value / 10} label={a.label} />
+            </div>
+          ))}
         {res.height === undefined && <p className="text-xs text-muted">No height given, so it isn't counted.</p>}
+      </div>
+
+      <div className="mt-8 border-t border-line pt-6">
+        <p className="text-sm text-muted">Overall (face, height and body)</p>
+        <div className="mt-1 flex items-baseline gap-3">
+          <span className="text-5xl font-semibold leading-none tracking-tight">{fmt(res.overall.mean)}</span>
+          <span className="text-xl text-muted">± {fmt(Math.max(0.1, res.overall.sd))}</span>
+        </div>
+        <p className="mt-2 text-lg font-medium text-accent">Top {res.top}% of guys overall</p>
+        <p className="mt-3 leading-snug">{res.verdict}</p>
       </div>
 
       {(res.strongest || res.weakest) && (
@@ -116,18 +142,6 @@ export function Results({
           <div>
             <p className="text-sm text-muted">Weakest</p>
             <p className="text-xl font-medium">{res.weakest?.label}</p>
-          </div>
-        </div>
-      )}
-
-      {res.match && (
-        <div className="mt-8 flex items-center gap-5 border-t border-line pt-6">
-          <div className="w-28 shrink-0">
-            <CelebPhoto celeb={res.match} className="text-sm" />
-          </div>
-          <div>
-            <p className="text-sm text-muted">{res.face.outOfBank === "above" ? "Face above even" : "Face around the level of"}</p>
-            <p className="text-2xl font-semibold leading-tight">{res.match.name}</p>
           </div>
         </div>
       )}
@@ -147,7 +161,12 @@ export function Results({
           </Button>
         )}
       </div>
-      <div className="mt-8 flex justify-center">
+      <div className="mt-8 flex justify-center gap-6">
+        {onUndo && (
+          <Button variant="text" onClick={onUndo}>
+            ← Undo last answer
+          </Button>
+        )}
         <Button variant="text" onClick={onStartOver}>
           Start over
         </Button>

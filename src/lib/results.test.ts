@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { BANK } from "./bank";
 import { answerProbs, makeRng, type Answer, type Vote } from "./engine";
-import { computeResults } from "./results";
+import { computeResults, verdict } from "./results";
 import { initialState, newRater, type AppState } from "./state";
 
 function votesFor(theta: number, s: number, seed: number, n = 14): Vote[] {
@@ -42,5 +42,14 @@ describe("multiple raters", () => {
     const res = computeResults(stateWith(votesFor(7, 0.3, 3)));
     expect(res.faceTop).toBeGreaterThan(5);
     expect(res.faceTop).toBeLessThan(40);
+  });
+});
+
+describe("verdict", () => {
+  it("agrees with the percentile", () => {
+    expect(verdict(15)).toMatch(/^Above average/);
+    expect(verdict(50)).toMatch(/^Around average/);
+    expect(verdict(1)).toMatch(/^Exceptional/);
+    expect(verdict(95)).toMatch(/^Below average/);
   });
 });

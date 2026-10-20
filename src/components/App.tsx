@@ -84,7 +84,11 @@ export function App() {
   function undo() {
     if (!state || !rater || rater.votes.length === 0) return;
     const last = rater.votes[rater.votes.length - 1];
-    set({ raters: updateRater(state.raters, state.activeRater, { votes: rater.votes.slice(0, -1), current: last.celebId }) });
+    // Also works from the results screen, when the misclick was the answer that finished the round.
+    set({
+      screen: "rating",
+      raters: updateRater(state.raters, state.activeRater, { votes: rater.votes.slice(0, -1), current: last.celebId }),
+    });
   }
 
   function keepGoing() {
@@ -142,6 +146,7 @@ export function App() {
           canKeepGoing={rater.votes.length < BANK.length}
           onKeepGoing={keepGoing}
           onAddRater={addRater}
+          onUndo={rater.votes.length > 0 ? undo : undefined}
           onStartOver={startOver}
         />
       );

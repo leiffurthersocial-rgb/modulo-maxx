@@ -77,12 +77,13 @@ export interface Results {
   answered: number;
 }
 
-export function verdict(overall: number): string {
-  if (overall >= 8.5) return "Exceptional. Very few guys score this high.";
-  if (overall >= 7.5) return "Well above average. You'd stand out in most rooms.";
-  if (overall >= 6.5) return "Above average. Good-looking by most people's standards.";
-  if (overall >= 5) return "Around average, which is where most guys are.";
-  if (overall >= 4) return "A bit below average on these three things. Style, grooming and confidence aren't counted here, and they count for a lot.";
+/** Verdict from the "top X%" figure, so the wording always agrees with the percentile shown. */
+export function verdict(top: number): string {
+  if (top <= 2) return "Exceptional. Very few guys score this high.";
+  if (top <= 10) return "Well above average. You'd stand out in most rooms.";
+  if (top <= 30) return "Above average. Good-looking by most people's standards.";
+  if (top <= 70) return "Around average, which is where most guys are.";
+  if (top <= 90) return "A bit below average on these three things. Style, grooming and confidence aren't counted here, and they count for a lot.";
   return "Below average on these three things, which leave out most of what people actually like about someone.";
 }
 
@@ -113,6 +114,7 @@ export function computeResults(state: AppState, fs: FaceState = faceState(state)
   const spread = sorted[0].value - sorted[sorted.length - 1].value;
 
   const rated = state.raters.filter((x) => x.votes.length > 0);
+  const top = topPercent(overall.mean);
   return {
     face: fs.face,
     faceTop: faceTopPercent(faceCenter(fs.face)),
@@ -123,12 +125,12 @@ export function computeResults(state: AppState, fs: FaceState = faceState(state)
     height,
     body,
     overall,
-    top: topPercent(overall.mean),
+    top,
     match: fs.face.outOfBank === "below" ? undefined : closestCeleb(fs.face.mean),
     attributes,
     strongest: spread >= 0.3 ? sorted[0] : undefined,
     weakest: spread >= 0.3 ? sorted[sorted.length - 1] : undefined,
-    verdict: verdict(overall.mean),
+    verdict: verdict(top),
     answered: state.raters.reduce((n, x) => n + x.votes.length, 0),
   };
 }
@@ -154,11 +156,10 @@ export function fmtFace(face: FaceSummary): string {
 export function shareText(res: Results, name: string): string {
   const who = name.trim() ? `${name.trim()}: ` : "";
   const parts = [
-    `face ${fmtFace(res.face)} (top ${res.faceTop}%)`,
     res.height !== undefined ? `height ${fmt(res.height)}` : null,
     `body ${fmt(res.body)}`,
   ].filter(Boolean);
   const match = res.match ? ` Face around the level of ${res.match.name}.` : "";
   const by = res.raters.length > 1 ? ` Rated by ${res.raters.length} people.` : "";
-  return `Modulo Maxx. ${who}${fmtRange(res.overall.mean, res.overall.sd)} overall, top ${res.top}% of guys. ${parts.join(", ")}.${match}${by} For fun, not science.`;
+  return `Modulo Maxx. ${who}face ${fmtFace(res.face)}, top ${res.faceTop}% of guys.${match} ${parts.join(", ")}, overall ${fmtRange(res.overall.mean, res.overall.sd)} (top ${res.top}%).${by} For fun, not science.`;
 }

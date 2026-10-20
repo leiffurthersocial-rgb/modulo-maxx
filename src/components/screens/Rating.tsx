@@ -25,11 +25,6 @@ export function Rating({
       <Bar value={progress} label="Confidence" />
       <div className="mt-2 flex justify-between text-xs text-muted">
         <span>Question {answered + 1}</span>
-        {onUndo && (
-          <button type="button" onClick={onUndo} className="underline-offset-4 hover:underline">
-            Undo
-          </button>
-        )}
       </div>
 
       {/* Key on the celeb so each new photo fades in. */}
@@ -51,6 +46,9 @@ export function Rating({
         </Button>
         <Button variant="outline" onClick={() => onAnswer("less")}>
           Less
+        </Button>
+        <Button variant="text" onClick={onUndo} disabled={!onUndo} className="disabled:opacity-30">
+          ← Back (undo last answer)
         </Button>
       </div>
     </Screen>

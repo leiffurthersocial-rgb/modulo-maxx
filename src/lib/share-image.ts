@@ -39,25 +39,36 @@ export async function renderResultImage(res: Results, name: string): Promise<Blo
   ctx.font = `500 40px ${font}`;
   ctx.fillText(name.trim() ? `Modulo Maxx · ${name.trim()}` : "Modulo Maxx", pad, pad + 40);
 
-  ctx.fillStyle = fg;
-  ctx.font = `600 200px ${font}`;
-  ctx.fillText(fmt(res.overall.mean), pad - 8, pad + 300);
-  const w = ctx.measureText(fmt(res.overall.mean)).width;
+  // Face is the headline number; overall sits with height and body below.
+  const big = res.face.outOfBank ? fmtFace(res.face) : fmt(res.face.mean);
   ctx.fillStyle = muted;
-  ctx.font = `400 64px ${font}`;
-  ctx.fillText(`± ${fmt(Math.max(0.1, res.overall.sd))}`, pad + w + 16, pad + 300);
+  ctx.font = `500 40px ${font}`;
+  ctx.fillText("Face", pad, pad + 120);
+  ctx.fillStyle = fg;
+  ctx.font = res.face.outOfBank ? `600 90px ${font}` : `600 200px ${font}`;
+  ctx.fillText(big, pad - 8, pad + 300);
+  if (!res.face.outOfBank) {
+    const w = ctx.measureText(big).width;
+    ctx.fillStyle = muted;
+    ctx.font = `400 64px ${font}`;
+    ctx.fillText(`± ${fmt(Math.max(0.1, res.face.sd))}`, pad + w + 16, pad + 300);
+  }
 
   ctx.fillStyle = accent;
   ctx.font = `500 52px ${font}`;
-  ctx.fillText(`Top ${res.top}% of guys`, pad, pad + 390);
+  ctx.fillText(`Top ${res.faceTop}% of guys for face`, pad, pad + 390);
 
   let y = pad + 500;
   const barW = W - pad * 2;
-  for (const a of res.attributes) {
+  const rows = [
+    ...res.attributes.filter((a) => a.key !== "face").map((a) => ({ label: a.label, text: fmt(a.value), value: a.value })),
+    { label: "Overall", text: `${fmt(res.overall.mean)} · top ${res.top}%`, value: res.overall.mean },
+  ];
+  for (const a of rows) {
     ctx.fillStyle = fg;
     ctx.font = `500 40px ${font}`;
     ctx.fillText(a.label, pad, y);
-    const label = a.key === "face" ? `${fmtFace(res.face)} · top ${res.faceTop}%` : fmt(a.value);
+    const label = a.text;
     ctx.font = `400 40px ${font}`;
     const lw = ctx.measureText(label).width;
     ctx.fillText(label, W - pad - lw, y);
