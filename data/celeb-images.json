@@ -71,6 +71,30 @@
   "height": 900,
   "year": 2026
  },
+ "andy-richter": {
+  "name": "Andy Richter",
+  "file": "andy-richter.jpg",
+  "title": "File:Andy Richter (2024, Stop Making Sense, Pantages Theater panel) (cropped).jpg",
+  "author": "Cory Doctorow",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andy_Richter_(2024,_Stop_Making_Sense,_Pantages_Theater_panel)_(cropped).jpg",
+  "width": 600,
+  "height": 673,
+  "year": 2024
+ },
+ "anthony-edwards": {
+  "name": "Anthony Edwards",
+  "file": "anthony-edwards.jpg",
+  "title": "File:Anthony Edwards Argentina v Egypt 7 July 2026-069 (cropped).jpg",
+  "author": "Bryan Berlin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anthony_Edwards_Argentina_v_Egypt_7_July_2026-069_(cropped).jpg",
+  "width": 600,
+  "height": 899,
+  "year": 2026
+ },
  "anthony-mackie": {
   "name": "Anthony Mackie",
   "file": "anthony-mackie.jpg",
@@ -119,6 +143,18 @@
   "height": 908,
   "year": 2019
  },
+ "barry-keoghan": {
+  "name": "Barry Keoghan",
+  "file": "barry-keoghan.jpg",
+  "title": "File:Barry Keoghan at the 2024 Toronto International Film Festival (cropped).jpg",
+  "author": "Kevin Payravi",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barry_Keoghan_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
+  "width": 600,
+  "height": 756,
+  "year": 2024
+ },
  "ben-affleck": {
   "name": "Ben Affleck",
   "file": "ben-affleck.jpg",
@@ -155,6 +191,18 @@
   "height": 800,
   "year": 2025
  },
+ "benson-boone": {
+  "name": "Benson Boone",
+  "file": "benson-boone.jpg",
+  "title": "File:Benson Boone Press Copy Warner Records (cropped).png",
+  "author": "Warner Records",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Benson_Boone_Press_Copy_Warner_Records_(cropped).png",
+  "width": 406,
+  "height": 506,
+  "year": 2024
+ },
  "bill-burr": {
   "name": "Bill Burr",
   "file": "bill-burr.jpg",
@@ -190,6 +238,18 @@
   "width": 600,
   "height": 750,
   "year": 2026
+ },
+ "bobby-lee": {
+  "name": "Bobby Lee",
+  "file": "bobby-lee.jpg",
+  "title": "File:Bobby Lee Edited James Tamim.jpeg",
+  "author": "Neal Brennan",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bobby_Lee_Edited_James_Tamim.jpeg",
+  "width": 600,
+  "height": 538,
+  "year": 2023
  },
  "brad-pitt": {
   "name": "Brad Pitt",
@@ -251,6 +311,54 @@
   "height": 789,
   "year": 2018
  },
+ "bukayo-saka": {
+  "name": "Bukayo Saka",
+  "file": "bukayo-saka.jpg",
+  "title": "File:Bukayo Saka England v Ghana 23 June 2026-057 (cropped).jpg",
+  "author": "Bryan Berlin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bukayo_Saka_England_v_Ghana_23_June_2026-057_(cropped).jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2026
+ },
+ "caleb-mclaughlin": {
+  "name": "Caleb McLaughlin",
+  "file": "caleb-mclaughlin.jpg",
+  "title": "File:Caleb McLaughlin 2025 (1).png",
+  "author": "La Gazzetta dello Sport",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caleb_McLaughlin_2025_(1).png",
+  "width": 600,
+  "height": 600,
+  "year": 2025
+ },
+ "central-cee": {
+  "name": "Central Cee",
+  "file": "central-cee.jpg",
+  "title": "File:Central cee-5.jpg",
+  "author": "200izo",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Central_cee-5.jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2023
+ },
+ "cha-eun-woo": {
+  "name": "Cha Eun-woo",
+  "file": "cha-eun-woo.jpg",
+  "title": "File:Cha Eun-woo, March 31, 2025.png",
+  "author": "K-POPIT 케이팝잇",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cha_Eun-woo,_March_31,_2025.png",
+  "width": 600,
+  "height": 788,
+  "year": 2025
+ },
  "channing-tatum": {
   "name": "Channing Tatum",
   "file": "channing-tatum.jpg",
@@ -275,6 +383,18 @@
   "height": 679,
   "year": 2019
  },
+ "charles-melton": {
+  "name": "Charles Melton",
+  "file": "charles-melton.jpg",
+  "title": "File:Charles Melton at the 2026 Cannes Film Festival 02 (cropped).jpg",
+  "author": "Gabriel Hutchinson",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Melton_at_the_2026_Cannes_Film_Festival_02_(cropped).jpg",
+  "width": 600,
+  "height": 760,
+  "year": 2026
+ },
  "charlie-day": {
   "name": "Charlie Day",
   "file": "charlie-day.jpg",
@@ -298,6 +418,18 @@
   "width": 600,
   "height": 800,
   "year": 2024
+ },
+ "chico-lachowski": {
+  "name": "Chico Lachowski",
+  "file": "chico-lachowski.jpg",
+  "title": "File:Francisco Lachowski 2011.jpg",
+  "author": "Sara Cimino from Milan, Italy ( Flickr account )",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Francisco_Lachowski_2011.jpg",
+  "width": 600,
+  "height": 843,
+  "year": 2011
  },
  "chris-evans": {
   "name": "Chris Evans",
@@ -407,6 +539,18 @@
   "height": 901,
   "year": 2025
  },
+ "cole-sprouse": {
+  "name": "Cole Sprouse",
+  "file": "cole-sprouse.jpg",
+  "title": "File:Cole Sprouse Tribeca 2026 4.jpg",
+  "author": "Casey \"Poppins\" Nedelka",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cole_Sprouse_Tribeca_2026_4.jpg",
+  "width": 600,
+  "height": 662,
+  "year": 2026
+ },
  "colin-farrell": {
   "name": "Colin Farrell",
   "file": "colin-farrell.jpg",
@@ -430,6 +574,18 @@
   "width": 600,
   "height": 807,
   "year": 2014
+ },
+ "conan-gray": {
+  "name": "Conan Gray",
+  "file": "conan-gray.jpg",
+  "title": "File:Conan gray 2024 (cropped).jpg",
+  "author": "Havelbaude",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Conan_gray_2024_(cropped).jpg",
+  "width": 600,
+  "height": 800,
+  "year": 2024
  },
  "conan-o-brien": {
   "name": "Conan O'Brien",
@@ -538,6 +694,18 @@
   "height": 800,
   "year": 2013
  },
+ "danny-trejo": {
+  "name": "Danny Trejo",
+  "file": "danny-trejo.jpg",
+  "title": "File:Danny Trejo Photo Op GalaxyCon Oklahoma City 2025.jpg",
+  "author": "Super Festivals from Ft. Lauderdale, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Danny_Trejo_Photo_Op_GalaxyCon_Oklahoma_City_2025.jpg",
+  "width": 600,
+  "height": 801,
+  "year": 2025
+ },
  "dave-chappelle": {
   "name": "Dave Chappelle",
   "file": "dave-chappelle.jpg",
@@ -564,14 +732,14 @@
  "denzel-washington": {
   "name": "Denzel Washington",
   "file": "denzel-washington.jpg",
-  "title": "File:Denzel Washington TIFF 2014.jpg",
-  "author": "GabboT",
-  "license": "CC BY-SA 2.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Denzel_Washington_TIFF_2014.jpg",
+  "title": "File:Denzel Washington at the 2025 Cannes Film Festival.jpg",
+  "author": "Gabriel Hutchinson",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Denzel_Washington_at_the_2025_Cannes_Film_Festival.jpg",
   "width": 600,
-  "height": 944,
-  "year": 2014
+  "height": 840,
+  "year": 2025
  },
  "dev-patel": {
   "name": "Dev Patel",
@@ -691,6 +859,18 @@
   "height": 900,
   "year": 2026
  },
+ "finn-wolfhard": {
+  "name": "Finn Wolfhard",
+  "file": "finn-wolfhard.jpg",
+  "title": "File:Finn Wolfhard 2025 (crop).png",
+  "author": "HEYFOMO",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Finn_Wolfhard_2025_(crop).png",
+  "width": 600,
+  "height": 725,
+  "year": 2025
+ },
  "flavor-flav": {
   "name": "Flavor Flav",
   "file": "flavor-flav.jpg",
@@ -703,6 +883,18 @@
   "height": 814,
   "year": 2014
  },
+ "fred-armisen": {
+  "name": "Fred Armisen",
+  "file": "fred-armisen.jpg",
+  "title": "File:Fred Armisen at Rock Center.jpg",
+  "author": "Colleen Sturtevant",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fred_Armisen_at_Rock_Center.jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2022
+ },
  "gary-neville": {
   "name": "Gary Neville",
   "file": "gary-neville.jpg",
@@ -714,6 +906,18 @@
   "width": 600,
   "height": 801,
   "year": 2014
+ },
+ "gaten-matarazzo": {
+  "name": "Gaten Matarazzo",
+  "file": "gaten-matarazzo.jpg",
+  "title": "File:Gaten Matarazzo.jpg",
+  "author": "Philip Romano",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gaten_Matarazzo.jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2022
  },
  "gene-simmons": {
   "name": "Gene Simmons",
@@ -799,6 +1003,18 @@
   "height": 757,
   "year": 2022
  },
+ "harris-dickinson": {
+  "name": "Harris Dickinson",
+  "file": "harris-dickinson.jpg",
+  "title": "File:Harris Dickinson at 2025 Telluride Film Festival (cropped).jpg",
+  "author": "John Sears",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Harris_Dickinson_at_2025_Telluride_Film_Festival_(cropped).jpg",
+  "width": 600,
+  "height": 800,
+  "year": 2025
+ },
  "harry-styles": {
   "name": "Harry Styles",
   "file": "harry-styles.jpg",
@@ -834,6 +1050,18 @@
   "width": 600,
   "height": 800,
   "year": 2024
+ },
+ "horatio-sanz": {
+  "name": "Horatio Sanz",
+  "file": "horatio-sanz.jpg",
+  "title": "File:Horatio Sanz on Behind The Velvet Rope TV (cropped).jpg",
+  "author": "Behind The Velvet Rope TV",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Horatio_Sanz_on_Behind_The_Velvet_Rope_TV_(cropped).jpg",
+  "width": 600,
+  "height": 624,
+  "year": 2015
  },
  "hugh-grant": {
   "name": "Hugh Grant",
@@ -871,6 +1099,30 @@
   "height": 856,
   "year": 2018
  },
+ "ishowspeed": {
+  "name": "IShowSpeed",
+  "file": "ishowspeed.jpg",
+  "title": "File:IShowSpeed at Chinatown (Portrait) 04.jpg",
+  "author": "Chin Yu Chu",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:IShowSpeed_at_Chinatown_(Portrait)_04.jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2024
+ },
+ "ja-morant": {
+  "name": "Ja Morant",
+  "file": "ja-morant.jpg",
+  "title": "File:Ja Morant 2021.jpg",
+  "author": "All-Pro Reels",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ja_Morant_2021.jpg",
+  "width": 600,
+  "height": 941,
+  "year": 2021
+ },
  "jack-black": {
   "name": "Jack Black",
   "file": "jack-black.jpg",
@@ -883,6 +1135,18 @@
   "height": 838,
   "year": 2023
  },
+ "jack-grealish": {
+  "name": "Jack Grealish",
+  "file": "jack-grealish.jpg",
+  "title": "File:ManCity20240722-017 (cropped).jpg",
+  "author": "Hameltion",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:ManCity20240722-017_(cropped).jpg",
+  "width": 600,
+  "height": 807,
+  "year": 2024
+ },
  "jack-harlow": {
   "name": "Jack Harlow",
   "file": "jack-harlow.jpg",
@@ -894,6 +1158,18 @@
   "width": 600,
   "height": 761,
   "year": 2022
+ },
+ "jacob-batalon": {
+  "name": "Jacob Batalon",
+  "file": "jacob-batalon.jpg",
+  "title": "File:Jacob Batalon (28035642754) (cropped).jpg",
+  "author": "Gage Skidmore from Peoria, AZ, United States of America",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacob_Batalon_(28035642754)_(cropped).jpg",
+  "width": 600,
+  "height": 801,
+  "year": 2016
  },
  "jacob-elordi": {
   "name": "Jacob Elordi",
@@ -918,6 +1194,17 @@
   "width": 600,
   "height": 900,
   "year": 2019
+ },
+ "jake-paul": {
+  "name": "Jake Paul",
+  "file": "jake-paul.jpg",
+  "title": "File:Jake Paul March 2026 (3x4 cropped).jpg",
+  "author": "The White House",
+  "license": "Public domain",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jake_Paul_March_2026_(3x4_cropped).jpg",
+  "width": 600,
+  "height": 800,
+  "year": 2026
  },
  "jamie-foxx": {
   "name": "Jamie Foxx",
@@ -1109,6 +1396,18 @@
   "height": 827,
   "year": 2024
  },
+ "joe-alwyn": {
+  "name": "Joe Alwyn",
+  "file": "joe-alwyn.jpg",
+  "title": "File:Joseph Alwyn.jpg",
+  "author": "H7ndrx",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Alwyn.jpg",
+  "width": 600,
+  "height": 866,
+  "year": 2024
+ },
  "joe-burrow": {
   "name": "Joe Burrow",
   "file": "joe-burrow.jpg",
@@ -1120,6 +1419,30 @@
   "width": 453,
   "height": 611,
   "year": 2022
+ },
+ "joe-keery": {
+  "name": "Joe Keery",
+  "file": "joe-keery.jpg",
+  "title": "File:JoeKeery-byPhilipRomano.jpg",
+  "author": "PhilipRomano",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:JoeKeery-byPhilipRomano.jpg",
+  "width": 600,
+  "height": 902,
+  "year": 2026
+ },
+ "joe-pesci": {
+  "name": "Joe Pesci",
+  "file": "joe-pesci.jpg",
+  "title": "File:JoePesci-2009 (cropped).jpg",
+  "author": "yausser",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:JoePesci-2009_(cropped).jpg",
+  "width": 600,
+  "height": 621,
+  "year": 2009
  },
  "joe-rogan": {
   "name": "Joe Rogan",
@@ -1215,6 +1538,18 @@
   "height": 841,
   "year": 2014
  },
+ "jon-lovitz": {
+  "name": "Jon Lovitz",
+  "file": "jon-lovitz.jpg",
+  "title": "File:JonLovitz08 (cropped).jpg",
+  "author": "Romina Espinosa at http://www.rominaespinosa.com",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:JonLovitz08_(cropped).jpg",
+  "width": 600,
+  "height": 885,
+  "year": 2008
+ },
  "jonah-hill": {
   "name": "Jonah Hill",
   "file": "jonah-hill.jpg",
@@ -1226,6 +1561,30 @@
   "width": 600,
   "height": 789,
   "year": 2019
+ },
+ "jonathan-bailey": {
+  "name": "Jonathan Bailey",
+  "file": "jonathan-bailey.jpg",
+  "title": "File:Jonathan Bailey press for Wicked.png",
+  "author": "Barbie Simons",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jonathan_Bailey_press_for_Wicked.png",
+  "width": 600,
+  "height": 802,
+  "year": 2024
+ },
+ "jordan-barrett": {
+  "name": "Jordan Barrett",
+  "file": "jordan-barrett.jpg",
+  "title": "File:Jordan-barrett-mbfw-march-2022-fashion-week-berlin.jpg",
+  "author": "Nordfriisk",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jordan-barrett-mbfw-march-2022-fashion-week-berlin.jpg",
+  "width": 600,
+  "height": 750,
+  "year": 2022
  },
  "jose-mourinho": {
   "name": "José Mourinho",
@@ -1263,6 +1622,18 @@
   "height": 900,
   "year": 2022
  },
+ "josh-gad": {
+  "name": "Josh Gad",
+  "file": "josh-gad.jpg",
+  "title": "File:Josh Gad at San Diego Comic Con 2026-2.jpg",
+  "author": "Kevin Paul",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Josh_Gad_at_San_Diego_Comic_Con_2026-2.jpg",
+  "width": 600,
+  "height": 750,
+  "year": 2026
+ },
  "jude-bellingham": {
   "name": "Jude Bellingham",
   "file": "jude-bellingham.jpg",
@@ -1273,6 +1644,18 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jude_Bellingham_England_v_Ghana_23_June_2026-061_(cropped).jpg",
   "width": 600,
   "height": 900,
+  "year": 2026
+ },
+ "jungkook": {
+  "name": "Jungkook",
+  "file": "jungkook.jpg",
+  "title": "File:Jung Kook of BTS, February 12, 2026 (1).png",
+  "author": "K-POPIT 케이팝잇",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jung_Kook_of_BTS,_February_12,_2026_(1).png",
+  "width": 600,
+  "height": 863,
   "year": 2026
  },
  "justin-bieber": {
@@ -1286,6 +1669,18 @@
   "width": 553,
   "height": 628,
   "year": 2018
+ },
+ "kai-cenat": {
+  "name": "Kai Cenat",
+  "file": "kai-cenat.jpg",
+  "title": "File:Kai Cenat July 2025.jpg",
+  "author": "ImDavisss Live",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kai_Cenat_July_2025.jpg",
+  "width": 600,
+  "height": 835,
+  "year": 2025
  },
  "keanu-reeves": {
   "name": "Keanu Reeves",
@@ -1370,6 +1765,18 @@
   "height": 585,
   "year": 2011
  },
+ "kevin-smith": {
+  "name": "Kevin Smith",
+  "file": "kevin-smith.jpg",
+  "title": "File:Kevin Smith (55266573227).jpg",
+  "author": "Tim Blackmon for Galaxy Con",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kevin_Smith_(55266573227).jpg",
+  "width": 600,
+  "height": 801,
+  "year": 2026
+ },
  "kit-harington": {
   "name": "Kit Harington",
   "file": "kit-harington.jpg",
@@ -1381,6 +1788,30 @@
   "width": 600,
   "height": 609,
   "year": 2013
+ },
+ "kj-apa": {
+  "name": "KJ Apa",
+  "file": "kj-apa.jpg",
+  "title": "File:K.J. Apa (44563642331) (cropped 2).jpg",
+  "author": "John Bauld from Toronto, Canada",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:K.J._Apa_(44563642331)_(cropped_2).jpg",
+  "width": 600,
+  "height": 768,
+  "year": 2018
+ },
+ "ksi": {
+  "name": "KSI",
+  "file": "ksi.jpg",
+  "title": "File:KSI in 2024 (2).png",
+  "author": "MILLION DOLLAZ WORTH OF GAME",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:KSI_in_2024_(2).png",
+  "width": 600,
+  "height": 835,
+  "year": 2024
  },
  "kumail-nanjiani": {
   "name": "Kumail Nanjiani",
@@ -1465,6 +1896,42 @@
   "height": 686,
   "year": 2019
  },
+ "lil-nas-x": {
+  "name": "Lil Nas X",
+  "file": "lil-nas-x.jpg",
+  "title": "File:Lil Nas X (cropped).jpg",
+  "author": "DiFronzo",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lil_Nas_X_(cropped).jpg",
+  "width": 528,
+  "height": 613,
+  "year": 2019
+ },
+ "lil-uzi-vert": {
+  "name": "Lil Uzi Vert",
+  "file": "lil-uzi-vert.jpg",
+  "title": "File:Lil Uzi Vert (2018).png",
+  "author": "Icebox",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lil_Uzi_Vert_(2018).png",
+  "width": 515,
+  "height": 613,
+  "year": 2018
+ },
+ "lil-yachty": {
+  "name": "Lil Yachty",
+  "file": "lil-yachty.jpg",
+  "title": "File:Lil Yachty 2025.jpg",
+  "author": "Lygonstreet",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lil_Yachty_2025.jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2025
+ },
  "lionel-messi": {
   "name": "Lionel Messi",
   "file": "lionel-messi.jpg",
@@ -1475,6 +1942,41 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
   "width": 600,
   "height": 900,
+  "year": 2026
+ },
+ "logan-paul": {
+  "name": "Logan Paul",
+  "file": "logan-paul.jpg",
+  "title": "File:Logan Paul, WrestleMania XL in 2024 1 (cropped) (cropped).jpg",
+  "author": "diegofernandophotography",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Logan_Paul,_WrestleMania_XL_in_2024_1_(cropped)_(cropped).jpg",
+  "width": 600,
+  "height": 899,
+  "year": 2024
+ },
+ "lucky-blue-smith": {
+  "name": "Lucky Blue Smith",
+  "file": "lucky-blue-smith.jpg",
+  "title": "File:Lucky blue smith 2019 2.jpg",
+  "author": "Yoann Lothaire / other viewnewsmedia",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lucky_blue_smith_2019_2.jpg",
+  "width": 584,
+  "height": 731,
+  "year": 2019
+ },
+ "luka-doncic": {
+  "name": "Luka Dončić",
+  "file": "luka-doncic.jpg",
+  "title": "File:Luka Dončić and Marines, 2026 (cropped).jpg",
+  "author": "U.S. Embassy Ljubljana",
+  "license": "Public domain",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Luka_Don%C4%8Di%C4%87_and_Marines,_2026_(cropped).jpg",
+  "width": 564,
+  "height": 769,
   "year": 2026
  },
  "luke-combs": {
@@ -1548,6 +2050,18 @@
   "width": 600,
   "height": 902,
   "year": 2026
+ },
+ "matt-rife": {
+  "name": "Matt Rife",
+  "file": "matt-rife.jpg",
+  "title": "File:Matt Rife 2024.jpg",
+  "author": "Jaime Aquino",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matt_Rife_2024.jpg",
+  "width": 554,
+  "height": 661,
+  "year": 2024
  },
  "matthew-gray-gubler": {
   "name": "Matthew Gray Gubler",
@@ -1705,6 +2219,18 @@
   "height": 751,
   "year": 2017
  },
+ "nicholas-galitzine": {
+  "name": "Nicholas Galitzine",
+  "file": "nicholas-galitzine.jpg",
+  "title": "File:Nicholas Galitzine on Dulce Osuna.jpg",
+  "author": "Dulce Osuna",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nicholas_Galitzine_on_Dulce_Osuna.jpg",
+  "width": 600,
+  "height": 700,
+  "year": 2020
+ },
  "nick-jonas": {
   "name": "Nick Jonas",
   "file": "nick-jonas.jpg",
@@ -1728,6 +2254,42 @@
   "width": 600,
   "height": 800,
   "year": 2022
+ },
+ "nikola-jokic": {
+  "name": "Nikola Jokić",
+  "file": "nikola-jokic.jpg",
+  "title": "File:Nikola Jokic free throw (cropped).jpg",
+  "author": "All-Pro Reels",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nikola_Jokic_free_throw_(cropped).jpg",
+  "width": 600,
+  "height": 817,
+  "year": 2020
+ },
+ "noah-centineo": {
+  "name": "Noah Centineo",
+  "file": "noah-centineo.jpg",
+  "title": "File:Noah Centineo by Gage Skidmore (cropped).jpg",
+  "author": "Gage Skidmore",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noah_Centineo_by_Gage_Skidmore_(cropped).jpg",
+  "width": 600,
+  "height": 779,
+  "year": 2026
+ },
+ "noah-schnapp": {
+  "name": "Noah Schnapp",
+  "file": "noah-schnapp.jpg",
+  "title": "File:Noah Schnapp - NBFF 2025.jpg",
+  "author": "Kevin Paul",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noah_Schnapp_-_NBFF_2025.jpg",
+  "width": 600,
+  "height": 750,
+  "year": 2025
  },
  "novak-djokovic": {
   "name": "Novak Djokovic",
@@ -1788,6 +2350,18 @@
   "height": 581,
   "year": 2023
  },
+ "patton-oswalt": {
+  "name": "Patton Oswalt",
+  "file": "patton-oswalt.jpg",
+  "title": "File:Patton Oswalt by Gage Skidmore 3 (cropped).jpg",
+  "author": "Gage Skidmore",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Patton_Oswalt_by_Gage_Skidmore_3_(cropped).jpg",
+  "width": 600,
+  "height": 824,
+  "year": 2017
+ },
  "paul-giamatti": {
   "name": "Paul Giamatti",
   "file": "paul-giamatti.jpg",
@@ -1824,6 +2398,30 @@
   "height": 900,
   "year": 2026
  },
+ "paul-walter-hauser": {
+  "name": "Paul Walter Hauser",
+  "file": "paul-walter-hauser.jpg",
+  "title": "File:20210526—Paul Walter Hauser, interview for \"Cruella\", LosCriticologos (05m21s) (cropped) (cropped).jpg",
+  "author": "LosCriticologo",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:20210526%E2%80%94Paul_Walter_Hauser,_interview_for_%22Cruella%22,_LosCriticologos_(05m21s)_(cropped)_(cropped).jpg",
+  "width": 433,
+  "height": 565,
+  "year": 2021
+ },
+ "pedri": {
+  "name": "Pedri",
+  "file": "pedri.jpg",
+  "title": "File:Pedri France v Spain 7.24.26-245.jpg",
+  "author": "Bryan Berlin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pedri_France_v_Spain_7.24.26-245.jpg",
+  "width": 600,
+  "height": 900,
+  "year": 2026
+ },
  "pedro-pascal": {
   "name": "Pedro Pascal",
   "file": "pedro-pascal.jpg",
@@ -1846,6 +2444,18 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Josep_Guardiola_2023-10-04_Fu%C3%9Fball,_M%C3%A4nner,_UEFA_Champions_League,_RB_Leipzig_-_Manchester_City_FC_1DX_2797_(cropped).jpg",
   "width": 600,
   "height": 776,
+  "year": 2023
+ },
+ "peso-pluma": {
+  "name": "Peso Pluma",
+  "file": "peso-pluma.jpg",
+  "title": "File:Peso Pluma concierto (cropped).png",
+  "author": "https://youtube.com/@kcmusica",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peso_Pluma_concierto_(cropped).png",
+  "width": 600,
+  "height": 750,
   "year": 2023
  },
  "pete-davidson": {
@@ -1883,6 +2493,18 @@
   "width": 600,
   "height": 770,
   "year": 2024
+ },
+ "phil-foden": {
+  "name": "Phil Foden",
+  "file": "phil-foden.jpg",
+  "title": "File:2023-10-04 Fußball, Männer, UEFA Champions League, RB Leipzig - Manchester City FC 1DX 2613, Phil Foden.jpg",
+  "author": "Steffen Prößdorf",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023-10-04_Fu%C3%9Fball,_M%C3%A4nner,_UEFA_Champions_League,_RB_Leipzig_-_Manchester_City_FC_1DX_2613,_Phil_Foden.jpg",
+  "width": 600,
+  "height": 780,
+  "year": 2023
  },
  "post-malone": {
   "name": "Post Malone",
@@ -2027,6 +2649,18 @@
   "height": 800,
   "year": 2022
  },
+ "ross-lynch": {
+  "name": "Ross Lynch",
+  "file": "ross-lynch.jpg",
+  "title": "File:Ross Lynch 2 (cropped).png",
+  "author": "MTV International",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ross_Lynch_2_(cropped).png",
+  "width": 558,
+  "height": 823,
+  "year": 2018
+ },
  "rowan-atkinson": {
   "name": "Rowan Atkinson",
   "file": "rowan-atkinson.jpg",
@@ -2098,6 +2732,18 @@
   "width": 600,
   "height": 802,
   "year": 2014
+ },
+ "sean-o-pry": {
+  "name": "Sean O'Pry",
+  "file": "sean-o-pry.jpg",
+  "title": "File:Sean O'Pry.jpg",
+  "author": "bertphotographer",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sean_O%27Pry.jpg",
+  "width": 450,
+  "height": 600,
+  "year": 2009
  },
  "sebastian-stan": {
   "name": "Sebastian Stan",
@@ -2171,6 +2817,30 @@
   "height": 800,
   "year": 2017
  },
+ "stephen-merchant": {
+  "name": "Stephen Merchant",
+  "file": "stephen-merchant.jpg",
+  "title": "File:Stephen Merchant.jpg",
+  "author": "Raph_PH",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stephen_Merchant.jpg",
+  "width": 600,
+  "height": 779,
+  "year": 2025
+ },
+ "stephen-root": {
+  "name": "Stephen Root",
+  "file": "stephen-root.jpg",
+  "title": "File:Stephen Root Tribeca 2026 3 (cropped).jpg",
+  "author": "Casey \"Poppins\" Nedelka",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stephen_Root_Tribeca_2026_3_(cropped).jpg",
+  "width": 600,
+  "height": 800,
+  "year": 2026
+ },
  "steve-buscemi": {
   "name": "Steve Buscemi",
   "file": "steve-buscemi.jpg",
@@ -2242,6 +2912,18 @@
   "height": 811,
   "year": 2025
  },
+ "tom-blyth": {
+  "name": "Tom Blyth",
+  "file": "tom-blyth.jpg",
+  "title": "File:TomBlyth-byPhilipRomano.jpg",
+  "author": "PhilipRomano",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:TomBlyth-byPhilipRomano.jpg",
+  "width": 600,
+  "height": 902,
+  "year": 2026
+ },
  "tom-brady": {
   "name": "Tom Brady",
   "file": "tom-brady.jpg",
@@ -2302,6 +2984,18 @@
   "height": 902,
   "year": 2026
  },
+ "tracy-morgan": {
+  "name": "Tracy Morgan",
+  "file": "tracy-morgan.jpg",
+  "title": "File:TracyMorgan-byPhilipRomano3.jpg",
+  "author": "PhilipRomano",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:TracyMorgan-byPhilipRomano3.jpg",
+  "width": 600,
+  "height": 902,
+  "year": 2026
+ },
  "travis-kelce": {
   "name": "Travis Kelce",
   "file": "travis-kelce.jpg",
@@ -2324,6 +3018,30 @@
   "width": 600,
   "height": 902,
   "year": 2026
+ },
+ "trent-alexander-arnold": {
+  "name": "Trent Alexander-Arnold",
+  "file": "trent-alexander-arnold.jpg",
+  "title": "File:LFC Parade 2019 01 Trent Alexander-Arnold.jpg",
+  "author": "Eric The Fish from UK",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:LFC_Parade_2019_01_Trent_Alexander-Arnold.jpg",
+  "width": 577,
+  "height": 841,
+  "year": 2019
+ },
+ "troye-sivan": {
+  "name": "Troye Sivan",
+  "file": "troye-sivan.jpg",
+  "title": "File:Troye Sivan - 1999 - Primavera Sound Barcelona - 2024.jpg",
+  "author": "PURE HONEY",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Troye_Sivan_-_1999_-_Primavera_Sound_Barcelona_-_2024.jpg",
+  "width": 600,
+  "height": 774,
+  "year": 2024
  },
  "tyler-the-creator": {
   "name": "Tyler, the Creator",
@@ -2349,6 +3067,30 @@
   "height": 801,
   "year": 2024
  },
+ "v-bts": {
+  "name": "V (BTS)",
+  "file": "v-bts.jpg",
+  "title": "File:BTS's V 20251004 04.jpg",
+  "author": "티비텐",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:BTS%27s_V_20251004_04.jpg",
+  "width": 595,
+  "height": 720,
+  "year": 2025
+ },
+ "victor-wembanyama": {
+  "name": "Victor Wembanyama",
+  "file": "victor-wembanyama.jpg",
+  "title": "File:Victor Wembanyama San Antonio Spurs 2024.jpg",
+  "author": "Frenchieinportland",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Victor_Wembanyama_San_Antonio_Spurs_2024.jpg",
+  "width": 600,
+  "height": 800,
+  "year": 2024
+ },
  "vin-diesel": {
   "name": "Vin Diesel",
   "file": "vin-diesel.jpg",
@@ -2370,6 +3112,18 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Actor_Vince_Vaughn_(2025)_(cropped).jpg",
   "width": 405,
   "height": 598,
+  "year": 2025
+ },
+ "wallace-shawn": {
+  "name": "Wallace Shawn",
+  "file": "wallace-shawn.jpg",
+  "title": "File:Wallace Shawn Jay Kelly-37 (cropped).jpg",
+  "author": "Bryan Berlin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wallace_Shawn_Jay_Kelly-37_(cropped).jpg",
+  "width": 600,
+  "height": 800,
   "year": 2025
  },
  "wayne-rooney": {

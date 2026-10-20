@@ -14,6 +14,9 @@
    2016
   ]
  },
+ "Bobby Moynihan": {
+  "drop": true
+ },
  "Brad Pitt": {
   "years": [
    2005,
@@ -31,6 +34,9 @@
  },
  "Charlie Day": {
   "file": "File:Charlie Day by Gage Skidmore (cropped).jpg"
+ },
+ "Chico Lachowski": {
+  "wiki": "Francisco Lachowski"
  },
  "Chris Martin": {
   "file": "File:Chris Martin 2023 (52950419334) (cropped).jpg"
@@ -76,11 +82,8 @@
   ],
   "file": "File:David Beckham at US Embassy in London (cropped).jpg"
  },
- "Denzel Washington": {
-  "years": [
-   2005,
-   2015
-  ]
+ "Drew Starkey": {
+  "drop": true
  },
  "Eddie Murphy": {
   "years": [
@@ -162,6 +165,9 @@
    2017
   ]
  },
+ "Jonathan Bailey": {
+  "file": "File:Jonathan Bailey press for Wicked.png"
+ },
  "Justin Bieber": {
   "file": "File:Justin Bieber (cropped).png"
  },
@@ -190,6 +196,9 @@
  "Kevin James": {
   "file": "File:Kevin-james-dickste-freunde-berlin-17-01-11 (cropped).jpg"
  },
+ "Kevin Smith": {
+  "wiki": "Kevin Smith"
+ },
  "Lakeith Stanfield": {
   "file": "File:Keith Stanfield by Gage Skidmore.jpg"
  },
@@ -207,6 +216,9 @@
    2008,
    2016
   ]
+ },
+ "Logan Paul": {
+  "file": "File:Logan Paul, WrestleMania XL in 2024 1 (cropped) (cropped).jpg"
  },
  "Luke Combs": {
   "file": "File:Luke Combs in 2020.png"
@@ -254,6 +266,9 @@
  "Neymar": {
   "file": "File:Neymar Jr presentation - Press conference for PSG 001 (cropped).jpg"
  },
+ "Nicholas Galitzine": {
+  "file": "File:Nicholas Galitzine on Dulce Osuna.jpg"
+ },
  "Patrick Mahomes": {
   "file": "File:Patrick Mahomes in the Oval Office of the White House on June 5, 2023 - P20230605AS-0902 (cropped).jpg"
  },
@@ -266,6 +281,9 @@
  "Post Malone": {
   "file": "File:Post Malone 2018 (cropped).jpg"
  },
+ "Rauw Alejandro": {
+  "drop": true
+ },
  "Robert De Niro": {
   "years": [
    2003,
@@ -277,6 +295,9 @@
    2008,
    2017
   ]
+ },
+ "Rudy Pankow": {
+  "drop": true
  },
  "Samuel L. Jackson": {
   "years": [
@@ -309,8 +330,14 @@
  "Travis Kelce": {
   "file": "File:Travis kelce 2017 training camp (cropped).jpg"
  },
+ "Trent Alexander-Arnold": {
+  "file": "File:LFC Parade 2019 01 Trent Alexander-Arnold.jpg"
+ },
  "Tyler, the Creator": {
   "file": "File:Tyler the Creator 2022 cropped (cropped).png"
+ },
+ "V (BTS)": {
+  "wiki": "V (singer)"
  },
  "Wayne Rooney": {
   "file": "File:Wayne Rooney (50121495731) (cropped).jpg"
