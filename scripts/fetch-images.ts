@@ -321,8 +321,8 @@ async function imageInfo(titles: string[], src?: Partial<Sources>): Promise<Cand
 }
 
 async function download(c: Candidate, dest: string, crop?: Crop): Promise<{ width: number; height: number }> {
-  // A crop needs more pixels than the 960px thumbnail; 3840 is one of Wikimedia's standard thumbnail sizes.
-  const url = crop && c.thumbUrl && c.width > THUMB_WIDTH ? c.thumbUrl.replace(`/${THUMB_WIDTH}px-`, `/${Math.min(c.width, 3840)}px-`) : (c.thumbUrl ?? c.url);
+  // A crop needs more pixels than the 960px thumbnail, so crops download the original.
+  const url = crop ? c.url : (c.thumbUrl ?? c.url);
   const res = await fetchWithRetry(url);
   const buf = Buffer.from(await res.arrayBuffer());
   let img = sharp(buf).rotate();
