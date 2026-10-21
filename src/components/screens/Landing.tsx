@@ -18,7 +18,16 @@ export function Landing({ onStart }: { onStart: () => void }) {
       >
         Mog battle
       </Link>
-      <p className="mt-3 text-center text-xs text-muted">Mog battle: rank your group&apos;s faces head-to-head.</p>
+      <Link
+        href="/ranker/"
+        className="mt-3 flex h-14 items-center justify-center rounded-xl border border-line text-lg font-medium active:bg-fg active:text-bg"
+      >
+        Celebrity ranker
+      </Link>
+      <p className="mt-3 text-center text-xs text-muted">
+        Mog battle: rank your group&apos;s faces head-to-head. Celebrity ranker: pick between celebs to sharpen the
+        ratings.
+      </p>
       <Link href="/credits/" className="mt-6 self-center text-sm text-muted underline-offset-4 hover:underline">
         Photo credits
       </Link>
