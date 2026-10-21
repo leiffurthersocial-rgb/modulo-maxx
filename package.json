@@ -12,7 +12,8 @@
     "test": "vitest run",
     "images": "tsx scripts/fetch-images.ts",
     "contact-sheet": "tsx scripts/contact-sheet.ts",
-    "bank": "tsx scripts/build-bank.ts"
+    "bank": "tsx scripts/build-bank.ts",
+    "rankings": "tsx scripts/apply-rankings.ts"
   },
   "dependencies": {
     "next": "^16.4.2",

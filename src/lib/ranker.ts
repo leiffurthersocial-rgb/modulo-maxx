@@ -94,7 +94,7 @@ function logLikDerivs(d: number, m: Margin): { g: number; h: number } {
 }
 
 /** MAP fit under the ordered-logit model. */
-export function fit(votes: RankVote[], pool: BankCeleb[] = BANK): Fitted[] {
+export function fit(votes: RankVote[], pool: BankCeleb[] = BANK, priorSd: number = PRIOR_SD): Fitted[] {
   const idx = new Map(pool.map((c, i) => [c.id, i]));
   const n = pool.length;
   const mu = pool.map((c) => c.rating);
@@ -114,8 +114,8 @@ export function fit(votes: RankVote[], pool: BankCeleb[] = BANK): Fitted[] {
     const grad = new Float64Array(n);
     hess.fill(0);
     for (let i = 0; i < n; i++) {
-      grad[i] = -(theta[i] - mu[i]) / PRIOR_SD ** 2;
-      hess[i] = 1 / PRIOR_SD ** 2;
+      grad[i] = -(theta[i] - mu[i]) / priorSd ** 2;
+      hess[i] = 1 / priorSd ** 2;
     }
     for (const [i, j, m] of games) {
       const { g, h } = logLikDerivs((theta[i] - theta[j]) / S, m);
