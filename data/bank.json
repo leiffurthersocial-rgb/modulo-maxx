@@ -37,6 +37,11 @@
    "category": "actor"
   },
   {
+   "name": "Robert Pattinson",
+   "rating": 8.7,
+   "category": "actor"
+  },
+  {
    "name": "Chace Crawford",
    "rating": 8.6,
    "category": "actor"
@@ -62,8 +67,8 @@
    "category": "musician"
   },
   {
-   "name": "Robert Pattinson",
-   "rating": 8.2,
+   "name": "Theo James",
+   "rating": 8.3,
    "category": "actor"
   },
   {
@@ -182,6 +187,11 @@
    "category": "actor"
   },
   {
+   "name": "Penn Badgley",
+   "rating": 7.4,
+   "category": "actor"
+  },
+  {
    "name": "Callum Turner",
    "rating": 7.3,
    "category": "actor"
@@ -245,11 +255,6 @@
    "name": "Neymar",
    "rating": 7.2,
    "category": "athlete"
-  },
-  {
-   "name": "Penn Badgley",
-   "rating": 7.2,
-   "category": "actor"
   },
   {
    "name": "Ross Lynch",
@@ -338,11 +343,6 @@
   },
   {
    "name": "Orlando Bloom",
-   "rating": 6.9,
-   "category": "actor"
-  },
-  {
-   "name": "Theo James",
    "rating": 6.9,
    "category": "actor"
   },
@@ -587,6 +587,11 @@
    "category": "actor"
   },
   {
+   "name": "Niall Horan",
+   "rating": 6.3,
+   "category": "musician"
+  },
+  {
    "name": "Nick Jonas",
    "rating": 6.3,
    "category": "musician"
@@ -717,11 +722,6 @@
    "category": "actor"
   },
   {
-   "name": "Niall Horan",
-   "rating": 6,
-   "category": "musician"
-  },
-  {
    "name": "Nico Hiraga",
    "rating": 6,
    "category": "actor"
@@ -758,6 +758,11 @@
   },
   {
    "name": "Evan Peters",
+   "rating": 5.9,
+   "category": "actor"
+  },
+  {
+   "name": "Jack Quaid",
    "rating": 5.9,
    "category": "actor"
   },
@@ -885,11 +890,6 @@
    "name": "Jack Harlow",
    "rating": 5.7,
    "category": "musician"
-  },
-  {
-   "name": "Jack Quaid",
-   "rating": 5.7,
-   "category": "actor"
   },
   {
    "name": "Marcus Rashford",
@@ -1162,11 +1162,6 @@
    "category": "actor"
   },
   {
-   "name": "Andrew Schulz",
-   "rating": 5.2,
-   "category": "comedian"
-  },
-  {
    "name": "Asa Butterfield",
    "rating": 5.2,
    "category": "actor"
@@ -1220,6 +1215,11 @@
    "name": "Wayne Rooney",
    "rating": 5.2,
    "category": "athlete"
+  },
+  {
+   "name": "Andrew Schulz",
+   "rating": 5.1,
+   "category": "comedian"
   },
   {
    "name": "Ed Sheeran",
@@ -1347,11 +1347,6 @@
    "category": "coach"
   },
   {
-   "name": "Steve Harvey",
-   "rating": 4.9,
-   "category": "comedian"
-  },
-  {
    "name": "Tyler, the Creator",
    "rating": 4.9,
    "category": "musician"
@@ -1422,12 +1417,7 @@
    "category": "comedian"
   },
   {
-   "name": "Sacha Baron Cohen",
-   "rating": 4.6,
-   "category": "actor"
-  },
-  {
-   "name": "Stephen Merchant",
+   "name": "Steve Harvey",
    "rating": 4.6,
    "category": "comedian"
   },
@@ -1452,6 +1442,11 @@
    "category": "comedian"
   },
   {
+   "name": "Sacha Baron Cohen",
+   "rating": 4.5,
+   "category": "actor"
+  },
+  {
    "name": "Shane Gillis",
    "rating": 4.5,
    "category": "comedian"
@@ -1460,6 +1455,11 @@
    "name": "Shaquille O'Neal",
    "rating": 4.5,
    "category": "athlete"
+  },
+  {
+   "name": "Stephen Merchant",
+   "rating": 4.5,
+   "category": "comedian"
   },
   {
    "name": "Zach Galifianakis",
