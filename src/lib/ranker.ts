@@ -3,7 +3,7 @@
 //
 // Model: ordered logit on the rating scale. With d = (θa − θb) / S, the five answers
 // (b much better, b better, too close, a better, a much better) are the bins of d + noise cut at
-// −CUT_MUCH, −CUT_TIE, +CUT_TIE, +CUT_MUCH. So "much better" says "probably a point or more
+// −CUT_MUCH, −CUT_TIE, +CUT_TIE, +CUT_MUCH. So "much better" says "probably two points or more
 // apart", and a few of those can move a badly misrated celeb a long way. Each θ starts from (and
 // is pulled towards) the celeb's current rating by a Gaussian prior, so the result is directly a
 // new rating. Fit by MAP with Newton steps per celeb; the curvature gives a ± per celeb.
@@ -18,12 +18,16 @@ import { BANK, type BankCeleb } from "./bank";
 const sigmoid = (x: number) => 1 / (1 + Math.exp(-x));
 
 /** Rating points per logit. */
-export const S = 0.55;
+export const S = 0.7;
 /** Prior SD around the current rating: loose enough that a clearly misrated celeb can move 1-2 points. */
 export const PRIOR_SD = 1.4;
-/** Cut points (in logits) between "too close" / "better" / "much better". */
-export const CUT_TIE = 0.35;
-export const CUT_MUCH = 2.0;
+/**
+ * Cut points (in logits) between "too close" / "better" / "much better". Fitted to real picks:
+ * people say "too close" up to about ±0.4 rating points and keep "much better" for gaps of about
+ * 2 points or more, so plain "better" between a 9 and a 7.5 is normal and doesn't drag the 9 down.
+ */
+export const CUT_TIE = 0.6;
+export const CUT_MUCH = 3.0;
 
 /** How much better a is than b: 2 = a much better, 1 = a better, 0 = too close, -1, -2 for b. */
 export type Margin = -2 | -1 | 0 | 1 | 2;
