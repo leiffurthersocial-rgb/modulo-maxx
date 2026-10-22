@@ -1,0 +1,1293 @@
+{
+ "kind": "modulo-maxx-celebrity-ranker",
+ "exportedAt": "2026-10-22T08:55:09.383Z",
+ "raters": [
+  "Leif"
+ ],
+ "votes": [
+  {
+   "a": "kevin-bacon",
+   "b": "conan-gray",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "matty-healy",
+   "b": "kevin-bacon",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "matty-healy",
+   "b": "sam-heughan",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "lil-nas-x",
+   "b": "kevin-bacon",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "oscar-isaac",
+   "b": "matty-healy",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "bukayo-saka",
+   "b": "oscar-isaac",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "bukayo-saka",
+   "b": "kit-connor",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "tom-holland",
+   "b": "kit-connor",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "erling-haaland",
+   "b": "bukayo-saka",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "erling-haaland",
+   "b": "christian-bale",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jamie-dornan",
+   "b": "christian-bale",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jamie-dornan",
+   "b": "josh-hartnett",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "paul-mescal",
+   "b": "erling-haaland",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "tom-blyth",
+   "b": "paul-mescal",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "tom-blyth",
+   "b": "joe-alwyn",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-evans",
+   "b": "joe-alwyn",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "alexander-skarsgard",
+   "b": "chris-evans",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-evans",
+   "b": "david-beckham",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "david-beckham",
+   "b": "matthew-mcconaughey",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "louis-partridge",
+   "b": "alexander-skarsgard",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "louis-partridge",
+   "b": "cha-eun-woo",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "cha-eun-woo",
+   "b": "richard-madden",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "richard-madden",
+   "b": "bradley-cooper",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "cristiano-ronaldo",
+   "b": "bradley-cooper",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "cristiano-ronaldo",
+   "b": "tom-cruise",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "leonardo-dicaprio",
+   "b": "tom-cruise",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "leonardo-dicaprio",
+   "b": "v-bts",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jon-bernthal",
+   "b": "v-bts",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "paul-rudd",
+   "b": "jon-bernthal",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jason-segel",
+   "b": "paul-rudd",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jason-segel",
+   "b": "daniel-craig",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "travis-kelce",
+   "b": "daniel-craig",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "travis-kelce",
+   "b": "tom-brady",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jon-hamm",
+   "b": "travis-kelce",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "dylan-sprouse",
+   "b": "jon-hamm",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "dylan-sprouse",
+   "b": "dylan-o-brien",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "channing-tatum",
+   "b": "dylan-o-brien",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "charlie-puth",
+   "b": "jon-hamm",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "charlie-puth",
+   "b": "patrick-mahomes",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "pete-davidson",
+   "b": "patrick-mahomes",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jack-quaid",
+   "b": "pete-davidson",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jack-quaid",
+   "b": "kevin-hart",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "kevin-hart",
+   "b": "benson-boone",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "tom-hiddleston",
+   "b": "pete-davidson",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "zlatan-ibrahimovic",
+   "b": "tom-hiddleston",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "zlatan-ibrahimovic",
+   "b": "jonah-hill",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "tom-hiddleston",
+   "b": "bill-hader",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "bill-hader",
+   "b": "jon-lovitz",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "bryan-cranston",
+   "b": "jon-lovitz",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jon-lovitz",
+   "b": "ksi",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "andrew-schulz",
+   "b": "bryan-cranston",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "andrew-schulz",
+   "b": "finn-wolfhard",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jimmy-kimmel",
+   "b": "ksi",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "bryan-cranston",
+   "b": "mrbeast",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "ksi",
+   "b": "ed-sheeran",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "ed-sheeran",
+   "b": "lewis-capaldi",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "lewis-capaldi",
+   "b": "ryan-gosling",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "javier-bardem",
+   "b": "ryan-gosling",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "denzel-washington",
+   "b": "javier-bardem",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "denzel-washington",
+   "b": "woody-harrelson",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "ryan-gosling",
+   "b": "patton-oswalt",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "patton-oswalt",
+   "b": "pete-holmes",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "elijah-wood",
+   "b": "patton-oswalt",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jerry-seinfeld",
+   "b": "elijah-wood",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "patton-oswalt",
+   "b": "ray-romano",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "ray-romano",
+   "b": "stephen-merchant",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "paul-bettany",
+   "b": "stephen-merchant",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "nikola-jokic",
+   "b": "stephen-merchant",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "nikola-jokic",
+   "b": "dominic-fike",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "troye-sivan",
+   "b": "dominic-fike",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "eddie-redmayne",
+   "b": "troye-sivan",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "eddie-redmayne",
+   "b": "mads-mikkelsen",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "tom-hardy",
+   "b": "mads-mikkelsen",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "mads-mikkelsen",
+   "b": "dacre-montgomery",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "dacre-montgomery",
+   "b": "asap-rocky",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "kj-apa",
+   "b": "asap-rocky",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "sebastian-stan",
+   "b": "kj-apa",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "sebastian-stan",
+   "b": "michael-b-jordan",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "lil-yachty",
+   "b": "kj-apa",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "anthony-edwards",
+   "b": "lil-yachty",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "anthony-edwards",
+   "b": "john-boyega",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "daniel-radcliffe",
+   "b": "john-boyega",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "lil-yachty",
+   "b": "jake-paul",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "nick-jonas",
+   "b": "anthony-edwards",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "nathan-fillion",
+   "b": "nick-jonas",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "kevin-de-bruyne",
+   "b": "nathan-fillion",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "taron-egerton",
+   "b": "kevin-de-bruyne",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "keanu-reeves",
+   "b": "taron-egerton",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "glen-powell",
+   "b": "keanu-reeves",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "ryan-reynolds",
+   "b": "glen-powell",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "ryan-reynolds",
+   "b": "drew-starkey",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "ryan-reynolds",
+   "b": "louis-tomlinson",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "noah-centineo",
+   "b": "louis-tomlinson",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "louis-tomlinson",
+   "b": "orlando-bloom",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "orlando-bloom",
+   "b": "cole-sprouse",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jensen-ackles",
+   "b": "cole-sprouse",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jensen-ackles",
+   "b": "aaron-taylor-johnson",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jake-gyllenhaal",
+   "b": "aaron-taylor-johnson",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jake-gyllenhaal",
+   "b": "austin-butler",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-hemsworth",
+   "b": "austin-butler",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "austin-butler",
+   "b": "charles-melton",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "charles-melton",
+   "b": "zac-efron",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "zac-efron",
+   "b": "chace-crawford",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jordan-barrett",
+   "b": "chace-crawford",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jordan-barrett",
+   "b": "lucky-blue-smith",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "sean-o-pry",
+   "b": "lucky-blue-smith",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "lucky-blue-smith",
+   "b": "chico-lachowski",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "sean-o-pry",
+   "b": "henry-cavill",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "brad-pitt",
+   "b": "henry-cavill",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "zayn-malik",
+   "b": "brad-pitt",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-pine",
+   "b": "zayn-malik",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "robert-pattinson",
+   "b": "chris-pine",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "ian-somerhalder",
+   "b": "robert-pattinson",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "ian-somerhalder",
+   "b": "paul-wesley",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "charlie-hunnam",
+   "b": "paul-wesley",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "paul-wesley",
+   "b": "jake-gyllenhaal",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "paul-wesley",
+   "b": "chris-pine",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "charlie-hunnam",
+   "b": "jacob-elordi",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "joseph-gordon-levitt",
+   "b": "jacob-elordi",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "joseph-gordon-levitt",
+   "b": "machine-gun-kelly",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "stephen-curry",
+   "b": "joseph-gordon-levitt",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "central-cee",
+   "b": "joseph-gordon-levitt",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "harry-styles",
+   "b": "central-cee",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "harry-styles",
+   "b": "michael-keaton",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "michael-keaton",
+   "b": "michael-jordan",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "michael-keaton",
+   "b": "kevin-costner",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "marcus-rashford",
+   "b": "michael-jordan",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "kevin-costner",
+   "b": "travis-scott",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jason-sudeikis",
+   "b": "michael-keaton",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jacob-batalon",
+   "b": "jason-sudeikis",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "dave-chappelle",
+   "b": "jacob-batalon",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "peso-pluma",
+   "b": "jason-sudeikis",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "gary-neville",
+   "b": "jacob-batalon",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "gordon-ramsay",
+   "b": "gary-neville",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jesse-eisenberg",
+   "b": "gordon-ramsay",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jesse-eisenberg",
+   "b": "pedri",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "pedri",
+   "b": "jack-grealish",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jack-grealish",
+   "b": "john-legend",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "john-legend",
+   "b": "nicholas-galitzine",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "theo-james",
+   "b": "nicholas-galitzine",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jared-leto",
+   "b": "nicholas-galitzine",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "theo-james",
+   "b": "kit-harington",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "joe-burrow",
+   "b": "jared-leto",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "mark-wahlberg",
+   "b": "joe-burrow",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "adam-sandler",
+   "b": "mark-wahlberg",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "matt-damon",
+   "b": "adam-sandler",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "novak-djokovic",
+   "b": "matt-damon",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "anthony-mackie",
+   "b": "novak-djokovic",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "adam-sandler",
+   "b": "charles-barkley",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "charles-barkley",
+   "b": "michael-phelps",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "charles-barkley",
+   "b": "daniel-kaluuya",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "colin-farrell",
+   "b": "charles-barkley",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "rob-mcelhenney",
+   "b": "colin-farrell",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "harry-kane",
+   "b": "colin-farrell",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "colin-farrell",
+   "b": "harris-dickinson",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "rob-mcelhenney",
+   "b": "andrew-scott",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jason-bateman",
+   "b": "andrew-scott",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "harris-dickinson",
+   "b": "usain-bolt",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "eddie-murphy",
+   "b": "jason-bateman",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jeff-goldblum",
+   "b": "eddie-murphy",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "rami-malek",
+   "b": "usain-bolt",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "nico-hiraga",
+   "b": "rami-malek",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "john-goodman",
+   "b": "rami-malek",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "john-goodman",
+   "b": "george-mackay",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "john-goodman",
+   "b": "rupert-grint",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "noah-schnapp",
+   "b": "john-goodman",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "declan-rice",
+   "b": "george-mackay",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "morgan-wallen",
+   "b": "george-mackay",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "declan-rice",
+   "b": "bob-odenkirk",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "bob-odenkirk",
+   "b": "steve-harvey",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "bob-odenkirk",
+   "b": "steve-carell",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "steve-carell",
+   "b": "kevin-durant",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "steve-harvey",
+   "b": "matt-rife",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "matt-rife",
+   "b": "evan-peters",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "evan-peters",
+   "b": "pharrell-williams",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "pharrell-williams",
+   "b": "seth-rogen",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "ewan-mcgregor",
+   "b": "matt-rife",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "ewan-mcgregor",
+   "b": "colman-domingo",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "josh-gad",
+   "b": "colman-domingo",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "bobby-lee",
+   "b": "josh-gad",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "bobby-lee",
+   "b": "tyler-the-creator",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "eminem",
+   "b": "colman-domingo",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "eminem",
+   "b": "bruno-mars",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "kylian-mbappe",
+   "b": "bruno-mars",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "kylian-mbappe",
+   "b": "will-smith",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "will-smith",
+   "b": "asa-butterfield",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "christopher-walken",
+   "b": "asa-butterfield",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "lebron-james",
+   "b": "christopher-walken",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-rock",
+   "b": "lebron-james",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-rock",
+   "b": "eric-bana",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "mark-ruffalo",
+   "b": "chris-rock",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "lucas-hedges",
+   "b": "eric-bana",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "chris-rock",
+   "b": "ben-stiller",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "miles-teller",
+   "b": "eric-bana",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "gerard-butler",
+   "b": "ben-stiller",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "eric-bana",
+   "b": "ja-morant",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "ja-morant",
+   "b": "niall-horan",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "caleb-mclaughlin",
+   "b": "gerard-butler",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "caleb-mclaughlin",
+   "b": "the-weeknd",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "the-weeknd",
+   "b": "sacha-baron-cohen",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "daniel-caesar",
+   "b": "sacha-baron-cohen",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "daniel-caesar",
+   "b": "wayne-rooney",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "wayne-rooney",
+   "b": "michael-cera",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "michael-cera",
+   "b": "jason-mantzoukas",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jason-mantzoukas",
+   "b": "nick-robinson",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "nick-robinson",
+   "b": "roger-federer",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "jamie-vardy",
+   "b": "nick-robinson",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "michael-fassbender",
+   "b": "roger-federer",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "barry-keoghan",
+   "b": "jamie-vardy",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "barry-keoghan",
+   "b": "jungkook",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "henry-golding",
+   "b": "jungkook",
+   "margin": -1,
+   "rater": "Leif"
+  },
+  {
+   "a": "timothee-chalamet",
+   "b": "henry-golding",
+   "margin": 0,
+   "rater": "Leif"
+  },
+  {
+   "a": "jungkook",
+   "b": "shane-gillis",
+   "margin": 1,
+   "rater": "Leif"
+  },
+  {
+   "a": "kai-cenat",
+   "b": "shane-gillis",
+   "margin": 1,
+   "rater": "Leif"
+  }
+ ]
+}

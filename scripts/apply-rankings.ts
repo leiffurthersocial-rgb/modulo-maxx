@@ -4,8 +4,6 @@
 //   npm run rankings -- --apply   # write them to data/celebs.json, move the files to data/rankings/applied/
 //   npm run rankings -- --prior 0.6
 //
-// Ratings in data/rating-locks.json are set by hand and never moved by picks.
-//
 // Each export (the JSON from "Download results file" or "Copy results") goes in data/rankings/.
 // Only files not yet applied are fitted, against the current ratings, so repeated sessions add up
 // without counting the same picks twice. The prior is tighter than in the app's live view
@@ -43,12 +41,8 @@ const known = new Set(pool.map((c) => c.id));
 const unknown = [...new Set(votes.flatMap((v) => [v.a, v.b]).filter((id) => !known.has(id)))];
 if (unknown.length) console.log(`Ignoring picks for unknown ids: ${unknown.join(", ")}`);
 
-// Hand-set ratings (data/rating-locks.json) are applied as-is and never moved by picks.
-const LOCKS = path.join(ROOT, "data/rating-locks.json");
-const locks: Record<string, number> = fs.existsSync(LOCKS) ? JSON.parse(fs.readFileSync(LOCKS, "utf8")).locks ?? {} : {};
-
 const changes = fit(votes, pool, prior)
-  .filter((f) => f.comparisons > 0 && !(f.celeb.name in locks) && Math.abs(f.rating - f.old) >= MIN_CHANGE - 1e-9)
+  .filter((f) => f.comparisons > 0 && Math.abs(f.rating - f.old) >= MIN_CHANGE - 1e-9)
   .sort((a, b) => b.rating - b.old - (a.rating - a.old));
 
 console.log(`${votes.length} picks by ${raters.size} ${raters.size === 1 ? "person" : "people"} from ${files.length} file(s), prior ±${prior}`);
@@ -61,7 +55,6 @@ for (const c of changes) {
 if (apply) {
   const next = new Map(changes.map((c) => [c.celeb.name, c.rating]));
   for (const c of data.celebs) if (next.has(c.name)) c.rating = next.get(c.name)!;
-  for (const c of data.celebs) if (c.name in locks) c.rating = locks[c.name];
   data.celebs.sort((a, b) => b.rating - a.rating || a.name.localeCompare(b.name));
   fs.writeFileSync(CELEBS, JSON.stringify(data, null, 1) + "\n");
   fs.mkdirSync(APPLIED, { recursive: true });

@@ -86,9 +86,10 @@ describe("celebrity ranker", () => {
   it("finds a badly misrated celeb (2 points too low)", () => {
     const target = BANK.find((c) => c.rating >= 5.5 && c.rating < 6)!;
     const truth = (id: string) => (id === target.id ? target.rating + 2 : BANK.find((c) => c.id === id)!.rating);
-    // He comes up once (and is judged much better than a same-rated celeb); follow-ups do the rest.
-    const peer = BANK.find((c) => c.id !== target.id && Math.abs(c.rating - target.rating) < 0.2)!;
-    const votes = simulate(truth, 12, 11, "all", [{ a: target.id, b: peer.id, margin: 2, rater: "t" }]);
+    // He's judged much better than two same-rated celebs; follow-ups do the rest.
+    const peers = BANK.filter((c) => c.id !== target.id && Math.abs(c.rating - target.rating) < 0.2).slice(0, 2);
+    const start = peers.map((p): RankVote => ({ a: target.id, b: p.id, margin: 2, rater: "t" }));
+    const votes = simulate(truth, 12, 11, "all", start);
     const f = fit(votes).find((x) => x.celeb.id === target.id)!;
     expect(f.comparisons).toBeGreaterThanOrEqual(4);
     expect(f.rating).toBeGreaterThan(target.rating + 1);

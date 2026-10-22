@@ -1,7 +1,0 @@
-{
- "note": "Ratings set by hand. scripts/apply-rankings.ts leaves these alone; remove a line to let ranker picks move it again.",
- "locks": {
-  "Theo James": 8.3,
-  "Robert Pattinson": 8.7
- }
-}
