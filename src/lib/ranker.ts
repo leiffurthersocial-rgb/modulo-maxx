@@ -147,18 +147,54 @@ const FOLLOW_SD = 0.5;
 /** … up to this many times in a row. */
 const FOLLOW_MAX = 4;
 
-/** Next pair to show, or null if the band has fewer than two celebs. */
+/** Picks in one focus round ("do a few with just him"). */
+export const FOCUS_PICKS = 8;
+
+/**
+ * Partner for a focused celeb: a bisection around his current estimate. Early on (large ±) the
+ * partners spread out to find the right region, then close in. Pairs already seen this session
+ * and partners from the last few picks are avoided so it doesn't feel like a loop.
+ */
+function focusPartner(anchor: Fitted, all: Fitted[], votes: RankVote[], seen: Set<string>, rng: () => number): Fitted | null {
+  const spread = Math.min(1.2, Math.max(0.3, anchor.sd));
+  const target = anchor.rating + (rng() * 2 - 1) * spread;
+  const lately = new Set(votes.slice(-6).flatMap((v) => [v.a, v.b]));
+  let best: Fitted | null = null;
+  let bestScore = -Infinity;
+  for (const f of all) {
+    if (f === anchor || !f.celeb.image) continue;
+    const repeat = seen.has([anchor.celeb.id, f.celeb.id].sort().join("|"));
+    const score = -Math.abs(f.rating - target) - (repeat ? 1.5 : 0) - (lately.has(f.celeb.id) ? 0.4 : 0) + rng() * 0.15;
+    if (score > bestScore) {
+      bestScore = score;
+      best = f;
+    }
+  }
+  return best;
+}
+
+/**
+ * Next pair to show, or null if the band has fewer than two celebs. With focus (a celeb id), that
+ * celeb is in every pair, against partners from the whole bank.
+ */
 export function nextPair(
   votes: RankVote[],
   band: Band = "all",
   rng: () => number = Math.random,
   pool: BankCeleb[] = BANK,
+  focus?: string,
 ): [BankCeleb, BankCeleb] | null {
   const fitted = fit(votes, pool);
   const byId = new Map(fitted.map((f) => [f.celeb.id, f]));
+  const seen = new Set(votes.map((v) => [v.a, v.b].sort().join("|")));
+  const focused = focus ? byId.get(focus) : undefined;
+  if (focused) {
+    const partner = focusPartner(focused, fitted, votes, seen, rng);
+    if (!partner) return null;
+    return rng() < 0.5 ? [focused.celeb, partner.celeb] : [partner.celeb, focused.celeb];
+  }
   const inBand = fitted.filter((f) => f.celeb.image && BANDS[band].test(f.old));
   if (inBand.length < 2) return null;
-  const seen = new Set(votes.map((v) => [v.a, v.b].sort().join("|")));
   const streak = (id: string) => {
     let n = 0;
     for (let k = votes.length - 1; k >= 0 && (votes[k].a === id || votes[k].b === id); k--) n++;
@@ -233,6 +269,8 @@ export interface RankerState {
   band: Band;
   showNames: boolean;
   current?: [string, string];
+  /** Focus round: every pair has this celeb, until the vote count reaches `until`. */
+  focus?: { id: string; from: number; until: number };
 }
 
 export function initialRanker(): RankerState {

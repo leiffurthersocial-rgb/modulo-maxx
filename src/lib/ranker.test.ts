@@ -1,14 +1,21 @@
 import { describe, expect, it } from "vitest";
 import { BANK } from "./bank";
 import { makeRng } from "./engine";
-import { exportResults, fit, marginProbs, nextPair, S, type Margin, type RankVote } from "./ranker";
+import { exportResults, fit, FOCUS_PICKS, marginProbs, nextPair, S, type Margin, type RankVote } from "./ranker";
 
 /** Pick with model probability using hidden "true" ratings. */
-function simulate(truth: (id: string) => number, n: number, seed = 1, band: "all" | "high" = "all", start: RankVote[] = []): RankVote[] {
+function simulate(
+  truth: (id: string) => number,
+  n: number,
+  seed = 1,
+  band: "all" | "high" = "all",
+  start: RankVote[] = [],
+  focus?: string,
+): RankVote[] {
   const rng = makeRng(seed);
   const votes: RankVote[] = [...start];
   for (let k = 0; k < n; k++) {
-    const pair = nextPair(votes, band, rng)!;
+    const pair = nextPair(votes, band, rng, BANK, focus)!;
     const probs = marginProbs((truth(pair[0].id) - truth(pair[1].id)) / S);
     let u = rng();
     let k = 0;
@@ -93,5 +100,15 @@ describe("celebrity ranker", () => {
     const f = fit(votes).find((x) => x.celeb.id === target.id)!;
     expect(f.comparisons).toBeGreaterThanOrEqual(4);
     expect(f.rating).toBeGreaterThan(target.rating + 1);
+  });
+
+  it("keeps a focused celeb in every pair, with fresh partners, and places him", () => {
+    const target = BANK.find((c) => c.image && c.rating >= 6 && c.rating < 6.5)!;
+    const truth = (id: string) => (id === target.id ? target.rating + 1.5 : BANK.find((c) => c.id === id)!.rating);
+    const votes = simulate(truth, FOCUS_PICKS, 4, "all", [], target.id);
+    expect(votes.every((v) => v.a === target.id || v.b === target.id)).toBe(true);
+    const partners = votes.map((v) => (v.a === target.id ? v.b : v.a));
+    expect(new Set(partners).size).toBe(partners.length);
+    expect(fit(votes).find((x) => x.celeb.id === target.id)!.rating).toBeGreaterThan(target.rating + 0.5);
   });
 });
