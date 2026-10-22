@@ -22,13 +22,8 @@
    "category": "actor"
   },
   {
-   "name": "Sean O'Pry",
-   "rating": 8.8,
-   "category": "model"
-  },
-  {
    "name": "Henry Cavill",
-   "rating": 8.7,
+   "rating": 8.6,
    "category": "actor"
   },
   {
@@ -37,14 +32,9 @@
    "category": "actor"
   },
   {
-   "name": "Robert Pattinson",
-   "rating": 8.5,
-   "category": "actor"
-  },
-  {
-   "name": "Brad Pitt",
-   "rating": 8.4,
-   "category": "actor"
+   "name": "Sean O'Pry",
+   "rating": 8.6,
+   "category": "model"
   },
   {
    "name": "Chace Crawford",
@@ -52,23 +42,38 @@
    "category": "actor"
   },
   {
-   "name": "Austin Butler",
-   "rating": 8.3,
+   "name": "Penn Badgley",
+   "rating": 8.4,
    "category": "actor"
   },
   {
-   "name": "Chris Hemsworth",
-   "rating": 8.3,
+   "name": "Robert Pattinson",
+   "rating": 8.4,
    "category": "actor"
   },
   {
    "name": "Shawn Mendes",
-   "rating": 8.3,
+   "rating": 8.4,
    "category": "musician"
   },
   {
-   "name": "Jordan Barrett",
+   "name": "Brad Pitt",
    "rating": 8.2,
+   "category": "actor"
+  },
+  {
+   "name": "Chris Hemsworth",
+   "rating": 8.2,
+   "category": "actor"
+  },
+  {
+   "name": "Austin Butler",
+   "rating": 8.1,
+   "category": "actor"
+  },
+  {
+   "name": "Jordan Barrett",
+   "rating": 8.1,
    "category": "model"
   },
   {
@@ -92,37 +97,27 @@
    "category": "actor"
   },
   {
+   "name": "Paul Wesley",
+   "rating": 7.9,
+   "category": "actor"
+  },
+  {
+   "name": "V (BTS)",
+   "rating": 7.9,
+   "category": "musician"
+  },
+  {
+   "name": "Zac Efron",
+   "rating": 7.9,
+   "category": "actor"
+  },
+  {
    "name": "Chase Stokes",
    "rating": 7.8,
    "category": "actor"
   },
   {
    "name": "Chris Evans",
-   "rating": 7.8,
-   "category": "actor"
-  },
-  {
-   "name": "Chris Pine",
-   "rating": 7.8,
-   "category": "actor"
-  },
-  {
-   "name": "Paul Wesley",
-   "rating": 7.8,
-   "category": "actor"
-  },
-  {
-   "name": "Penn Badgley",
-   "rating": 7.8,
-   "category": "actor"
-  },
-  {
-   "name": "Theo James",
-   "rating": 7.8,
-   "category": "actor"
-  },
-  {
-   "name": "Christian Bale",
    "rating": 7.7,
    "category": "actor"
   },
@@ -137,29 +132,19 @@
    "category": "actor"
   },
   {
-   "name": "V (BTS)",
-   "rating": 7.7,
-   "category": "musician"
-  },
-  {
-   "name": "Zac Efron",
-   "rating": 7.7,
-   "category": "actor"
-  },
-  {
    "name": "Alexander Skarsgård",
    "rating": 7.6,
    "category": "actor"
   },
   {
-   "name": "Drew Starkey",
+   "name": "Christian Bale",
    "rating": 7.6,
    "category": "actor"
   },
   {
-   "name": "Jude Bellingham",
+   "name": "Theo James",
    "rating": 7.6,
-   "category": "athlete"
+   "category": "actor"
   },
   {
    "name": "Tom Cruise",
@@ -182,22 +167,27 @@
    "category": "actor"
   },
   {
-   "name": "Zayn Malik",
+   "name": "Chris Pine",
    "rating": 7.5,
-   "category": "musician"
+   "category": "actor"
   },
   {
    "name": "Dacre Montgomery",
-   "rating": 7.4,
+   "rating": 7.5,
    "category": "actor"
+  },
+  {
+   "name": "Drew Starkey",
+   "rating": 7.5,
+   "category": "actor"
+  },
+  {
+   "name": "Jude Bellingham",
+   "rating": 7.5,
+   "category": "athlete"
   },
   {
    "name": "Jacob Elordi",
-   "rating": 7.4,
-   "category": "actor"
-  },
-  {
-   "name": "Jamie Dornan",
    "rating": 7.4,
    "category": "actor"
   },
@@ -207,18 +197,13 @@
    "category": "actor"
   },
   {
+   "name": "Neymar",
+   "rating": 7.4,
+   "category": "athlete"
+  },
+  {
    "name": "Nicholas Galitzine",
    "rating": 7.4,
-   "category": "actor"
-  },
-  {
-   "name": "Tom Blyth",
-   "rating": 7.4,
-   "category": "actor"
-  },
-  {
-   "name": "Charles Melton",
-   "rating": 7.3,
    "category": "actor"
   },
   {
@@ -227,29 +212,14 @@
    "category": "actor"
   },
   {
-   "name": "Cristiano Ronaldo",
+   "name": "Jamie Dornan",
    "rating": 7.3,
-   "category": "athlete"
-  },
-  {
-   "name": "David Beckham",
-   "rating": 7.3,
-   "category": "athlete"
+   "category": "actor"
   },
   {
    "name": "Kit Harington",
    "rating": 7.3,
    "category": "actor"
-  },
-  {
-   "name": "Mads Mikkelsen",
-   "rating": 7.3,
-   "category": "actor"
-  },
-  {
-   "name": "Neymar",
-   "rating": 7.3,
-   "category": "athlete"
   },
   {
    "name": "Ross Lynch",
@@ -262,12 +232,17 @@
    "category": "actor"
   },
   {
-   "name": "Glen Powell",
+   "name": "David Beckham",
+   "rating": 7.2,
+   "category": "athlete"
+  },
+  {
+   "name": "Jared Padalecki",
    "rating": 7.2,
    "category": "actor"
   },
   {
-   "name": "Michael B. Jordan",
+   "name": "Mads Mikkelsen",
    "rating": 7.2,
    "category": "actor"
   },
@@ -277,14 +252,14 @@
    "category": "actor"
   },
   {
-   "name": "Richard Madden",
+   "name": "Tom Blyth",
    "rating": 7.2,
    "category": "actor"
   },
   {
-   "name": "Rudy Pankow",
+   "name": "Zayn Malik",
    "rating": 7.2,
-   "category": "actor"
+   "category": "musician"
   },
   {
    "name": "Callum Turner",
@@ -292,17 +267,7 @@
    "category": "actor"
   },
   {
-   "name": "Channing Tatum",
-   "rating": 7.1,
-   "category": "actor"
-  },
-  {
    "name": "Dylan O'Brien",
-   "rating": 7.1,
-   "category": "actor"
-  },
-  {
-   "name": "Jared Padalecki",
    "rating": 7.1,
    "category": "actor"
   },
@@ -327,12 +292,37 @@
    "category": "actor"
   },
   {
+   "name": "Michael B. Jordan",
+   "rating": 7.1,
+   "category": "actor"
+  },
+  {
+   "name": "Paul Mescal",
+   "rating": 7.1,
+   "category": "actor"
+  },
+  {
+   "name": "Richard Madden",
+   "rating": 7.1,
+   "category": "actor"
+  },
+  {
    "name": "Roger Federer",
    "rating": 7.1,
    "category": "athlete"
   },
   {
-   "name": "Paul Mescal",
+   "name": "Rudy Pankow",
+   "rating": 7.1,
+   "category": "actor"
+  },
+  {
+   "name": "Tom Holland",
+   "rating": 7.1,
+   "category": "actor"
+  },
+  {
+   "name": "Charles Melton",
    "rating": 7,
    "category": "actor"
   },
@@ -352,27 +342,27 @@
    "category": "actor"
   },
   {
+   "name": "Channing Tatum",
+   "rating": 6.9,
+   "category": "actor"
+  },
+  {
+   "name": "Cristiano Ronaldo",
+   "rating": 6.9,
+   "category": "athlete"
+  },
+  {
+   "name": "Glen Powell",
+   "rating": 6.9,
+   "category": "actor"
+  },
+  {
    "name": "Jason Statham",
    "rating": 6.9,
    "category": "actor"
   },
   {
-   "name": "Keanu Reeves",
-   "rating": 6.9,
-   "category": "actor"
-  },
-  {
-   "name": "Leonardo DiCaprio",
-   "rating": 6.9,
-   "category": "actor"
-  },
-  {
-   "name": "Orlando Bloom",
-   "rating": 6.9,
-   "category": "actor"
-  },
-  {
-   "name": "Tom Holland",
+   "name": "Nick Robinson",
    "rating": 6.9,
    "category": "actor"
   },
@@ -387,9 +377,9 @@
    "category": "actor"
   },
   {
-   "name": "Dylan Sprouse",
+   "name": "John Mulaney",
    "rating": 6.8,
-   "category": "actor"
+   "category": "comedian"
   },
   {
    "name": "Joshua Bassett",
@@ -402,22 +392,12 @@
    "category": "actor"
   },
   {
-   "name": "Nick Robinson",
-   "rating": 6.8,
-   "category": "actor"
-  },
-  {
-   "name": "Ansel Elgort",
-   "rating": 6.7,
-   "category": "actor"
-  },
-  {
    "name": "Ben Affleck",
    "rating": 6.7,
    "category": "actor"
   },
   {
-   "name": "Cole Sprouse",
+   "name": "Dylan Sprouse",
    "rating": 6.7,
    "category": "actor"
   },
@@ -432,9 +412,14 @@
    "category": "musician"
   },
   {
-   "name": "Justin Bieber",
+   "name": "Henry Golding",
    "rating": 6.7,
-   "category": "musician"
+   "category": "actor"
+  },
+  {
+   "name": "Mark Wahlberg",
+   "rating": 6.7,
+   "category": "actor"
   },
   {
    "name": "Timothée Chalamet",
@@ -452,14 +437,14 @@
    "category": "athlete"
   },
   {
-   "name": "Eddie Redmayne",
+   "name": "Cole Sprouse",
    "rating": 6.6,
    "category": "actor"
   },
   {
-   "name": "Henry Golding",
+   "name": "Conan Gray",
    "rating": 6.6,
-   "category": "actor"
+   "category": "musician"
   },
   {
    "name": "Idris Elba",
@@ -482,7 +467,22 @@
    "category": "musician"
   },
   {
+   "name": "Justin Bieber",
+   "rating": 6.6,
+   "category": "musician"
+  },
+  {
+   "name": "Leonardo DiCaprio",
+   "rating": 6.6,
+   "category": "actor"
+  },
+  {
    "name": "Miles Teller",
+   "rating": 6.6,
+   "category": "actor"
+  },
+  {
+   "name": "Orlando Bloom",
    "rating": 6.6,
    "category": "actor"
   },
@@ -492,7 +492,27 @@
    "category": "actor"
   },
   {
-   "name": "George Clooney",
+   "name": "Ansel Elgort",
+   "rating": 6.5,
+   "category": "actor"
+  },
+  {
+   "name": "Bruno Mars",
+   "rating": 6.5,
+   "category": "musician"
+  },
+  {
+   "name": "Charlie Puth",
+   "rating": 6.5,
+   "category": "musician"
+  },
+  {
+   "name": "Eddie Redmayne",
+   "rating": 6.5,
+   "category": "actor"
+  },
+  {
+   "name": "Joseph Quinn",
    "rating": 6.5,
    "category": "actor"
   },
@@ -500,6 +520,16 @@
    "name": "Logan Paul",
    "rating": 6.5,
    "category": "creator"
+  },
+  {
+   "name": "Matt Damon",
+   "rating": 6.5,
+   "category": "actor"
+  },
+  {
+   "name": "Troye Sivan",
+   "rating": 6.5,
+   "category": "musician"
   },
   {
    "name": "Alex Turner",
@@ -512,37 +542,27 @@
    "category": "actor"
   },
   {
-   "name": "Bruno Mars",
-   "rating": 6.4,
-   "category": "musician"
-  },
-  {
-   "name": "Charlie Puth",
-   "rating": 6.4,
-   "category": "musician"
-  },
-  {
    "name": "Donald Glover",
    "rating": 6.4,
    "category": "actor"
   },
   {
-   "name": "Jack Grealish",
+   "name": "George Clooney",
    "rating": 6.4,
-   "category": "athlete"
+   "category": "actor"
   },
   {
-   "name": "John Mulaney",
-   "rating": 6.4,
-   "category": "comedian"
-  },
-  {
-   "name": "Joseph Quinn",
+   "name": "Hugh Jackman",
    "rating": 6.4,
    "category": "actor"
   },
   {
    "name": "Josh Hartnett",
+   "rating": 6.4,
+   "category": "actor"
+  },
+  {
+   "name": "Keanu Reeves",
    "rating": 6.4,
    "category": "actor"
   },
@@ -562,17 +582,12 @@
    "category": "actor"
   },
   {
-   "name": "Mark Wahlberg",
-   "rating": 6.4,
-   "category": "actor"
-  },
-  {
-   "name": "Matt Damon",
-   "rating": 6.4,
-   "category": "actor"
-  },
-  {
    "name": "Michael Fassbender",
+   "rating": 6.4,
+   "category": "actor"
+  },
+  {
+   "name": "Oscar Isaac",
    "rating": 6.4,
    "category": "actor"
   },
@@ -587,42 +602,12 @@
    "category": "athlete"
   },
   {
-   "name": "Conan Gray",
-   "rating": 6.3,
-   "category": "musician"
-  },
-  {
-   "name": "Hugh Jackman",
-   "rating": 6.3,
-   "category": "actor"
-  },
-  {
    "name": "Jonathan Bailey",
    "rating": 6.3,
    "category": "actor"
   },
   {
-   "name": "Lucas Hedges",
-   "rating": 6.3,
-   "category": "actor"
-  },
-  {
    "name": "Niall Horan",
-   "rating": 6.3,
-   "category": "musician"
-  },
-  {
-   "name": "Noah Centineo",
-   "rating": 6.3,
-   "category": "actor"
-  },
-  {
-   "name": "Sam Heughan",
-   "rating": 6.3,
-   "category": "actor"
-  },
-  {
-   "name": "Troye Sivan",
    "rating": 6.3,
    "category": "musician"
   },
@@ -642,6 +627,16 @@
    "category": "musician"
   },
   {
+   "name": "Erling Haaland",
+   "rating": 6.2,
+   "category": "athlete"
+  },
+  {
+   "name": "Gerard Butler",
+   "rating": 6.2,
+   "category": "actor"
+  },
+  {
    "name": "Glenn Howerton",
    "rating": 6.2,
    "category": "actor"
@@ -657,19 +652,9 @@
    "category": "actor"
   },
   {
-   "name": "Jon Hamm",
-   "rating": 6.2,
-   "category": "actor"
-  },
-  {
    "name": "Mason Mount",
    "rating": 6.2,
    "category": "athlete"
-  },
-  {
-   "name": "Oscar Isaac",
-   "rating": 6.2,
-   "category": "actor"
   },
   {
    "name": "Phil Foden",
@@ -677,9 +662,19 @@
    "category": "athlete"
   },
   {
+   "name": "Aaron Paul",
+   "rating": 6.1,
+   "category": "actor"
+  },
+  {
    "name": "Adam Levine",
    "rating": 6.1,
    "category": "musician"
+  },
+  {
+   "name": "Ben Stiller",
+   "rating": 6.1,
+   "category": "actor"
   },
   {
    "name": "Central Cee",
@@ -692,7 +687,7 @@
    "category": "athlete"
   },
   {
-   "name": "Erling Haaland",
+   "name": "Jack Grealish",
    "rating": 6.1,
    "category": "athlete"
   },
@@ -707,12 +702,17 @@
    "category": "actor"
   },
   {
-   "name": "Nathan Fillion",
+   "name": "Jon Hamm",
    "rating": 6.1,
    "category": "actor"
   },
   {
-   "name": "Pedro Pascal",
+   "name": "Lucas Hedges",
+   "rating": 6.1,
+   "category": "actor"
+  },
+  {
+   "name": "Nathan Fillion",
    "rating": 6.1,
    "category": "actor"
   },
@@ -722,17 +722,7 @@
    "category": "comedian"
   },
   {
-   "name": "Aaron Paul",
-   "rating": 6,
-   "category": "actor"
-  },
-  {
    "name": "Barry Keoghan",
-   "rating": 6,
-   "category": "actor"
-  },
-  {
-   "name": "Ben Stiller",
    "rating": 6,
    "category": "actor"
   },
@@ -752,12 +742,17 @@
    "category": "athlete"
   },
   {
-   "name": "Matty Healy",
+   "name": "Kevin Hart",
    "rating": 6,
-   "category": "musician"
+   "category": "comedian"
   },
   {
    "name": "Nico Hiraga",
+   "rating": 6,
+   "category": "actor"
+  },
+  {
+   "name": "Pedro Pascal",
    "rating": 6,
    "category": "actor"
   },
@@ -782,6 +777,11 @@
    "category": "actor"
   },
   {
+   "name": "Jack Quaid",
+   "rating": 5.9,
+   "category": "actor"
+  },
+  {
    "name": "Jon Bernthal",
    "rating": 5.9,
    "category": "actor"
@@ -792,22 +792,22 @@
    "category": "actor"
   },
   {
-   "name": "Kevin Hart",
-   "rating": 5.9,
-   "category": "comedian"
-  },
-  {
-   "name": "Kylian Mbappé",
+   "name": "Marcus Rashford",
    "rating": 5.9,
    "category": "athlete"
   },
   {
-   "name": "Louis Tomlinson",
+   "name": "Mark Ruffalo",
    "rating": 5.9,
-   "category": "musician"
+   "category": "actor"
   },
   {
-   "name": "Mark Ruffalo",
+   "name": "Noah Centineo",
+   "rating": 5.9,
+   "category": "actor"
+  },
+  {
+   "name": "Sam Heughan",
    "rating": 5.9,
    "category": "actor"
   },
@@ -837,17 +837,12 @@
    "category": "actor"
   },
   {
-   "name": "Daniel Craig",
+   "name": "Eminem",
    "rating": 5.8,
-   "category": "actor"
+   "category": "musician"
   },
   {
-   "name": "Ewan McGregor",
-   "rating": 5.8,
-   "category": "actor"
-  },
-  {
-   "name": "Gerard Butler",
+   "name": "Jude Law",
    "rating": 5.8,
    "category": "actor"
   },
@@ -857,7 +852,22 @@
    "category": "actor"
   },
   {
+   "name": "Kylian Mbappé",
+   "rating": 5.8,
+   "category": "athlete"
+  },
+  {
    "name": "Lil Nas X",
+   "rating": 5.8,
+   "category": "musician"
+  },
+  {
+   "name": "Louis Tomlinson",
+   "rating": 5.8,
+   "category": "musician"
+  },
+  {
+   "name": "Matty Healy",
    "rating": 5.8,
    "category": "musician"
   },
@@ -872,6 +882,16 @@
    "category": "actor"
   },
   {
+   "name": "Daniel Caesar",
+   "rating": 5.7,
+   "category": "musician"
+  },
+  {
+   "name": "Drake",
+   "rating": 5.7,
+   "category": "musician"
+  },
+  {
    "name": "Evan Peters",
    "rating": 5.7,
    "category": "actor"
@@ -882,17 +902,7 @@
    "category": "musician"
   },
   {
-   "name": "Jack Quaid",
-   "rating": 5.7,
-   "category": "actor"
-  },
-  {
    "name": "Joaquin Phoenix",
-   "rating": 5.7,
-   "category": "actor"
-  },
-  {
-   "name": "Jude Law",
    "rating": 5.7,
    "category": "actor"
   },
@@ -902,19 +912,14 @@
    "category": "musician"
   },
   {
-   "name": "Marcus Rashford",
-   "rating": 5.7,
-   "category": "athlete"
-  },
-  {
    "name": "Michael Jordan",
    "rating": 5.7,
    "category": "athlete"
   },
   {
-   "name": "Pep Guardiola",
+   "name": "Rafael Nadal",
    "rating": 5.7,
-   "category": "coach"
+   "category": "athlete"
   },
   {
    "name": "Bryan Cranston",
@@ -922,14 +927,19 @@
    "category": "actor"
   },
   {
-   "name": "Drake",
+   "name": "Bukayo Saka",
    "rating": 5.6,
-   "category": "musician"
+   "category": "athlete"
   },
   {
-   "name": "Eminem",
+   "name": "Ewan McGregor",
    "rating": 5.6,
-   "category": "musician"
+   "category": "actor"
+  },
+  {
+   "name": "Jimmy Fallon",
+   "rating": 5.6,
+   "category": "comedian"
   },
   {
    "name": "John Legend",
@@ -952,6 +962,11 @@
    "category": "athlete"
   },
   {
+   "name": "Pep Guardiola",
+   "rating": 5.6,
+   "category": "coach"
+  },
+  {
    "name": "Rami Malek",
    "rating": 5.6,
    "category": "actor"
@@ -960,11 +975,6 @@
    "name": "Steve Carell",
    "rating": 5.6,
    "category": "actor"
-  },
-  {
-   "name": "Theo Von",
-   "rating": 5.6,
-   "category": "comedian"
   },
   {
    "name": "Travis Scott",
@@ -977,14 +987,14 @@
    "category": "actor"
   },
   {
+   "name": "Woody Harrelson",
+   "rating": 5.6,
+   "category": "actor"
+  },
+  {
    "name": "Zlatan Ibrahimović",
    "rating": 5.6,
    "category": "athlete"
-  },
-  {
-   "name": "Anthony Mackie",
-   "rating": 5.5,
-   "category": "actor"
   },
   {
    "name": "Benedict Cumberbatch",
@@ -992,12 +1002,12 @@
    "category": "actor"
   },
   {
-   "name": "Bukayo Saka",
+   "name": "Colman Domingo",
    "rating": 5.5,
-   "category": "athlete"
+   "category": "actor"
   },
   {
-   "name": "Colman Domingo",
+   "name": "Daniel Craig",
    "rating": 5.5,
    "category": "actor"
   },
@@ -1027,11 +1037,6 @@
    "category": "actor"
   },
   {
-   "name": "Jimmy Fallon",
-   "rating": 5.5,
-   "category": "comedian"
-  },
-  {
    "name": "Kai Cenat",
    "rating": 5.5,
    "category": "creator"
@@ -1057,19 +1062,14 @@
    "category": "musician"
   },
   {
-   "name": "Rafael Nadal",
-   "rating": 5.5,
-   "category": "athlete"
-  },
-  {
    "name": "Austin Abrams",
    "rating": 5.4,
    "category": "actor"
   },
   {
-   "name": "Daniel Caesar",
+   "name": "Dan Levy",
    "rating": 5.4,
-   "category": "musician"
+   "category": "actor"
   },
   {
    "name": "Daniel Radcliffe",
@@ -1092,6 +1092,11 @@
    "category": "athlete"
   },
   {
+   "name": "Hugh Grant",
+   "rating": 5.4,
+   "category": "actor"
+  },
+  {
    "name": "Jason Segel",
    "rating": 5.4,
    "category": "actor"
@@ -1112,6 +1117,11 @@
    "category": "athlete"
   },
   {
+   "name": "Lionel Messi",
+   "rating": 5.4,
+   "category": "athlete"
+  },
+  {
    "name": "Michael Keaton",
    "rating": 5.4,
    "category": "actor"
@@ -1122,12 +1132,17 @@
    "category": "athlete"
   },
   {
+   "name": "Theo Von",
+   "rating": 5.4,
+   "category": "comedian"
+  },
+  {
    "name": "Tom Hiddleston",
    "rating": 5.4,
    "category": "actor"
   },
   {
-   "name": "Usain Bolt",
+   "name": "Vinícius Júnior",
    "rating": 5.4,
    "category": "athlete"
   },
@@ -1137,9 +1152,14 @@
    "category": "actor"
   },
   {
-   "name": "Hugh Grant",
+   "name": "Anthony Mackie",
    "rating": 5.3,
    "category": "actor"
+  },
+  {
+   "name": "Chris Rock",
+   "rating": 5.3,
+   "category": "comedian"
   },
   {
    "name": "Jake Paul",
@@ -1157,7 +1177,7 @@
    "category": "actor"
   },
   {
-   "name": "Lionel Messi",
+   "name": "Nikola Jokić",
    "rating": 5.3,
    "category": "athlete"
   },
@@ -1177,14 +1197,9 @@
    "category": "actor"
   },
   {
-   "name": "Woody Harrelson",
+   "name": "Usain Bolt",
    "rating": 5.3,
-   "category": "actor"
-  },
-  {
-   "name": "Chris Rock",
-   "rating": 5.2,
-   "category": "comedian"
+   "category": "athlete"
   },
   {
    "name": "Joseph Gordon-Levitt",
@@ -1197,11 +1212,6 @@
    "category": "athlete"
   },
   {
-   "name": "Machine Gun Kelly",
-   "rating": 5.2,
-   "category": "musician"
-  },
-  {
    "name": "MrBeast",
    "rating": 5.2,
    "category": "creator"
@@ -1212,14 +1222,14 @@
    "category": "actor"
   },
   {
-   "name": "Vinícius Júnior",
+   "name": "Wayne Rooney",
    "rating": 5.2,
    "category": "athlete"
   },
   {
-   "name": "Wayne Rooney",
-   "rating": 5.2,
-   "category": "athlete"
+   "name": "Adam Sandler",
+   "rating": 5.1,
+   "category": "actor"
   },
   {
    "name": "Andrew Scott",
@@ -1237,9 +1247,9 @@
    "category": "actor"
   },
   {
-   "name": "Dan Levy",
+   "name": "Gordon Ramsay",
    "rating": 5.1,
-   "category": "actor"
+   "category": "chef"
   },
   {
    "name": "Jason Mantzoukas",
@@ -1247,9 +1257,14 @@
    "category": "comedian"
   },
   {
-   "name": "Jeremy Renner",
+   "name": "Jason Sudeikis",
    "rating": 5.1,
    "category": "actor"
+  },
+  {
+   "name": "Machine Gun Kelly",
+   "rating": 5.1,
+   "category": "musician"
   },
   {
    "name": "Matthew Gray Gubler",
@@ -1258,11 +1273,6 @@
   },
   {
    "name": "Michael Phelps",
-   "rating": 5.1,
-   "category": "athlete"
-  },
-  {
-   "name": "Nikola Jokić",
    "rating": 5.1,
    "category": "athlete"
   },
@@ -1282,12 +1292,12 @@
    "category": "actor"
   },
   {
-   "name": "Gordon Ramsay",
+   "name": "Denzel Washington",
    "rating": 5,
-   "category": "chef"
+   "category": "actor"
   },
   {
-   "name": "Jason Sudeikis",
+   "name": "Jeremy Renner",
    "rating": 5,
    "category": "actor"
   },
@@ -1307,12 +1317,22 @@
    "category": "actor"
   },
   {
-   "name": "Adam Sandler",
+   "name": "Peter Crouch",
+   "rating": 5,
+   "category": "athlete"
+  },
+  {
+   "name": "Asa Butterfield",
    "rating": 4.9,
    "category": "actor"
   },
   {
-   "name": "Denzel Washington",
+   "name": "Ed Sheeran",
+   "rating": 4.9,
+   "category": "musician"
+  },
+  {
+   "name": "Finn Wolfhard",
    "rating": 4.9,
    "category": "actor"
   },
@@ -1327,11 +1347,6 @@
    "category": "creator"
   },
   {
-   "name": "Peter Crouch",
-   "rating": 4.9,
-   "category": "athlete"
-  },
-  {
    "name": "Tyler, the Creator",
    "rating": 4.9,
    "category": "musician"
@@ -1342,19 +1357,14 @@
    "category": "actor"
   },
   {
-   "name": "Asa Butterfield",
+   "name": "Andrew Schulz",
    "rating": 4.8,
-   "category": "actor"
+   "category": "comedian"
   },
   {
    "name": "Chris Martin",
    "rating": 4.8,
    "category": "musician"
-  },
-  {
-   "name": "Finn Wolfhard",
-   "rating": 4.8,
-   "category": "actor"
   },
   {
    "name": "Jerry Seinfeld",
@@ -1392,24 +1402,24 @@
    "category": "actor"
   },
   {
+   "name": "Patrick Mahomes",
+   "rating": 4.8,
+   "category": "athlete"
+  },
+  {
+   "name": "Rupert Grint",
+   "rating": 4.8,
+   "category": "actor"
+  },
+  {
    "name": "Zach Galifianakis",
    "rating": 4.8,
    "category": "actor"
   },
   {
-   "name": "Andrew Schulz",
-   "rating": 4.7,
-   "category": "comedian"
-  },
-  {
    "name": "Bob Odenkirk",
    "rating": 4.7,
    "category": "actor"
-  },
-  {
-   "name": "Ed Sheeran",
-   "rating": 4.7,
-   "category": "musician"
   },
   {
    "name": "Elijah Wood",
@@ -1422,23 +1432,8 @@
    "category": "actor"
   },
   {
-   "name": "Patrick Mahomes",
-   "rating": 4.7,
-   "category": "athlete"
-  },
-  {
-   "name": "Rupert Grint",
-   "rating": 4.7,
-   "category": "actor"
-  },
-  {
    "name": "Steve Harvey",
    "rating": 4.7,
-   "category": "comedian"
-  },
-  {
-   "name": "Jim Gaffigan",
-   "rating": 4.6,
    "category": "comedian"
   },
   {
@@ -1467,14 +1462,34 @@
    "category": "comedian"
   },
   {
+   "name": "Al Pacino",
+   "rating": 4.5,
+   "category": "actor"
+  },
+  {
+   "name": "Charles Barkley",
+   "rating": 4.5,
+   "category": "athlete"
+  },
+  {
    "name": "Gary Neville",
    "rating": 4.5,
    "category": "athlete"
   },
   {
+   "name": "Jacob Batalon",
+   "rating": 4.5,
+   "category": "actor"
+  },
+  {
    "name": "Morgan Freeman",
    "rating": 4.5,
    "category": "actor"
+  },
+  {
+   "name": "Peso Pluma",
+   "rating": 4.5,
+   "category": "musician"
   },
   {
    "name": "Ricky Gervais",
@@ -1497,24 +1512,19 @@
    "category": "comedian"
   },
   {
-   "name": "Al Pacino",
-   "rating": 4.4,
-   "category": "actor"
-  },
-  {
    "name": "Bobby Lee",
    "rating": 4.4,
    "category": "comedian"
   },
   {
-   "name": "Charles Barkley",
+   "name": "Horatio Sanz",
    "rating": 4.4,
-   "category": "athlete"
+   "category": "comedian"
   },
   {
-   "name": "Jacob Batalon",
+   "name": "Jim Gaffigan",
    "rating": 4.4,
-   "category": "actor"
+   "category": "comedian"
   },
   {
    "name": "Jon Favreau",
@@ -1523,11 +1533,6 @@
   },
   {
    "name": "Lil Dicky",
-   "rating": 4.4,
-   "category": "musician"
-  },
-  {
-   "name": "Peso Pluma",
    "rating": 4.4,
    "category": "musician"
   },
@@ -1567,7 +1572,7 @@
    "category": "chef"
   },
   {
-   "name": "Horatio Sanz",
+   "name": "Larry David",
    "rating": 4.2,
    "category": "comedian"
   },
@@ -1583,6 +1588,11 @@
   },
   {
    "name": "Rowan Atkinson",
+   "rating": 4.2,
+   "category": "actor"
+  },
+  {
+   "name": "Stephen Root",
    "rating": 4.2,
    "category": "actor"
   },
@@ -1617,11 +1627,6 @@
    "category": "musician"
   },
   {
-   "name": "Stephen Root",
-   "rating": 4.1,
-   "category": "actor"
-  },
-  {
    "name": "Tracy Morgan",
    "rating": 4.1,
    "category": "comedian"
@@ -1647,22 +1652,12 @@
    "category": "comedian"
   },
   {
-   "name": "Gaten Matarazzo",
-   "rating": 4,
-   "category": "actor"
-  },
-  {
    "name": "Jack Black",
    "rating": 4,
    "category": "actor"
   },
   {
    "name": "Post Malone",
-   "rating": 4,
-   "category": "musician"
-  },
-  {
-   "name": "Rick Ross",
    "rating": 4,
    "category": "musician"
   },
@@ -1682,6 +1677,11 @@
    "category": "actor"
   },
   {
+   "name": "Gaten Matarazzo",
+   "rating": 3.9,
+   "category": "actor"
+  },
+  {
    "name": "John C. Reilly",
    "rating": 3.9,
    "category": "actor"
@@ -1692,19 +1692,9 @@
    "category": "comedian"
   },
   {
-   "name": "Larry David",
-   "rating": 3.9,
-   "category": "comedian"
-  },
-  {
    "name": "Luke Combs",
    "rating": 3.9,
    "category": "musician"
-  },
-  {
-   "name": "Rainn Wilson",
-   "rating": 3.9,
-   "category": "actor"
   },
   {
    "name": "Willem Dafoe",
@@ -1727,6 +1717,21 @@
    "category": "actor"
   },
   {
+   "name": "Paul Walter Hauser",
+   "rating": 3.8,
+   "category": "actor"
+  },
+  {
+   "name": "Rainn Wilson",
+   "rating": 3.8,
+   "category": "actor"
+  },
+  {
+   "name": "Rick Ross",
+   "rating": 3.8,
+   "category": "musician"
+  },
+  {
    "name": "Vince Vaughn",
    "rating": 3.8,
    "category": "actor"
@@ -1742,11 +1747,6 @@
    "category": "comedian"
   },
   {
-   "name": "Paul Walter Hauser",
-   "rating": 3.7,
-   "category": "actor"
-  },
-  {
    "name": "Ron Perlman",
    "rating": 3.6,
    "category": "actor"
@@ -1758,7 +1758,7 @@
   },
   {
    "name": "Gene Simmons",
-   "rating": 3.4,
+   "rating": 3.3,
    "category": "musician"
   },
   {
@@ -1772,13 +1772,13 @@
    "category": "actor"
   },
   {
-   "name": "Paul Giamatti",
+   "name": "Wallace Shawn",
    "rating": 2.8,
    "category": "actor"
   },
   {
-   "name": "Wallace Shawn",
-   "rating": 2.8,
+   "name": "Paul Giamatti",
+   "rating": 2.7,
    "category": "actor"
   },
   {
