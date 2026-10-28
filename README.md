@@ -2,7 +2,8 @@
 
 A for-fun, non-commercial attractiveness calculator for guys. A friend compares the subject's face to
 celebrity photos (More / About equal / Less), and the app combines that with height and build into an
-overall score. It's a static site with no backend, no accounts and no analytics. For fun, not science
+overall score. Every page is static; the only backend is the Group board's small API (no accounts, no
+analytics). For fun, not science
 
 ## Setup
 
@@ -11,11 +12,16 @@ npm install
 npm run dev          # http://localhost:3000
 npm test             # vitest: engine simulations, scoring, image helpers
 npm run typecheck
-npm run build        # static export to out/
+npm run build        # every page prerendered; /api/board/* runs as Vercel functions
 ```
 
-**Deploying on Vercel:** import the repo and keep the defaults. `next.config.ts` sets `output: 'export'`, and
-Vercel serves `out/`. Any static host works the same way (`npx serve out`).
+**Deploying on Vercel:** import the repo and keep the defaults.
+
+**Group board database:** the Group board (`/board/`) keeps boards, posts, photos and ratings in Upstash
+Redis. In the Vercel dashboard: project → Storage → Create Database → Upstash for Redis (free plan is
+plenty) → connect it to the project, then redeploy. That sets `KV_REST_API_URL` and `KV_REST_API_TOKEN`.
+Without them, `npm run dev` uses an in-memory store (lost on restart) and a production build shows "The
+database isn't connected yet" on the board instead of losing posts.
 
 ## Celeb photos
 

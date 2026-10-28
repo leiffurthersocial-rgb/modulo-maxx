@@ -6,7 +6,7 @@
     "dev": "next dev",
     "prebuild": "tsx scripts/build-bank.ts",
     "build": "next build",
-    "start": "npx serve out",
+    "start": "next start",
     "typecheck": "tsc --noEmit",
     "pretest": "tsx scripts/build-bank.ts",
     "test": "vitest run",
